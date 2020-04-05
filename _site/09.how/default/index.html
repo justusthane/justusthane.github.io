@@ -1,0 +1,9 @@
+<h2>CMS</h2>
+<p>The site is powered by a pretty nifty if not slightly idiosyncratic (at least to me) flat-file CMS called <a href="https://getgrav.org">Grav</a>. I like it because all content and configuration is stored in text files rather than a database, which means it's simple to install and maintain, and I can version control everything, as well as add content from any platform without dealing with a slow CMS dashboard.</p>
+<p>A static site generator would probably make a lot of sense for this site and I'd like to explore that some day, but I haven't quite wrapped my head around them yet. I want to be able to publish from anywhere, not just my computer where the SSG is installed, which means I would need a Continuous Integration server running to monitor for changes and rebuild the site. This seems <em>more</em> complicated to me than just running a CMS.</p>
+<h2>Hosting</h2>
+<p>I host the site on <a href="https://cloudways.com">Cloudways</a>, a very cool VPS hosting provider. It spins up DigitalOcean, AWS, Google Cloud, Linode, or Vultr VMs in the background, but then manages the OS and installed packages for you, so you don't need to worry about security, configuration, etc. At $22/mo for one DigitalOcean server it's a little spendy for personal hosting, but I'm currently serving close to a dozen different websites on that one instance.</p>
+<h2>Git</h2>
+<p>The entire site (CMS installation and all) is in a <a href="https://github.com/justusthane/grav-justus.ws">Github repo</a>. When I make a change to the site and push to the repo (or edit directly through the Github web interface), a Webhook tells Cloudways to pull the changes from the repo and the changes are live within seconds.</p>
+<h2>Local development with Vagrant</h2>
+<p><em>Coming soon</em></p>

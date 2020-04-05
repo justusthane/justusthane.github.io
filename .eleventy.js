@@ -1,0 +1,30 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.setTemplateFormats([
+    "md",
+    "html",
+    "jpeg",
+    "jpg",
+    "GIF"
+  ]);
+  eleventyConfig.addPassthroughCopy("style");
+  eleventyConfig.addPassthroughCopy("webfonts");
+  eleventyConfig.addPassthroughCopy("js");
+
+  let markdownIt = require("markdown-it");
+  let markdownItDeflist = require("markdown-it-deflist");
+  let markdownItFootnote = require("markdown-it-footnote");
+  let markdownItAnchor = require("markdown-it-anchor");
+  let markdownItTocDoneRight = require("markdown-it-toc-done-right");
+  let markdownItAttrs = require("markdown-it-attrs");
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+};
+  let markdownLib = markdownIt(options).use(markdownItDeflist).use(markdownItFootnote).use(markdownItAnchor).use(markdownItTocDoneRight).use(markdownItAttrs);
+  eleventyConfig.setLibrary("md", markdownLib);
+};
+

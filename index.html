@@ -1,0 +1,42 @@
+---
+layout: layouts/home.liquid
+title: "justus.ws"
+body_classes: 'home h-card'
+homeNav:
+    - 
+        menu: craft/sewing
+        tagline: '&nbsp;projects'
+        url: /craft
+    - 
+        menu: food
+        tagline: '&nbsp;&amp; kitchen'
+        url: /food
+    - 
+        menu: writings
+        tagline: '&nbsp;&amp; musings'
+        url: /writings
+    - 
+        menu: misc
+        tagline: '/fun&amp;notfun'
+        url: /misc
+    - 
+        menu: why
+        tagline: '&nbsp;does this site exist?'
+        url: /why
+    - 
+        menu: how
+        tagline: '&nbsp;does this site work?'
+        url: /how
+    - 
+        menu: links
+        tagline: '&nbsp;&amp; other things I like'
+        url: /links
+---
+<nav>
+    <dl>
+        {% for item in homeNav %}
+        <dt><a href="{{ item.url }}">{{ item.menu }}</a></dt>
+            <dd>{{ item.tagline }}</dd>
+        {% endfor %}
+    </dl>
+</nav>
