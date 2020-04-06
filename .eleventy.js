@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setTemplateFormats([
     "md",
     "html",
+    "txt",
     "jpeg",
     "jpg",
     "GIF"
