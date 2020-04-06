@@ -1,7 +1,7 @@
 ---
 title: Marika and Biagio's new house
 date: '2019-11-08'
-updated: '2020-02-13'
+updated: '2020-04-05'
 ---
 <h3>Table of Contents</h3>
 
@@ -20,7 +20,7 @@ I'm having a little house envy, so I'm going to live vicariously through them an
 ![IMG_2627](IMG_2627.jpeg?cropResize=800,600)
 
 ---
-## Update 11/16/19
+## Update 2019-11-16
 
 They're cutting a hole in the side of the house for a sliding door from the living room out to the deck. Dad was there to help out this weekend.
 
@@ -31,7 +31,13 @@ They're cutting a hole in the side of the house for a sliding door from the livi
 
 
 ---
-## Update 2/13/20
+## Update 2020-02-13
 The kitchen is livable and cozy!
 
 ![IMG_3536](IMG_3536.jpeg?cropResize=800,600)
+
+---
+## Update 2020-04-05
+The kitchen is no longer livable and cozy!
+
+![](kitchen-torn-up.jpg)

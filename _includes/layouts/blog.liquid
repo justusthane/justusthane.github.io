@@ -1,0 +1,17 @@
+---
+layout: layouts/base.liquid
+---
+<h1><a href="/">home</a>/{{ title }}</h1>
+{{ content | safe }}
+
+{% assign pages = collections.blog | reverse %}
+
+{% for page in pages %}
+  <section class="blogPost h-entry">
+    <div class="title"><h2 class="p-name">{% include includes/blog_item_title with {page, embed: true} %}</h2></div>
+    <div class="date"><a href="{{page.url}}" class="dt-published u-url u-uid">{{ page.date | date: '%Y-%m-%d' }}</a></div>
+    <div class="content ">
+      {{ page.templateContent }}
+    </div>
+  </section>
+{% endfor %}
