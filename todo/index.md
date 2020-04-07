@@ -46,11 +46,12 @@ templateEngineOverride: md
         - [x] default to device preference
             - dark mode now exists for devices that prefer it! still need to make it manual option as well.
     - [ ] LocalStorage to indicate new items since last visit
-- [ ] Publish theme?
 - [ ] WebMentions
 - [ ] Comments
 - [ ] In-line links to load image on demand. Identify with little photo icon (similar to external links). 
     - button to load all images in page/post
+- [x] Add default layout for all pages
+  - Done, thanks to [this](https://github.com/11ty/eleventy/issues/380#issuecomment-568033456) handy tip for accomplishing this in Eleventy
 
 ## Content
 - [ ] Worm composting article?
