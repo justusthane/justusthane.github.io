@@ -24,11 +24,11 @@ Kicks Condor
 
 [Special Fish](https://special.fish)
 
-:    Another tiny whimsical social network by the [same amazing community builder](http://bellkiosk.site/) as Gossip's Cafe. You get to choose a username and a color, you get to choose a community to reside in (represented by a little symbol), you get to post lists of things, you get to be a fan of 9 other users, and...that's it!
+:    Another tiny whimsical social network by the [same amazing community builder](http://bellkiosk.site/) as Gossip's Cafe. You get to choose a username and a color, you get to choose a community to reside in (represented by a little symbol), you get to post lists of things, you get to be a fan of 9 other users, and...that's it! 
 
 [Blueskunk Club](http://blueskunk.club)
 
-:    Really neat little pure HTML personal site by Jake Fee. I especially like the interactive blog posts.
+:    A really neat little handbuilt personal site. I especially like the interactive blog posts and the collision of craft and technology. Check out the [loom simulator](http://blueskunk.club/0013.html)!
 
 ## Things
 
