@@ -1,6 +1,6 @@
 {% case page.data.type %}
 {% when 'reply' %}
-  <i class="fas fa-reply"></i> Reply to: <a href="{{ page.data.link }}">{{ page.data.title }}</a>
+  <i class="fas fa-reply"></i> Reply to: <a class="u-in-reply-to"  href="{{ page.data.link }}">{{ page.data.title }}</a>
 {% when 'link' %}
   <i class="fas fa-link"></i> Link: <a href="{{ page.data.link }}">{{ page.data.title }}</a>
 {% else %}
