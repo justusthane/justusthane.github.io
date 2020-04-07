@@ -1,7 +1,7 @@
 ---
-layout: layouts/home.liquid
+layout: layouts/base.liquid
 title: "justus.ws"
-body_classes: 'home h-card'
+bodyclasses: "home"
 homeNav:
     - 
         menu: craft/sewing
@@ -44,7 +44,7 @@ homeNav:
     <dl>
         {% for item in homeNav %}
         <dt><a href="{{ item.url }}">{{ item.menu }}</a></dt>
-            <dd>{{ item.tagline }}</dd>
+            <dd style="margin-top: 0; margin-bottom: 0;">{{ item.tagline }}</dd>
         {% endfor %}
     </dl>
 </nav>
