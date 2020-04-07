@@ -18,12 +18,14 @@ module.exports = function(eleventyConfig) {
   let markdownItAnchor = require("markdown-it-anchor");
   let markdownItTocDoneRight = require("markdown-it-toc-done-right");
   let markdownItAttrs = require("markdown-it-attrs");
+  let markdownItTaskLists = require("markdown-it-task-lists");
+
   let options = {
     html: true,
     breaks: true,
     linkify: true
 };
-  let markdownLib = markdownIt(options).use(markdownItDeflist).use(markdownItFootnote).use(markdownItAnchor).use(markdownItTocDoneRight).use(markdownItAttrs);
+  let markdownLib = markdownIt(options).use(markdownItDeflist).use(markdownItFootnote).use(markdownItAnchor).use(markdownItTocDoneRight).use(markdownItAttrs).use(markdownItTaskLists);
   eleventyConfig.setLibrary("md", markdownLib);
 };
 

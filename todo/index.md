@@ -36,8 +36,9 @@ templateEngineOverride: md
 - [x] Favicon
 - [ ] Define the site tagline in YAML
 - [ ] Add indicator for external links
-- [ ] Write Grav plugin to render these markdown checkboxes as HTML checkboxes
+- [x] Write Grav plugin to render these markdown checkboxes as HTML checkboxes
    - Model after Github markdown preview checkboxes
+    - *Done! Well, I didn't write a Grav plugin, instead I rebuilt the site in the pretty cool [Eleventy static site generator](https://11ty.dev), which uses markdown.it, and it turns out there's a [markdown.it plugin](https://www.npmjs.com/package/markdown-it-task-lists) that does exactly what I wanted. Awesome!*
 - [x] Add *Links* page
    - [x] Maybe actually put links on the links page
 - [ ] Add RSS feeds
@@ -59,7 +60,7 @@ templateEngineOverride: md
 - [ ] Glove darning blog post
 - [ ] FZF article
 - [ ] Add /now page
-- [ ] Add "How does this site work?" page
+- [x] Add "How does this site work?" page
 - [ ] Self-composting page?
    - Define the entire page (save maybe nav and a brief message?) in a single template
    - Delete one character out of the template every time the page is loaded
