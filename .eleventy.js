@@ -1,3 +1,4 @@
+var moment = require('moment');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setTemplateFormats([
@@ -11,6 +12,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("style");
   eleventyConfig.addPassthroughCopy("webfonts");
   eleventyConfig.addPassthroughCopy("js");
+
+  eleventyConfig.addLiquidFilter("customDate", function(value, arg) { 
+    return moment(value).utc().format(arg);
+  });
 
   let markdownIt = require("markdown-it");
   let markdownItDeflist = require("markdown-it-deflist");
