@@ -93,6 +93,10 @@ body.home nav {
     padding-bottom: 2rem;
 }
 
+.blogPost.blurb .content {
+  font-size: 1.7rem;
+}
+
 .date {
     font-size: 0.8rem;
 }
@@ -109,8 +113,8 @@ body.home nav {
 }
 
 .blogPost .content {
-    border-left: 1px solid #404040;
-    padding-left: 1rem;
+    /*border-left: 1px solid #404040;*/
+    /*padding-left: 1rem;*/
 }
 
 .blogPost .title {

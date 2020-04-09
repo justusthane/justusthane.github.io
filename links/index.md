@@ -48,3 +48,6 @@ Chainmail cast iron scrubber
 
 :   YNAB is a zero-based envelop budgeting system. Any time you earn money, you immediately assign each dollar to a category for its intended purpose until you have *zero* dollars left to assign. This is an analogy of the old envelope-based budgeting where you put money into physical envelopes for rent, groceries, etc. In YNAB, once a category is empty, you're out of money to spend on that thing—you can easily move money from a different category to cover it, but it forces you to be intentional about it. You're making a choice to move available funds from your Vacation category to your Dining Out category. You immediately know what the repurcussions of buying that burger are going to be. It takes a bit to wrap your head around the YNAB methodology, but it's well worth it.
 
+[DaisyDisk](https://daisydiskapp.com/)
+
+:    The best disk-space analyzer for mac. Beautiful interface and that polished feel of a nice indie mac app.
