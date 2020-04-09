@@ -145,6 +145,7 @@ dd {
 .footnotes {
     background-color: #eee;
     padding: .5em;
+    padding-right: 2em;
     font-size: .9rem;
 }
 
