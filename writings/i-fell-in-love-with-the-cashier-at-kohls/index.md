@@ -1,5 +1,6 @@
 ---
 title: "I fell in love with the cashier at Kohl's"
+date: 2014-08-31
 ---
 Standing in line at Kohl's, I was intrigued by the cashier as she checked out the woman ahead of us in line. I couldn't read her. I couldn't tell if she was content or tired. I couldn't tell if she was exasperated with the woman, or patient. She was tiny and very pregnant. She seemed to take a long time to check the woman out. 
 
