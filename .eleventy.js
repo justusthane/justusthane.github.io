@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
     "txt",
     "jpeg",
     "jpg",
+    "png",
     "GIF"
   ]);
   eleventyConfig.addPassthroughCopy("style");
