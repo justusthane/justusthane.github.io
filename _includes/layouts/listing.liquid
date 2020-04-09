@@ -8,6 +8,13 @@ layout: layouts/base.liquid
 {% endif %}
 <h1><a href="/{% if parent != 'home' %}{{ parent }}{% endif %}">{{ parent }}</a>/{{ title }}</h1>
 {{ content | safe }}
+
+<ul>
+{% for page in collections[cat] %}
+  <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="date">(published {{ page.date | customDate: 'YYYY-MM-DD' }}{% if page.data.updated %}, updated {{ page.data.updated}}{% endif %})</span></li>
+{% endfor %}
+</ul>
+
 {% if parent != 'home' %}
 <div id="back">
     <a href="/{{ parent }}">&lt; more {{ parent }}</a>

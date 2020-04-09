@@ -1,8 +1,5 @@
 ---
-layout: layouts/page.liquid
-menu: 'sewing/craft'
-tagline: '&nbsp;projects'
+layout: layouts/listing.liquid
 title: 'Sewing & other crafty things'
 tags: ''
 ---
-{% include includes/pagelisting.liquid with pages: collections.craft %}

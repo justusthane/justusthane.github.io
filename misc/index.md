@@ -1,8 +1,5 @@
 ---
-layout: 'layouts/page.liquid'
-menu: 'misc'
-tagline: '/fun&amp;notfun'
+layout: 'layouts/listing.liquid'
 title: 'Miscellaneous'
 tags: ''
 ---
-{% include includes/pagelisting.liquid with pages: collections.misc %}
