@@ -1,8 +1,7 @@
-{% case page.data.type %}
-{% when 'reply' %}
+{% if page.data.type == 'reply' %}
   <i class="fas fa-reply"></i> Reply to: <a class="u-in-reply-to"  href="{{ page.data.link }}">{{ page.data.title }}</a>
-{% when 'link' %}
+{% elif page.data.type == 'link' %}
   <i class="fas fa-link"></i> Link: <a href="{{ page.data.link }}">{{ page.data.title }}</a>
 {% else %}
   {{ page.data.title }}
-{% endcase %}
+{% endif %}

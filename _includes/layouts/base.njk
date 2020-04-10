@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="{{ url('theme://images/justus.png') }}" />
-    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    <link rel="icon" type="image/png" href="" />
+    <link rel="canonical" href="{{ page.url }}" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
 
@@ -25,7 +25,7 @@
     </div>
 
     <div id="content">
-        {{ content }}
+        {{ content | safe }}
     </div>
 
     <script src="/js/jquery-3.4.1.min.js"></script>

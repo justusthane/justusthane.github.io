@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/page.liquid'
+layout: 'layouts/page.njk'
 title: 'How does this site work?'
 menu: 'how'
 tagline: '&nbsp;does this site work?'

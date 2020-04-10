@@ -1,5 +1,5 @@
 ---
-layout: layouts/listing.liquid
+layout: layouts/listing.njk
 title: 'Sewing & other crafty things'
 tags: ''
 ---

@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+<h1><a href="/">home</a>/{{ title }}</h1>
+{{ content | safe }}
+
+{% set pages = collections.blog | reverse %}
+
+{% for page in pages %}
+  <section class="blogPost h-entry {{ page.data.type }}">
+    <div class="title"><h2 class="p-name">{% include "includes/blog_item_title.njk" %}</h2></div>
+    <div class="date"><a href="{{page.url}}" class="dt-published u-url u-uid">{{ page.date | utcDate('YYYY-MM-DD') }}</a></div>
+    <div class="content ">
+      {{ page.templateContent | safe }}
+    </div>
+  </section>
+{% endfor %}

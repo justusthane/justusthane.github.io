@@ -1,1 +1,1 @@
-module.exports = "layouts/page.liquid"
+module.exports = "layouts/page.njk"

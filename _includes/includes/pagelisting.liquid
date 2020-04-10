@@ -1,5 +1,0 @@
-<ul>
-{% for page in pages %}
-  <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="date">(published {{ page.date | customDate: 'YYYY-MM-DD' }}{% if page.data.updated %}, updated {{ page.data.updated}}{% endif %})</span></li>
-{% endfor %}
-</ul>

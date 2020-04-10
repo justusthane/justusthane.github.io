@@ -1,20 +1,18 @@
 ---
-layout: layouts/base.liquid
+layout: layouts/base.njk
 ---
-{% set myArray = page.url | slice('/') | reverse %}
+{% extends "layouts/pagewrap.njk" %}
+{% set myArray = page.url | split('/') | reverse %}
 {% set parent = myArray[2] %}
-{% if not parent  %}
+{% if not parent %}
     {% set parent = 'home' %}
 {% endif %}
-<h1><a href="/{% if parent != 'home' %}{{ parent }}{% endif %}">{{ parent }}</a>/{{ title }}</h1>
+
+{% block content %}
 {{ content | safe }}
 <ul>
 {% for page in collections[cat] %}
-  <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="date">(published {{ page.date }}{% if page.data.updated %}, updated {{ page.data.updated}}{% endif %})</span></li>
+  <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
 {% endfor %}
 </ul>
-{% if parent != 'home' %}
-<div id="back">
-    <a href="/{{ parent }}">&lt; more {{ parent }}</a>
-</div>
-{% endif %}
+{% endblock %}

@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/page.liquid'
+layout: 'layouts/page.njk'
 title: 'Why does this website exist?'
 menu: 'why'
 tagline: '&nbsp;does this site exist?'

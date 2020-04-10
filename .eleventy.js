@@ -18,6 +18,14 @@ module.exports = function(eleventyConfig) {
     return moment(value).utc().format(arg);
   });
 
+  eleventyConfig.addFilter("utcDate", function(value, arg) { 
+    return moment(value).utc().format(arg);
+  });
+
+  eleventyConfig.addNunjucksFilter("split", function(value, arg) { 
+    return value.split(arg);
+  });
+
   let markdownIt = require("markdown-it");
   let markdownItDeflist = require("markdown-it-deflist");
   let markdownItFootnote = require("markdown-it-footnote");

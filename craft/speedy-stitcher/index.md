@@ -1,5 +1,6 @@
 ---
 title: Speedy Stitcher saved my shoulder bag
+date: 2020-01-30
 ---
 My Filson shoulder bag was starting to blow out pretty bad at the corners where the shoulder straps connected. Unfortunately I only took photos of the less bad side:
 

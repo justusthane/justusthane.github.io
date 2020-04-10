@@ -1,7 +1,5 @@
 ---
-layout: layouts/blog.liquid
-menu: 'blog'
-tagline: '/site updates'
+layout: layouts/blog.njk
 title: 'Weblog & site updates' 
 tags: ''
 ---

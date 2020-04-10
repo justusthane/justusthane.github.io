@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.liquid
+layout: layouts/page.njk
 menu: 'links'
 tagline: '&nbsp;&amp;&nbsp;other things I like'
 title: 'links & other things I like'

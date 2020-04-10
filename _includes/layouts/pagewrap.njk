@@ -1,0 +1,13 @@
+{% set myArray = page.url.split('/') | reverse %}
+{% set parent = myArray[2] %}
+{% if not parent %}
+    {% set parent = 'home' %}
+{% endif %}
+<h1><a href="/{% if parent != 'home' %}{{ parent }}{% endif %}">{{ parent }}</a>/{{ title }}</h1>
+{% block content %}
+{% endblock %}
+{% if parent != 'home' %}
+<div id="back">
+    <a href="/{{ parent }}">&lt; more {{ parent }}</a>
+</div>
+{% endif %}

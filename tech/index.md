@@ -1,5 +1,5 @@
 ---
-layout: layouts/listing.liquid
+layout: layouts/listing.njk
 title: Techsmithing
 tags: ''
 ---
