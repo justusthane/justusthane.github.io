@@ -229,7 +229,8 @@ dd {
 
     a:hover {
         text-decoration:    none;
-        color:              #efaa28;
+        /*color:              #efaa28;*/
+        color: #ff1493;
     }
 
 @media (prefers-color-scheme: dark) {
