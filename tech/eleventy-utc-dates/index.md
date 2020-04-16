@@ -1,10 +1,9 @@
 ---
-title: Making Liquid in Eleventy play nice with dates
-date: '2020-04-07'
+title: "Eleventy static-site generator: Making Liquid play nice with dates"
+date: '2020-04-16'
 templateEngineOverride: md
-eleventyExcludeFromCollections: true
 ---
-I was working on rebuilding this site in the excellent [Eleventy](https://11ty.dev) static-site generator when I noticed that dates specified in a page's frontmatter were a day off when displayed in the template. 
+I was working on rebuilding this site in the excellent [Eleventy](https://11ty.dev) static-site generator when I noticed that when I specified a date in a template's frontmatter, the date was a day off when displayed on the page.
 
 Frontmatter:
 ``` yaml
