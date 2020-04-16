@@ -70,11 +70,11 @@ body.home nav {
 #content { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   #content { font-family: 'Inter var', sans-serif; }
-/
+}
 
 
 #content img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .highlight-line-active {
