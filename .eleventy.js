@@ -41,7 +41,8 @@ module.exports = function(eleventyConfig) {
   let options = {
     html: true,
     breaks: true,
-    linkify: true
+    linkify: true,
+    typographer: true
 };
   let markdownLib = markdownIt(options).use(markdownItDeflist).use(markdownItFootnote).use(markdownItAnchor).use(markdownItTocDoneRight).use(markdownItAttrs).use(markdownItTaskLists).use(markdownItEmoji);
   eleventyConfig.setLibrary("md", markdownLib);
