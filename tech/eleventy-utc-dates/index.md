@@ -3,6 +3,14 @@ title: "Eleventy static-site generator: Making Liquid play nice with dates"
 date: '2020-04-16'
 templateEngineOverride: md
 ---
+<nav class="toc">
+<h3>Table of Contents</h3>
+
+[[toc]]
+
+</nav>
+
+## The Problem
 I was working on rebuilding this site in the excellent [Eleventy](https://11ty.dev) static-site generator when I noticed that when I specified a date in a template's frontmatter, the date was a day off when displayed on the page.
 
 Frontmatter:
