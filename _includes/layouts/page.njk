@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+templateEngineOverride: njk,md
 ---
 {% extends "layouts/pagewrap.njk" %}
 
@@ -7,3 +8,4 @@ layout: layouts/base.njk
 <p class="publish-date">Published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD')}}{% endif %}</p>
 {{ content | safe }}
 {% endblock %}
+
