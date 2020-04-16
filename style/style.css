@@ -8,6 +8,8 @@ body {
 
 h1,h2,h3,h4,h5 {
     font-weight: normal;
+    line-height: 1.2em;
+    margin-bottom: 0;
 }
 
 body.home nav h1,h2,h3,h4,h5 {
@@ -97,8 +99,9 @@ body.home nav {
   font-size: 1.7rem;
 }
 
-.date {
+.publish-date {
     font-size: 0.8rem;
+    text-shadow: 1px 1px 2px #ff1493;
 }
 
 .blogPost .date {
@@ -241,6 +244,9 @@ dd {
 
     #toc {
         background-color: #1e1b2b;
+    }
+    #back a {
+      text-shadow: 1px 1px 2px gray;
     }
 }
 

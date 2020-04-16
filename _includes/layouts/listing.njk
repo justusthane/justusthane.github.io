@@ -12,7 +12,7 @@ layout: layouts/base.njk
 {{ content | safe }}
 <ul>
 {% for page in collections[cat] %}
-  <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
+  <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
 {% endfor %}
 </ul>
 {% endblock %}
