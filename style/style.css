@@ -77,6 +77,10 @@ body.home nav {
     width: 100%;
 }
 
+.highlight-line-active {
+    background-color: #fcf267;
+}
+
 
 #toc {
     background-color: #fff;
