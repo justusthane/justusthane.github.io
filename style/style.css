@@ -12,7 +12,11 @@ h1,h2,h3,h4,h5 {
     margin-bottom: 0;
 }
 
-body.home nav h1,h2,h3,h4,h5 {
+body.home nav h1,
+body.home nav h2,
+body.home nav h3,
+body.home nav h4,
+body.home nav h5 {
     margin: 0;
 }
 
