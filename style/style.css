@@ -68,7 +68,7 @@ body.home nav {
 #content { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   #content { font-family: 'Inter var', sans-serif; }
-}
+/
 
 
 #content img {
@@ -135,6 +135,10 @@ body.home nav {
 
 #back {
     font-size: 2.5rem;
+}
+
+#back a {
+  text-shadow: 1px 1px 2px black;
 }
 
 dd {
@@ -209,7 +213,7 @@ dd {
     }
 }
     body {
-        color: #404040;
+        color: #131415;
     }
     a,a:visited {
         text-decoration:    underline;
@@ -253,4 +257,7 @@ body.color-dark {
     body.color-auto a:hover {
         color: #f9c536;
     }
+  #back a {
+    text-shadow: 1px 1px 2px white;
+  }
 }
