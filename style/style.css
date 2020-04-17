@@ -1,4 +1,4 @@
-import url('https://rsms.me/inter/inter.css');
+@import url('https://rsms.me/inter/inter.css');
 
 
 body {
@@ -223,19 +223,20 @@ dd {
         grid-row-start: 2;
     }
 }
-    body {
-        color: #131415;
-    }
-    a,a:visited {
-        text-decoration:    underline;
-        color:              #024def;
-    }
 
-    a:hover {
-        text-decoration:    none;
-        /*color:              #efaa28;*/
-        color: #ff1493;
-    }
+body {
+    color: #131415;
+}
+a,a:visited {
+    text-decoration:    underline;
+    color:              #024def;
+}
+
+a:hover {
+    text-decoration:    none;
+    /*color:              #efaa28;*/
+    color: #ff1493;
+}
 
 @media (prefers-color-scheme: dark) {
     body.color-auto {
@@ -248,7 +249,7 @@ dd {
     }
 
     body.color-auto a:hover {
-        color: #f9c536;
+        color: #ff1493;
     }
 
     #toc {
@@ -257,22 +258,4 @@ dd {
     #back a {
       text-shadow: 1px 1px 2px gray;
     }
-}
-
-body.color-dark {
-    body.color-auto {
-        background-color: #100e17;
-        color: #fff;
-    }
-
-    body.color-auto a, body.color-auto a:visited {
-        color: #02c4ef;
-    }
-
-    body.color-auto a:hover {
-        color: #f9c536;
-    }
-  #back a {
-    text-shadow: 1px 1px 2px white;
-  }
 }
