@@ -46,5 +46,13 @@ module.exports = function(eleventyConfig) {
 };
   let markdownLib = markdownIt(options).use(markdownItDeflist).use(markdownItFootnote).use(markdownItAnchor).use(markdownItTocDoneRight).use(markdownItAttrs).use(markdownItTaskLists).use(markdownItEmoji);
   eleventyConfig.setLibrary("md", markdownLib);
+
+markdownLib.renderer.rules.footnote_block_open = () => (
+  '<h3>Footnotes</h3>\n' +
+  '<section class="footnotes">\n' +
+  '<ol class="footnotes-list">\n'
+);
+
 };
+
 
