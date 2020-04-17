@@ -34,6 +34,7 @@ body.home nav h5 {
 }
 
 #header .tagline {
+    font-family: 'Inter var', sans-serif;
     margin: 0 auto;
     font-size: 1.5rem;
     display: flex;
