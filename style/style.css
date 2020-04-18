@@ -72,9 +72,15 @@ body.home nav {
     text-align: justify;
 }
 
-#content { font-family: 'Inter', sans-serif; }
+#content { 
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: "ss02", "cv02", "frac";
+}
+
 @supports (font-variation-settings: normal) {
-  #content { font-family: 'Inter var', sans-serif; }
+  #content { 
+    font-family: 'Inter var', sans-serif; 
+  }
 }
 
 
