@@ -5,7 +5,7 @@ templateEngineOverride: njk,md
 {% extends "layouts/pagewrap.njk" %}
 
 {% block content %}
-<p class="publish-date">Published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD')}}{% endif %}</p>
+<p class="publish-date">Published {{ page.date | utcDate('YYYY-MM-DD') }}{% if updated %}, updated {{ updated | utcDate('YYYY-MM-DD')}}{% endif %}</p>
 {{ content | safe }}
 {% endblock %}
 
