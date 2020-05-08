@@ -2,11 +2,13 @@
 title: Sewing the Merchant & Mills' Right-to-Roam rucksack kit
 published: 2020-05-08
 ---
-[[toc]]
 ![](IMG_4334.jpeg)
 
-I just finished making the rucksack from Merchant & Mills' Right-to-Roam kit. The kit can be hard to find, but you can purchase the [pattern here](https://merchantandmills.com/store/patterns/right-roam-rucksack/). [North House Folk School](https://northhouse.org/) also carries Merchant & Mills products in their school store---you may be able to order the kit by contacting them. The kit can be made as either a shoulder bag or rucksack. I made the rucksack.
+I just finished making the rucksack from Merchant & Mills' Right-to-Roam kit. The kit is hard to find online, but you can purchase the [pattern here](https://merchantandmills.com/store/patterns/right-roam-rucksack/). [North House Folk School](https://northhouse.org/) also carries Merchant & Mills products in their school store---you may be able to order the kit by contacting them. The kit can be made as either a shoulder bag or rucksack. I made the rucksack.
 
+[[toc]]
+
+## The kit
 ![](IMG_3521.jpeg)
 
 The pattern is labeled intermediate, and I think that's probably accurate. The instructions are clear and easy to follow, for the most part. There are only a few bits that might be frustrating for a beginner to figure out.
