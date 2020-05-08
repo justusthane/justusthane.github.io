@@ -41,7 +41,9 @@ The instructions only say to do one line of stitching when attaching the straps.
 
 ### Inserting the lining, and magnetic fasteners
 ![](IMG_4253.jpeg)
-Inserting the lining into the bag. I'm doing this wrong, as we'll discover in a second. Also not the magnetic fastening---the instructions aren't super clear on the best way to attach this, and after a little experimentation I think it works best to bend the metal tabs to the outside (rather than inside). Also note that the facing washer is slightly cupped, and the concave side should be down.
+Inserting the lining into the bag. I'm doing this wrong, as we'll discover in a second. 
+
+Note the magnetic fastening---the instructions aren't super clear on the best way to attach this, and after a little experimentation I think it works best to bend the metal tabs to the outside (rather than inside). Also note that the facing washer is slightly cupped, and the concave side should be down.
 
 ### Oops!
 ![](oops.jpg)
