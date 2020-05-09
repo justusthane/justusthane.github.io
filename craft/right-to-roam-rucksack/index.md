@@ -34,7 +34,7 @@ Note the [Wonder Clips](https://www.joann.com/wonder-clips-50-pkg/11490935.html)
 
 ### Sewing the pocket corners
 ![](pocket-corner-comparison.jpg)
-I was sewing with an entry-level Singer machine, and while it did pretty well overall, it didn't like dealing with more than three or four layers of the oilskin. Because these reinforced pocket corners are hemmed and then folded over, there are...seven layers if I'm doing my math right. The machine made it through on the first pocket, but the machine really wasn't happy, and the stitches weren't great, so I handstitched the corners on the second pocket. I used backstiches, which look like a machine stitch on the right-side. I free-handed the first corner, which was difficult and turned out sloppy, as you can see above. The next corner, I used a thicker sewing needle as an awl to prepunch each hole from the right side. Much easier and neater.
+I was sewing with an entry-level Singer machine, and while it did pretty well overall, it didn't like dealing with more than three or four layers of the oilskin. Because these reinforced pocket corners are hemmed and then folded over, there are...seven layers if I'm doing my math right. The machine made it through on the first pocket, but the machine really wasn't happy, and the stitches weren't great, so I handstitched the corners on the second pocket. I used backstiches, which look like a machine stitch on the right side (although they're ugly on the back). I free-handed the first corner, which was difficult and turned out sloppy, as you can see above. The next corner, I used a thicker sewing needle as an awl to prepunch each hole from the right side. Much easier and neater.
 
 ### Adding an extra little key loop
 ![](IMG_4214.jpeg)
