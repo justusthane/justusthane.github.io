@@ -1,10 +1,10 @@
 ---
-title: Sewing the Merchant & Mills' Right-to-Roam rucksack kit
+title: Sewing the Merchant & Mills Right-to-Roam rucksack kit
 published: 2020-05-08
 ---
 ![](IMG_4334.jpeg)
 
-I just finished making Merchant & Mill's [Right-to-Roam rucksack](https://merchantandmills.com/store/patterns/right-roam-rucksack/) (the pattern can also be made as a shoulder bag).
+I just finished making the Merchant & Mills [Right-to-Roam rucksack](https://merchantandmills.com/store/patterns/right-roam-rucksack/) (the pattern can also be made as a shoulder bag).
 
 I purchased it as a kit, which can be hard to find online. The [North House Folk School](https://northhouse.org) carries Merchant & Mills products---you may be able to get it by contacting them. Otherwise, the pattern can be purchased at the link above.
 
@@ -28,6 +28,8 @@ The process detailed below is by no means comprehensive. I'm only noting parts o
 ### Adding the front pockets
 ![](IMG_4210.jpeg)
 This is one of the trickier parts because the pockets are three-dimensional with these pleats in the corners. I didn't immediately understand the instructions for sewing around the corners reading ahead, but it made sense when I was actually doing it. Just take it slow and it's pretty easy.
+
+Note the [Wonder Clips](https://www.joann.com/wonder-clips-50-pkg/11490935.html). This oilskin (and waxed canvas in general) tends to show pin holes, so I tried to avoid pinning where possible, or placed my pins strategically otherwise.
 
 ### Sewing the pocket corners
 ![](pocket-corner-comparison.jpg)
