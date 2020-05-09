@@ -19,7 +19,8 @@ The kit just supplies the materials needed. You still have to do all the work yo
 
 - Thread. I used a heavy duty nylon upholstry thread for strength and a jeans needle
 - Leather shears for cuttting the straps to length
-- Rivet setting tool and 2.5mm hole punch, [like this](https://www.dritz.com/product/double-cap-rivet-tools/)
+- Rivet setting tool
+- 2 and 3mm hole punches
 
 ## The process
 
