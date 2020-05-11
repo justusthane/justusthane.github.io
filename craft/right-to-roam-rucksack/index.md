@@ -4,10 +4,9 @@ published: 2020-05-08
 ---
 ![](IMG_4334.jpeg)
 
-I just finished making the Merchant & Mills [Right-to-Roam rucksack](https://merchantandmills.com/store/patterns/right-roam-rucksack/) (the pattern can also be made as a shoulder bag).
+I just finished making the Merchant & Mills Right-to-Roam rucksack, [which is available as either a pattern](https://merchantandmills.com/store/patterns/right-roam-rucksack/) or a [kit](https://merchantandmills.com/store/gifts-2/kits/rtr-rucksack-kit/). I purchased the kit.
 
-I purchased it as a kit, which can be hard to find online. The [North House Folk School](https://northhouse.org) carries Merchant & Mills products---you may be able to get it by contacting them. Otherwise, the pattern can be purchased at the link above.
-
+Merchant and Mills stuff can be difficult to find online in the US. [North House Folk School](https://northhouse.org)'s School Store carries Merchant & Mills products---you may be able to get it by contacting them. 
 [[toc]]
 
 ## The kit
@@ -15,7 +14,7 @@ I purchased it as a kit, which can be hard to find online. The [North House Folk
 
 The pattern is labeled intermediate, and I think that's probably accurate. The instructions are clear and easy to follow, for the most part. There are only a few bits that might be frustrating for a beginner to figure out.
 
-The kit just supplies the materials needed. You still have to do all the work yourself (measuring and cutting the fabric, cutting the straps, punching holes, making buckles, etc). The kit comes with *almost* everything you need---it even comes with a grommet setting tool. Curiously, it does not include a hole punch or a rivet setting tool. Here's what you'll need that's not included:
+The kit supplies the materials needed; you still have to do all the prep work yourself (measuring and cutting the fabric, cutting the leather straps, assembling the buckles, etc). There are a few things that the kit doesn't include:
 
 - Thread. I used a heavy duty nylon upholstry thread for strength and a jeans needle
 - Leather shears for cuttting the straps to length
@@ -34,7 +33,7 @@ Note the [Wonder Clips](https://www.joann.com/wonder-clips-50-pkg/11490935.html)
 
 ### Sewing the pocket corners
 ![](pocket-corner-comparison.jpg)
-I was sewing with an entry-level Singer machine, and while it did pretty well overall, it didn't like dealing with more than three or four layers of the oilskin. Because these reinforced pocket corners are hemmed and then folded over, there are...seven layers if I'm doing my math right. The machine made it through on the first pocket, but the machine really wasn't happy, and the stitches weren't great, so I handstitched the corners on the second pocket. I used backstiches, which look like a machine stitch on the right side (although they're ugly on the back). I free-handed the first corner, which was difficult and turned out sloppy, as you can see above. The next corner, I used a thicker sewing needle as an awl to prepunch each hole from the right side. Much easier and neater.
+I was sewing with an entry-level Singer machine, and while it did pretty well overall, it didn't like dealing with more than three or four layers of the oilskin. Because these reinforced pocket corners are hemmed and then folded over, there are...seven layers if I'm doing my math right. The machine made it through on the first pocket, but the machine really wasn't happy, and the stitches weren't great, so I handstitched the corners on the second pocket. I used backstiches, which look like a machine stitch on the right-side I free-handed the first corner, which was difficult and turned out sloppy, as you can see above. The next corner, I used a thicker sewing needle as an awl to prepunch each hole from the right side. Much easier and neater.
 
 ### Adding an extra little key loop
 ![](IMG_4214.jpeg)
