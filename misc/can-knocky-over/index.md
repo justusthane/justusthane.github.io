@@ -30,4 +30,4 @@ Marika, Biago, and I were relaxing with lawnchairs in the driveway with a couple
 - Small, smooth pebbles that are unlikely to cause grave bodily harm are recommended. All players play at their own risk.
 
 ## Alternate Rules
-- To reward skill, a player whose can is knocked over gets one shot to attempt to knock over the can of the person who knocked over their can. If they succeed, both cans are placed back upright and play proceeds to the left with no further violence or penalty. If they are not successful, or if they accidentally knock over a different can, the player must reset all knocked over cans while being bombarded by the other players, as above.
+- To reward skill, a player whose can is knocked over gets one shot to attempt to knock over the can of the person who knocked over their can. If they succeed, both cans are placed back upright and play proceeds to the left with no further violence or penalty. If they are not successful, or if they knock over the wrong can, the player must reset all knocked over cans while being bombarded by the other players, as above.
