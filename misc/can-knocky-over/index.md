@@ -11,9 +11,9 @@ Marika, Biago, and I were relaxing with lawnchairs in the driveway with a couple
 
 ## Setup
 1. Each player must already have drunk one beer to be eligible to play, and must be in possession of their empty beer can.
-1. Each player places his or her empty beer can into the middle, and sits in their lawn chair an equal distance back from their can, so that the cans form tight inner circle, with the chairs forming a larger outer circle. As pictured:
+1. The empty cans (one belonging to each player) are arranged in a small circle in the middle, and each player sits in their lawn chair an equal distance back from their can, so that the cans form a tight inner circle, with the chairs forming a larger outer circle. As pictured:
 ![The Field](the_field.jpg)
-1. Each player gathers *up to* 5 small pebbles in their dominant hand and holds a full beer in their other hand. The beer must remain in the hand for the duration of the game.
+1. Each player gathers *up to* five small pebbles in their dominant hand and holds a full beer in their other hand. The beer must remain in the hand for the duration of the game.
 
 ## The Gameplay
 1. The first player throws a pebble at another player's empty can. 
