@@ -28,3 +28,6 @@ Marika, Biago, and I were relaxing with lawnchairs in the driveway with a couple
 - Players may elect to hold fewer than five pebbles in their throwing hand at any given time to make it easier to throw, and thus more accurate. However, this means that they will have fewer pebbles available to throw at a player whose can is knocked over.
 - If a player knocks two cans over simutaneously, that player receives an extra shot (after the persons whose cans were knocked over set them back up or forfeit).
 - Small, smooth pebbles that are unlikely to cause grave bodily harm are recommended. All players play at their own risk.
+
+## Alternate Rules
+- To reward skill, a player whose can is knocked over gets one shot to attempt to knock over the can of the person who knocked over their can. If they succeed, both cans are placed back upright and play proceeds to the left with no further violence or penalty. If they are not successful, or if they accidentally knock over a different can, the player must reset all knocked over cans while being bombarded by the other players, as above.
