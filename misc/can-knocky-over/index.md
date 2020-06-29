@@ -13,14 +13,14 @@ Marika, Biago, and I were relaxing with lawnchairs in the driveway with a couple
 1. Each player must already have drunk one beer to be eligible to play, and must be in possession of their empty beer can.
 1. Each player places his or her empty beer can into the middle, and sits in their lawn chair an equal distance back from their can, so that the cans form tight inner circle, with the chairs forming a larger outer circle. As pictured:
 ![The Field](the_field.jpg)
-1. Each player gathers *up to* 5 small pebbles in their dominant hand, and holds a full beer in their other hand. The beer must remain in the hand for the duration of the game.
+1. Each player gathers *up to* 5 small pebbles in their dominant hand and holds a full beer in their other hand. The beer must remain in the hand for the duration of the game.
 
 ## The Gameplay
 1. The first player throws a pebble at another player's empty can. 
-  - If the player misses, he or she takes a drink. 
+  - If the player misses, they take a drink. 
   - If the can is knocked over, the person whose can is knocked over may elect to either chug the rest of their beer and forfeit the game, or to dash into the middle to set their can back upright.
     - If they  elect to set their can back up, *all* other players may throw pebbles at that person for as long as they are not seated in their chair. However, they may *only* throw pebbles that they are already holding in their hand (see Rule 3 under setup).
-    - If any other cans are knocked over in the process of setting the can back up, either accidentally by the person resetting their own can or by the other players throwing pebbles, the person in the middle must reset those cans as well before returning to their chair.
+    - If any other cans are knocked over in the process of setting the can back up&mdash;either accidentally by the person resetting their own can or by the other players throwing pebbles&mdash;the person in the middle must reset those cans as well before returning to their chair.
 2. Everybody replenishes the pebbles in their throwing hand up the maximum of five.
 1. Play proceeds clockwise. When a player's beer is empty, they are out of the game.
 
