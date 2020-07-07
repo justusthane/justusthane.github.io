@@ -1,6 +1,7 @@
 ---
 title: 'Can-Knocky-Over: A Driveway Drinking Game'
 date: 2020-06-28
+updated: 2020-07-07
 ---
 ### Also Known As: Hit The Can; Everyone Must Get Stoned
 
