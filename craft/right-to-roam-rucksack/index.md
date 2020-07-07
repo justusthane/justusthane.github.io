@@ -1,6 +1,6 @@
 ---
 title: Sewing the Merchant & Mills Right-to-Roam rucksack kit
-published: 2020-05-08
+date: 2020-05-08
 ---
 ![](IMG_4334.jpeg)
 
