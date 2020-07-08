@@ -32,4 +32,4 @@ Marika, Biago, and I were relaxing with lawnchairs in the driveway with a couple
 
 ## Alternate Rules
 - To reward skill, a player whose can is knocked over gets one shot to attempt to knock over the can of the person who knocked over their can. If they succeed, both cans are placed back upright and play proceeds to the left with no further violence or penalty. If they are not successful, or if they knock over the wrong can, the player must reset all knocked over cans while being bombarded by the other players, as above.
-- A player who opts to chug their remaining beer rather than setting their can back up and getting pelted, may, instead of leaving the game, add their newly empty can to the middle and get a new full beer.
+- When a player's beer is empty, instead of leaving the game they may add their newly empty can to the middle and get a new full beer. In this case, the game eventually ends through attrition as players decide they have had too much to drink and opt to leave the game rather than opening a new beer.
