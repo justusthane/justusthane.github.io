@@ -2,7 +2,8 @@
 title: "SDR: Digital Adventures in Shortwave Radio"
 date: 2020-08-30
 ---
-#Intro
+[[toc]]
+# Intro
 
 Three days ago I happened across a website posted in an unrelated forum: [http://websdr.ewi.utwente.nl:8901/](http://websdr.ewi.utwente.nl:8901/)
 
@@ -65,7 +66,7 @@ UVB-76, also known as "The Buzzer", is a mysterious signal that has been broadca
 [Here is a short recording](The-Buzzer_2020-08-30T17-09-30Z_4625.0kHz.mp3) I just made.
 
 
-## Music
+## AM Music Stations
 
 There are thousands of AM stations that broadcast on various frequencies at different times. I've listened to Jay-Z broadcast from Germany. I've listened to The Doors broadcast from The Netherlands. I've heard traditional Chinese and Mongolian folk music. One of my favorite stations is [1008 kHz AM](http://websdr.ewi.utwente.nl:8901/?tune=1008AMSync) &mdash; United AM, a hobby station in Holland. They don't even have a website, just a [Facebook page](https://www.facebook.com/United-am-1008khz-298m-2046008235620711/). They're playing Crash Test Dummies as I listen now. I'm not sure what their schedule is, but they've been broadcasting every time I've tuned in.
 
