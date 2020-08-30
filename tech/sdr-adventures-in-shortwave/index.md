@@ -118,7 +118,7 @@ I also like Absolute Radio at [1215 kHz](http://websdr.ewi.utwente.nl:8901/?tune
 
 ## Amateur Operators (HAM radio)
 
-[Recorded at 21:13 GMT on 2020-08-30](USA-to-Slovenia_2020-08-30T21-15-31Z_14240.0kHz.mp3) at 14240 kHz, here we can hear someone with callsign [S51DX](https://www.qrzcq.com/call/S51DX) (Slovenia) hailing someone in North America with the callsign [KD8XK](https://www.qrzcq.com/call/KD8XK) (West Virginia). On our end we can only just barely hear the response from North America, but it's there. Trans-Atlantic communication!
+[Recorded at 21:13 GMT on 2020-08-30](USA-to-Slovenia_2020-08-30T21-15-31Z_14240.0kHz.mp3) at 14240 kHz, we can hear someone with callsign [S51DX](https://www.qrzcq.com/call/S51DX) (Slovenia) hailing someone in North America with the callsign [KD8XK](https://www.qrzcq.com/call/KD8XK) (West Virginia). On our end we can only just barely hear the response from North America, but it's there. Trans-Atlantic communication!
 
 You can find countless amateur radio transmissions in the Amateur bands, helpfully indicated in Green in the Web SDR.
 
