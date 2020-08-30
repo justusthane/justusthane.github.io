@@ -35,7 +35,7 @@ In the example above, there's a strong AM signal on the right at 13650 kHz, a we
 
 ## Modes
 
-The mode specifies how the signal is encoded in the radio waves. You're likely familiar with AM (Amplitude Modulation) and FM (Frequency Modulation). AM encodes sound waves by modifying the strength (or amplitude) of the radio wave, while FM encodes sound waves by modifying the frequency (speed) of the wave. But there are othes as well:
+The mode specifies how the signal is encoded in the radio waves. You're likely familiar with AM (Amplitude Modulation) and FM (Frequency Modulation). AM encodes sound waves by modifying the strength (or amplitude) of the radio wave, while FM encodes sound waves by modifying the frequency (length) of the wave. But there are othes as well:
 
 CW (Continous Wave)
 
