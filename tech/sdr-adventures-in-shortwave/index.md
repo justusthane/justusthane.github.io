@@ -5,7 +5,9 @@ date: 2020-08-30
 [[toc]]
 # Intro
 
-Three days ago I happened across a website posted in an unrelated forum: [http://websdr.ewi.utwente.nl:8901/](http://websdr.ewi.utwente.nl:8901/)
+Three days ago I happened across a website posted in an unrelated forum: 
+
+## [http://websdr.ewi.utwente.nl:8901/](http://websdr.ewi.utwente.nl:8901/)
 
 Behind this inauspicious URL hides an entire realm of secrets. It is a gateway to a world that I've only had the vaguest idea of. Let me explain.
 
