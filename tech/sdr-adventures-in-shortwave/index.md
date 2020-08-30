@@ -85,7 +85,7 @@ The yellow bar represents the "filter"&mdash; the frequency range that the radio
 
 At the same time as they broadcast these wide signals across the spectrum, the Chinese government also actively jams foreign radio signals that they deem undesirable. For example, the United States runs a news agency called [Voice of America](https://en.wikipedia.org/wiki/Voice_of_America) which broadcasts AM stations in 47 languages across the world. VoA was established in 1942, and could certainly be considered propaganda as well as China Radio International. Propaganda just depends on which side you're on, right?
 
-China actively jams the frequencies that Voice of American can be received on inside of China. They do this by using a signal known as [Firedrake](https://www.sigidwiki.com/wiki/Chinese_Firedrake_Jammer)&mdash;an hour long loop of traditional Chinese folk songs broadcast on repeat at a power high enough to override the competing station. An recording of the signal can be heard at that link.
+China actively jams the frequencies that Voice of American can be received on inside of China. They do this by using a signal known as [Firedrake](https://www.sigidwiki.com/wiki/Chinese_Firedrake_Jammer)&mdash;an hour long loop of traditional Chinese folk songs broadcast on repeat at a power high enough to override the competing station. A recording of the signal can be heard at that link.
 
 ## Numbers Stations
 
