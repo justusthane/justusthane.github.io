@@ -71,7 +71,7 @@ BBC Radio 4 transmits way down at [198 kHz](http://websdr.ewi.utwente.nl:8901/?t
 
 ## Propaganda and signal jamming
 
-China runs a strong shortwave game. They a broadcast a station called China Radio International in English and many other languages on hundreds of frequences. I'm surprised by how "Western" the broadcasting sounds. You can see a list of all their stations, times, and languages [here](https://short-wave.info/index.php?station=CHINA%20RADIO%20INTERNATIONAL). They tend to broadcast a much "wider" signal than typical AM stations (e.g. taking up more of the spectrum) which can wipe out other nearby stations.
+China runs a strong shortwave game. They broadcast a station called China Radio International in English and many other languages on hundreds of frequences. I'm surprised by how "Western" the broadcasting sounds. You can see a list of all their stations, times, and languages [here](https://short-wave.info/index.php?station=CHINA%20RADIO%20INTERNATIONAL). They tend to broadcast a much "wider" signal than typical AM stations (e.g. taking up more of the spectrum) which can wipe out other nearby stations.
 
 As an example, here's a typical AM station (United AM at [1008 kHz](http://websdr.ewi.utwente.nl:8901/?tune=1008AMSync), a hobby station out of the Netherlands&mdash;good music, btw!):
 
