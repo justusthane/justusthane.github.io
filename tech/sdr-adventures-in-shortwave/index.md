@@ -2,6 +2,8 @@
 title: "SDR: Digital Adventures in Shortwave Radio"
 date: 2020-08-30
 ---
+#Intro
+
 Three days ago I happened across a website posted in an unrelated forum: [http://websdr.ewi.utwente.nl:8901/](http://websdr.ewi.utwente.nl:8901/)
 
 Behind this inauspicious URL hides an entire realm of secrets. It is a gateway to a world that I've only had the vaguest idea of. Let me explain.
@@ -15,6 +17,8 @@ This brings us pack to the website above: The Amateur Radio Club at the Universi
 Note: from here on we're going to be using kHz (kilohertz) instead of of MHz (megahertz) since we'll be discussing frequencies much lower than those received by your home radio. 1 MHz = 1000 kHz.
 
 Their radio can pick up the the Low Frequency range from 30 - 300 kHz (that's 0.03 &ndash; 0.3 MHz) that militaries use to communicate with submarines under the ocean. It can pick up the various amateur HAM radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at one times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded broadcasts from foreign intelligence agencies.
+
+# Discoveries
 
 A few of the things I've heard over the past three days:
 
