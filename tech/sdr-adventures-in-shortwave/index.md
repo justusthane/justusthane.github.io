@@ -17,7 +17,7 @@ This brings us pack to the website above: The Amateur Radio Club at the Universi
 
 Note: from here on we're going to be using kHz (kilohertz) instead of of MHz (megahertz) since we'll be discussing frequencies much lower than those received by your home radio. 1 MHz = 1000 kHz.
 
-Their radio can pick up the the Low Frequency range from 30 - 300 kHz (that's 0.03 &ndash; 0.3 MHz) that militaries use to communicate with submarines under the ocean. It can pick up the various amateur HAM radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at one times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded broadcasts from foreign intelligence agencies.
+Their radio can pick up the the Low Frequency range from 30 - 300 kHz that militaries use to communicate with submarines under the ocean. It can pick up the various amateur HAM radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at one times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded broadcasts from foreign intelligence agencies.
 
 # Tech Notes
 
@@ -25,7 +25,7 @@ A short overview of some of the technical aspects can be helpful to know when ex
 
 ## The Waterfall
 
-The waterfall display provides a way find and identify signals by visualizing the spectrum. Frequency is on the X axis. Time is on the Y axis, with 0 = now. New signals appear at the bottom and move up. A lighter color is a stronger signal.
+The waterfall display is a visual representation of the radio spectrum. It can be used for finding and identifying signals. Frequency is on the X axis. Time is on the Y axis, with 0 = now. New signals appear at the bottom and move up. A lighter color is a stronger signal.
 
 ![](waterfall.png)
 
