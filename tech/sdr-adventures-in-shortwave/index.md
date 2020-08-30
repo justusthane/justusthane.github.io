@@ -34,7 +34,7 @@ And here's China Radio International:
 
 ![](ChinaRadio.png)
 
-The yellow bar represents the "filter", or the frequency bandwidth that the radio is actually "listening" to. In this example, the portions of the signal that are wider than the yellow bar aren't serving any real purpose.
+The yellow bar represents the "filter", or the frequency range ("bandwidth") that the radio is actually "listening" to. In this example, the portions of the signal that are wider than the yellow bar aren't serving any real purpose. Some radios pick up a wider bandwidth, but still, this wider bandwidth likely doesn't serve much purpose other than drowning out neighboring stations.
 
 At the same time as they broadcast these wide signals across the spectrum, the Chinese government also actively jams foreign radio signals. For example, the United States runs a news agency called [Voice of America](https://en.wikipedia.org/wiki/Voice_of_America) which broadcasts AM stations in 47 languages across the world. VoA was established in 1942, and could certainly be considered propaganda as well as China International. I'd never heard of it before&mdash;I bet most US citizens haven't.
 
