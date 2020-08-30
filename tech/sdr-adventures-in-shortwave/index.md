@@ -61,7 +61,7 @@ Carrier signal at 14135 kHz with the information occupying 3 kHz above that.
 
 AMSync (A.K.A. Syncronous AM)
 
-:    In this mode, the receiver "locks on" to the carrier frequency, and replaces the received carrier signal with an artificially generated one. Since it's no longer relying on the received carrier, it can reproduce the received audio with better fidelity. Or something like that. I don't really understand it, but it almost always results in a clearer AM signal. [More information here](https://www.electronics-notes.com/articles/radio/modulation/am-synchronous-demodulation-detection-detector.php).
+:    In this mode, the receiver "locks on" to the carrier frequency and replaces the received carrier signal with an artificially generated one. Since it's no longer relying on the received carrier, it can reproduce the received audio with better fidelity. Or something like that. I don't really understand it, but it almost always results in a clearer AM signal. [More information here](https://www.electronics-notes.com/articles/radio/modulation/am-synchronous-demodulation-detection-detector.php).
 
 # Discoveries
 
