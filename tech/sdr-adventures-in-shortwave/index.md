@@ -81,7 +81,7 @@ And here's China Radio International:
 
 ![](ChinaRadio.png)
 
-The yellow bar represents the "filter"&mdash; the frequency range that the radio is actually listening to. In this example, the portions of the signal that are wider than the yellow bar aren't serving any real purpose. Some radios have a wider maximum filter and the greater bandwidth can result in better audio fidelity, and apparently it can also be useful in avoiding interference.
+The yellow bar represents the "filter"&mdash; the frequency range that the radio is listening to. In this example, the portions of the signal that are wider than the yellow bar aren't serving any real purpose. Some radios have a wider maximum filter and the greater bandwidth can result in better audio fidelity, and apparently it can also be useful in avoiding interference.
 
 At the same time as they broadcast these wide signals across the spectrum, the Chinese government also actively jams foreign radio signals that they deem undesirable. For example, the United States runs a news agency called [Voice of America](https://en.wikipedia.org/wiki/Voice_of_America) which broadcasts AM stations in 47 languages across the world. VoA was established in 1942, and could certainly be considered propaganda as well as China Radio International. Propaganda just depends on which side you're on, right?
 
