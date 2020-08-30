@@ -14,13 +14,13 @@ This brings us pack to the website above: The Amateur Radio Club at the Universi
 
 Note: from here on we're going to be using kHz (kilohertz) instead of of MHz (megahertz) since we'll be discussing frequencies much lower than those received by your home radio. 1 MHz = 1000 kHz.
 
-Their radio can pick up the the Low Frequency range from 30 - 300 kHz (that's 0.03 &ndash; 0.3 MHz) that militaries use to communicate with submarines under the ocean. It can pick up the various amateur HAM radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at one times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded intelligence broadcasts.
+Their radio can pick up the the Low Frequency range from 30 - 300 kHz (that's 0.03 &ndash; 0.3 MHz) that militaries use to communicate with submarines under the ocean. It can pick up the various amateur HAM radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at one times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded broadcasts from foreign intelligence agencies.
 
 A few of the things I've heard over the past three days:
 
 ## BBC Radio 4
 
-BBC Radio 4 transmits way down at [198 kHz](http://websdr.ewi.utwente.nl:8901/?tune=198AM) (that's 0.198 MHz if you want to compare to your home radio). This very low frequency means it can be received over extremely long distances&mdash;the signal comes in crystal clear on this radio in the Netherlands, and can be received across Europe. Unfortunately, it probably [won't be around for much longer](https://www.theguardian.com/media/2011/oct/09/bbc-radio4-long-wave-goodbye).
+BBC Radio 4 transmits way down at [198 kHz](http://websdr.ewi.utwente.nl:8901/?tune=198AM) (that's 0.198 MHz). This very low frequency means it can be received over extremely long distances&mdash;the signal comes in crystal clear on this radio in the Netherlands, and can be received across Europe&mdash;and, at night and with good conditions, even on the east coast of the U.S. Unfortunately, it probably [won't be around for much longer](https://www.theguardian.com/media/2011/oct/09/bbc-radio4-long-wave-goodbye).
 
 ## Propaganda and signal jamming
 
@@ -69,6 +69,6 @@ I also like Absolute Radio at [1215 kHz](http://websdr.ewi.utwente.nl:8901/?tune
 
 [short-wave.info](https://short-wave.info/index.php) is a great resource for finding the schedules and frequences of stations. Keep in mind that the radio we're using is located in the Netherlands - pay attention to the location of the transmitting station to determine whether you'll be able to get a clear signal. If you set your location, short-wave.info will show you the estimated signal strength. Shortwave signals don't travel well between night and daytime. In other words, when it's daytime in the Netherlands, you'll get a better signal from transmitters that are also in the daylight, and vice versa for nighttime. 
 
-# Questions? Made your own discoveries?
+# Questions? Want to let me know about a mistake I've made? Share your own discoveries?
 
 [Email me](mailto:jg@justus.ws)!
