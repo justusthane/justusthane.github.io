@@ -27,7 +27,9 @@ A short overview of some of the technical aspects can be helpful when exploring 
 
 ## *Short*wave?
 
-In case you're confused, as I was, about the "short" in shortwave. Afterall, short waves = high frequency, but we're talking about frequencies much *lower* than those we're used to. Huh? The term shortwave pre-dates our current high-frequency world of FM radio, televison, cellphones, and satelites. When the term came about, the frequencies were indeed much shorter than those previously common.
+I was confused at first by the "short" in *shortwave*. Afterall, shorter waves = higher frequency, but we're talking about frequencies much *lower* than those we're accustomed to. Huh? 
+
+The term *shortwave* pre-dates our current high-frequency world of FM radio, television, cellphones, and Wi-Fi. When the term came about, the waves were indeed much shorter than those used at the time.
 
 ![](radio-spectrum-in-demand.gif)
 
