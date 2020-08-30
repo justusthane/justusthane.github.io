@@ -11,7 +11,8 @@ module.exports = function(eleventyConfig) {
     "jpeg",
     "jpg",
     "png",
-    "GIF"
+    "GIF",
+    "mp3"
   ]);
   eleventyConfig.addPassthroughCopy("style");
   eleventyConfig.addPassthroughCopy("webfonts");
