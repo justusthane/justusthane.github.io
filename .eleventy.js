@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig) {
     "jpg",
     "png",
     "GIF",
+    "wav",
     "mp3"
   ]);
   eleventyConfig.addPassthroughCopy("style");

@@ -11,17 +11,17 @@ Three days ago I happened across a website posted in an unrelated forum:
 
 Behind this inauspicious URL hides an entire realm of secrets. It is a gateway to a world that I've only had the vaguest idea of. Let me explain.
 
-The part of the radio spectrum that you're probably most familiar with is 88 &ndash; 108 and 530 &ndash; 1700 MHz: the FM and AM bands that you can receive from your radio in your car or at home. You probably also know that there's a huge usable radio spectrum outside of this. You've heard of HAM radio, shortwave radio, CB, etc. These are all located in areas of the spectrum not receivable by your home radio. Typically, you would need specialized equipment to pick them up: perhaps a HAM radio setup costing thousands of dollars.
+The parts of the radio spectrum that you're probably most familiar with are 88 &ndash; 108 and 530 &ndash; 1700 MHz: the FM and AM bands that you can receive from your radio in your car or at home. You probably also know that there's a huge usable radio spectrum outside of this. You've heard of HAM radio, shortwave radio, CB, VHF, etc. These are all located in areas of the spectrum not receivable by your home radio (actually, not quite&mdash;the bands that you can receive on your home radio occupy a small portion of the larger VHF band). Typically, you would need specialized equipment to pick them up: perhaps a HAM radio setup costing thousands of dollars, or at least a cheaper handheld receiver.
 
 ## What is SDR?
 
-Now imagine a friend of yours had a radio capable of picking up this wider spectrum of signals. You could go over and listen with her, but the two of you would have to agree what frequency you want to tune the radio to&mdash;you can only listen to one frequency at a time. Enter *SDR*&mdash;"software-defined radio". With SDR, the radio is a computer chip that listens to a huge portion of the radio spectrum and sends the entire signal to the computer it's attached to. Software running on the computer pulls out the frequency it wants. Thanks to this fact, multiple users can use&mdash;and tune&mdash;the radio simutaneously, each to whatever frequency they want.
+Now imagine a friend of yours had a radio capable of picking up this wider spectrum of signals. You could go over and listen with her, but the two of you would have to agree what frequency you want to tune the radio to&mdash;you can only listen to one frequency at a time. Enter *SDR*&mdash;"software-defined radio". With SDR, the radio is a computer chip that listens to a huge portion of the radio spectrum at once and sends the entire signal to the computer it's attached to. Software running on the computer pulls out the frequency it wants. Thanks to this fact, multiple users can use&mdash;and tune&mdash;the radio simutaneously, each to whatever frequency they want.
 
-This brings us pack to the website above: The Amateur Radio Club at the University of Twente in the Netherlands happens to run an SDR, and they have it [hooked up to a public web interface](http://websdr.ewi.utwente.nl:8901/?tune=198AM). This means that anyone in the world can connect to their website and tune the radio to whatever frequency desired. Go ahead, click that link. You'll find yourself listening to the BBC. Except you're listening to the BBC broadcast by a low-frequency high-power transmitter located in Worcestershire, England (originally built in 1934), picked up by an antenna at the University of Twente in the Netherlands, and streamed to you over the internet. Cool, huh?
+This brings us back to the website above: The Amateur Radio Club at the University of Utwente in the Netherlands happens to run an SDR, and they have it [hooked up to a public web interface](http://websdr.ewi.utwente.nl:8901/?tune=198AM). This means that anyone in the world can connect to their website and tune the radio to whatever frequency desired. Go ahead, click that link. You'll find yourself listening to the BBC. Except you're listening to the BBC broadcast by a low-frequency high-power transmitter located in Worcestershire, England (originally built in 1934), picked up by an antenna at the University of Twente in the Netherlands, and streamed to you over the internet. Cool, huh?
 
 Note: From here on we're going to be using kHz (kilohertz) instead of of MHz (megahertz) since we'll be discussing frequencies much lower than those received by your home radio. 1 MHz = 1000 kHz.
 
-Their radio can pick up the the Low Frequency range from 30 - 300 kHz that militaries use to communicate with submarines under the ocean. It can pick up the various amateur HAM radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at what times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded broadcasts from foreign intelligence agencies.
+Utwente's radio can pick up the the Low Frequency range from 30 - 300 kHz that militaries use to communicate with submarines under the ocean. It can pick up the various amateur HAM radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at what times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded broadcasts from foreign intelligence agencies.
 
 # Tech Notes
 
@@ -31,11 +31,11 @@ A short overview of some of the technical aspects can be helpful when exploring 
 
 I was confused at first by the "short" in *shortwave*. Afterall, shorter waves = higher frequency, but we're talking about frequencies much *lower* than those we're accustomed to. Huh? 
 
-The term *shortwave* pre-dates our current high-frequency world of FM radio, television, cellphones, and Wi-Fi. When the term came about, the waves were indeed much shorter than those used at the time.
+The term *shortwave* predates our current high-frequency world of FM radio, television, cellphones, and Wi-Fi. When the term came about, the waves were indeed much shorter than those used at the time.
 
 ![](radio-spectrum-in-demand.gif)
 
-This graph does a good job of illustrating the spectrum. You can see here that what's called "shortwave" is also HF, or high-frequency. Utwente's web SDR can tune from the bottom of the VLF range to the top of the HF range.
+This graph does a good job of illustrating the spectrum. You can see here that what's called "shortwave" is also HF, or high-frequency. You can probably guess what VLF, LF, MF, VHF, UHF, SHF, and EHF stand for. Utwente's web SDR can tune from the bottom of the VLF range to the top of the HF range.
 
 Also note that lower frequencies have a greater range, while higher frequencies can carry more data. This is why technology has trended towards higher frequencies, and why lower frequencies are more fun :)
 
@@ -53,7 +53,12 @@ The mode specifies how the signal is encoded in the radio waves. You're likely f
 
 CW (Continous Wave)
 
-:    A very simple mode that encodes information only by turning the wave off and on. Because of this, it cannot be used to transmit analog voice signals. Often used for morse code.
+:    A very simple mode that encodes information only by turning the wave off and on. Because of this, it cannot be used to transmit analog voice signals. Often used for morse code. 
+
+:    Here's an example of what a CW signal looks like on the waterfall.
+![](cw-waterfall.gif)
+Because we can see the signal stopping and starting, it's possible to decode morse code from the waterfall display alone, without listening to it.
+
 
 LSB and USB (Lower Sideband and Uppersideband)
 
@@ -76,6 +81,24 @@ Carrier signal near 14135 kHz with the information occupying a 3 kHz-wide sideba
 AMSync (A.K.A. Syncronous AM)
 
 :    In this mode, the receiver "locks on" to the carrier frequency and replaces the received carrier signal with an artificially generated one. Since it's no longer relying on the received carrier, it can reproduce the received audio with better fidelity. Or something like that. I don't really understand it, but it almost always results in a clearer AM signal. [More information here](https://www.electronics-notes.com/articles/radio/modulation/am-synchronous-demodulation-detection-detector.php).
+
+Digital Modes
+
+:    There are many types of signals that you won't be able to understand just by listening: there are any number of digital protocols for broadcasting data over radio waves. Wi-Fi is an easy example of this: of course you wan't tune into the Wi-Fi frequency and hear words (although we won't find Wi-Fi anywhere near the frequencies we're listening at). Here's an example of one:
+![](digital-waterfall.png)
+
+:    [Here's a recording](digital.wav) of what I hear when I tune into that signal. Depending on the protocol being used, it may be possible to decode the audio into meaningful digital information, but that's beyond me. 
+
+:    HAM operators may also use (much simpler) digital signals to make contact with each other. You can imagine that it would be much more convenient if your computer was listening for the signal and showed an alert saying "So-and-so is hailing you on 18439 kHz" instead of having to listen 24/7. They can also faciliate sending information over very weak signals.
+
+:    The [Signal ID Wiki](https://www.sigidwiki.com/wiki/Category:Digital) can be used to attempt to indentify these, and other unknown, signals.
+
+RADAR and other stuff
+
+:    There are any number of other things making noise on the radio spectrum. Here's an example of LORAN long-range RADAR at 100 kHz:
+![](loran.png)
+
+:    Many of them can be identified by their characteristics using the [Signal ID Wiki](https://www.sigidwiki.com).
 
 # Discoveries
 
