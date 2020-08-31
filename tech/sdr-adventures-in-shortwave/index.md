@@ -41,7 +41,7 @@ Also note that lower frequencies have a greater range, while higher frequencies 
 
 ## The Waterfall
 
-The waterfall display is a visual representation of the radio spectrum, useful for finding and identifying signals. Frequency is on the X axis. Time is on the Y axis, with 0 = now. New signals appear at the bottom and move up. A lighter color is a stronger signal.
+The waterfall display is a visual representation of the radio spectrum, useful for finding and identifying signals. Frequency is on the X axis. Time is on the Y axis, with Y = 0 being the current moment. In other words, new signals appear at the bottom and move up. A lighter color is a stronger signal.
 
 ![](waterfall.png)
 
