@@ -96,7 +96,7 @@ Digital Modes
 RADAR and other stuff
 
 :    There are any number of other things making noise on the radio spectrum. Here's an example of LORAN long-range RADAR at 100 kHz:
-![](loran.png)
+![](loran-waterfall.png)
 
 :    Many of them can be identified by their characteristics using the [Signal ID Wiki](https://www.sigidwiki.com).
 
