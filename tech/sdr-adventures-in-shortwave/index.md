@@ -107,7 +107,7 @@ China actively jams the frequencies that Voice of American can be received on in
 
 [Numbers Stations](https://people.howstuffworks.com/numbers-stations.htm) are mysterious shortwave broadcasts by goverments across the world, used to communicate with operatives in foreign countries. When you tune into one, you'll hear a voice reading a series of letters and numbers&mdash;a virtually unbreakable code. A schedule of upcoming Numbers Stations broadcasts can be found at [priyom.org](priyom.org), a hobby website run by a group of enthusiasts.
 
-[Here's one I recorded just now while writing this](NumbersStation_E11_2020-08-30T16-24-20Z_7863.0kHz.mp3) on 7863 kHz USB at 1625 GMT. This particular one is an example of the E11 station, broadcast from Warsaw, Poland, [believed to be run](https://priyom.org/number-stations/operators/polish-11) by a Polish intelligence agency.
+[Here's one I recorded just now while writing this](NumbersStation_E11_2020-08-30T16-24-20Z_7863.0kHz.mp3) on 7863 kHz USB at 1625 GMT. This particular one is an example of the E11 station, broadcast from Warsaw, [believed to be run](https://priyom.org/number-stations/operators/polish-11) by a Polish intelligence agency.
 
 If you want to listen to your own, use the schedule at [priyom.org](https://priyom.org) and tune into the given frequency at the specified time. Keep in mind that the web SDR we're using is located in the Netherlands, so that will affect which stations you're able to hear. You should have good luck with the E11 station, which comes in clear, is pretty frequent, and is in English (as indicated by the "E" in *E11*).
 
