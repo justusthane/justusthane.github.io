@@ -13,6 +13,8 @@ Behind this inauspicious URL hides an entire realm of secrets. It is a gateway t
 
 The part of the radio spectrum that you're probably most familiar with is 88 &ndash; 108 and 530 &ndash; 1700 MHz: the FM and AM bands that you can receive from your radio in your car or at home. You probably also know that there's a huge usable radio spectrum outside of this. You've heard of HAM radio, shortwave radio, CB, etc. These are all located in areas of the spectrum not receivable by your home radio. Typically, you would need specialized equipment to pick them up: perhaps a HAM radio setup costing thousands of dollars.
 
+## What is SDR?
+
 Now imagine a friend of yours had a radio capable of picking up this wider spectrum of signals. You could go over and listen with her, but the two of you would have to agree what frequency you want to tune the radio to&mdash;you can only listen to one frequency at a time. Enter *SDR*&mdash;"software-defined radio". With SDR, the radio is a computer chip that listens to a huge portion of the radio spectrum and sends the entire signal to the computer it's attached to. Software running on the computer pulls out the frequency it wants. Thanks to this fact, multiple users can use&mdash;and tune&mdash;the radio simutaneously, each to whatever frequency they want.
 
 This brings us pack to the website above: The Amateur Radio Club at the University of Twente in the Netherlands happens to run an SDR, and they have it [hooked up to a public web interface](http://websdr.ewi.utwente.nl:8901/?tune=198AM). This means that anyone in the world can connect to their website and tune the radio to whatever frequency desired. Go ahead, click that link. You'll find yourself listening to the BBC. Except you're listening to the BBC broadcast by a low-frequency high-power transmitter located in Worcestershire, England (originally built in 1934), picked up by an antenna at the University of Twente in the Netherlands, and streamed to you over the internet. Cool, huh?
@@ -55,19 +57,19 @@ CW (Continous Wave)
 
 LSB and USB (Lower Sideband and Uppersideband)
 
-:    These are both forms of AM called Single Sideband which use half as much bandwidth as AM. With regular AM, there's a carrier signal at the specified frequency, and the information is transmitted both above and below that frequency. In other words, it uses both sidebands. See this AM signal as an example:
+:    These are both forms of AM called Single Sideband. They use half as much bandwidth as AM. With regular AM, there's a carrier signal at the specified frequency, and the information is transmitted both above and below that frequency. In other words, it uses both sidebands. See this AM signal as an example:
 ![](UnitedAM.png)
-The carrier is at 1008 kHz&mdash;this is the frequency you would tune to&mdash;and the information is transmitted in 6 kHz-wide sidebands on either side of the carrier.
+The carrier is at 1008 kHz&mdash;this is the frequency you would tune to&mdash;and the information is transmitted in 6 kHz-wide sidebands on both sides of the carrier.
 
 :    In contrast, the Single Sideband modes use only a single sideband: Upper Sideband (USB) transmits information only above the carrier signal, while Lower Sideband (LSB) transmits information below the carrier.
 
 :    Here's an examble of LSB:
 ![](LSB.png)
-The small vertical yellow line represents the carrier signal at 7176 kHz, while the actual information (in this case, an analog voice conversation) occupies 3 kHz below it.
+The small vertical yellow line represents the carrier signal at 7176 kHz, while the actual information (in this case, an analog voice conversation) occupies a 3 khz-wide sideband below it.
 
-:    And here's USB:
+:    And here's a USB signal:
 ![](USB.png)
-Carrier signal at 14135 kHz with the information occupying 3 kHz above that.
+Carrier signal near 14135 kHz with the information occupying a 3 kHz-wide sideband above that.
 
 :    Voice broadcasts almost always use Single Sideband, but there's no rule about whether they use USB or LSB, only tradition and convention. HAMs generally use LSB below 10000 kHz and USB above, while non-HAM voice broadcasts usually use USB. Data transmissions also usually use USB.
 
@@ -97,7 +99,7 @@ And here's China Radio International:
 
 The yellow bar represents the "filter"&mdash; the frequency range that the radio is listening to. In this example, the portions of the signal that are wider than the yellow bar aren't serving any real purpose. Some radios have a wider maximum filter and the greater bandwidth can result in better audio fidelity, and apparently it can also be useful in avoiding interference.
 
-At the same time as they broadcast these wide signals across the spectrum, the Chinese government also actively jams foreign radio signals that they deem undesirable. For example, the United States runs a news agency called [Voice of America](https://en.wikipedia.org/wiki/Voice_of_America) which broadcasts AM stations in 47 languages across the world. VoA was established in 1942, and could certainly be considered propaganda as well as China Radio International. Propaganda just depends on which side you're on, right?
+At the same time as they broadcast these wide signals across the spectrum, the Chinese government also actively jams foreign radio signals that they deem undesirable. For example, the United States runs a news agency called [Voice of America](https://en.wikipedia.org/wiki/Voice_of_America) which broadcasts AM stations in 47 languages across the world. VoA was established in 1942, and is certainly considered by some to be propaganda as well. The definition of propaganda just depends on which side you're on, right?
 
 China actively jams the frequencies that Voice of American can be received on inside of China. They do this by using a signal known as [Firedrake](https://www.sigidwiki.com/wiki/Chinese_Firedrake_Jammer)&mdash;an hour long loop of traditional Chinese folk songs broadcast on repeat at a power high enough to override the competing station. A recording of the signal can be heard at that link.
 
@@ -107,17 +109,17 @@ China actively jams the frequencies that Voice of American can be received on in
 
 [Here's one I recorded just now while writing this](NumbersStation_E11_2020-08-30T16-24-20Z_7863.0kHz.mp3) on 7863 kHz USB at 1625 GMT. This particular one is an example of the E11 station, broadcast from Warsaw, Poland, [believed to be run](https://priyom.org/number-stations/operators/polish-11) by a Polish intelligence agency.
 
-If you want to listen to your own, use the schedule at [priyom.org](https://priyom.org) and tune into the given frequency at the specified time. Keep in mind that the web SDR we're using is located in the Nethlands, so that will affect which stations you're able to hear. You should have good luck with the E11 station, which comes in clear and is pretty frequent.
+If you want to listen to your own, use the schedule at [priyom.org](https://priyom.org) and tune into the given frequency at the specified time. Keep in mind that the web SDR we're using is located in the Netherlands, so that will affect which stations you're able to hear. You should have good luck with the E11 station, which comes in clear, is pretty frequent, and is in English (as indicated by the "E" in *E11*).
 
 ## EAM (Emergency Action Messages)
 
 EAMs are coded messages broadcast by the US Air Force to issue commands to units in the field. Similar to Numbers Stations, they are broadcast in an unbreakable code. Unlike Numbers Stations, they are  broadcast on dedicated frequencies and we know who is responsible for them. They are broadcast on the [High Frequency Global Communications System](https://en.wikipedia.org/wiki/High_Frequency_Global_Communications_System), a network of transmitters across the globe. 
 
-[Here is quite a long one](EAM_message_2020-08-28_1740.mp3) that I recorded on 2020-08-28 at 2240 GMT at 8992 kHz USB.
+[Here is quite a long one](EAM_message_2020-08-28_1740.mp3) that I recorded on 2020-08-28 at 2240 GMT at 8992 kHz USB. In the beginning of the broadcast, which I didn't catch in the recording, he signals "All Stations". He identifies himself with the callsign "Dungaree".
 
 ## "The Buzzer"
 
-UVB-76, also known as "The Buzzer", is a mysterious signal that has been broadcasting from Russia since the early 70s at [4625](http://websdr.ewi.utwente.nl:8901/?tune=4625usb) kHz. Depending on the time of day (which impacts reception), you should be able to hear it yourself by clicking that link. It broadcasts 24 hours a day, consistingly usually of a regularly pulsing buzz. Occasonally a Russian voice interrupts the buzzer. No one knows the purpose of the buzzer&mdash;one theory is that it serves as a Numbers Station, and that the buzzing is only to keep others off the channel when not in use. Another is that it is part of Russia's automated nuclear relatiation system&mdash;if the buzzing ever ceases, it would be a sign that the Russia is under attack and nuclear relatiation is automatically triggered. Good information in [this BBC article](https://www.bbc.com/future/article/20170801-the-ghostly-radio-station-that-no-one-claims-to-run).
+UVB-76, also known as "The Buzzer", is a mysterious signal that has been broadcasting from Russia since the early 70s at [4625](http://websdr.ewi.utwente.nl:8901/?tune=4625usb) kHz. Depending on the time of day (which impacts reception), you should be able to hear it yourself by clicking that link. It broadcasts 24 hours a day, consisting usually only of a regularly pulsing buzz. Occasonally a Russian voice interrupts the buzzer. No one knows the purpose of the buzzer&mdash;one theory is that it serves as a Numbers Station, and that the buzzing is only to keep others off the channel when not in use. Another is that it is part of Russia's automated nuclear relatiation system&mdash;if the buzzing ever ceases, it would be a sign that the Russia is under attack and nuclear relatiation is automatically triggered. Good information in [this BBC article](https://www.bbc.com/future/article/20170801-the-ghostly-radio-station-that-no-one-claims-to-run).
 
 [Here is a short recording](The-Buzzer_2020-08-30T17-09-30Z_4625.0kHz.mp3) I just made.
 
@@ -132,7 +134,7 @@ I also like Absolute Radio at [1215 kHz](http://websdr.ewi.utwente.nl:8901/?tune
 
 ## Amateur Operators (HAM radio)
 
-[Recorded at 21:13 GMT on 2020-08-30](USA-to-Slovenia_2020-08-30T21-15-31Z_14240.0kHz.mp3) at 14240 kHz, we can hear someone with callsign [S51DX](https://www.qrzcq.com/call/S51DX) (Slovenia) hailing someone in North America with the callsign [KD8XK](https://www.qrzcq.com/call/KD8XK) (West Virginia). On our end we can only just barely hear the response from North America, but it's there. Trans-Atlantic communication!
+[In this recording](USA-to-Slovenia_2020-08-30T21-15-31Z_14240.0kHz.mp3) I made at 21:13 GMT on 2020-08-30 at 14240 kHz, we can hear someone with callsign [S51DX](https://www.qrzcq.com/call/S51DX) (Slovenia) hailing someone in North America with the callsign [KD8XK](https://www.qrzcq.com/call/KD8XK) (West Virginia). On our end we can only just barely hear the response from North America, but it's there. Trans-Atlantic communication!
 
 You can find countless amateur radio transmissions in the Amateur bands, helpfully indicated in Green in the Web SDR.
 
@@ -161,6 +163,10 @@ If you hang out in the chat long enough at http://websdr.ewi.utwente.nl:8901 you
 [priyom.org](https://priyom.org/)
 
 :    Schedule and information on Numbers Stations.
+
+The chatroom at http://websdr.ewi.utwente.nl:8901
+
+:    One of the best things about Utwente's web SDR is the accompanying chatroom on the same page. Much of what I've learned so far is from that chatroom, and the people who hang out there are very gracious, patient, and helpful. Thank you!
 
 # Further Explorations
 
