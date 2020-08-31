@@ -37,7 +37,7 @@ The term *shortwave* pre-dates our current high-frequency world of FM radio, tel
 
 This graph does a good job of illustrating the spectrum. You can see here that what's called "shortwave" is also HF, or high-frequency. Utwente's web SDR can tune from the bottom of the VLF range to the top of the HF range.
 
-Also note that lower frequencies have a greater range, while higher frequencies can carry more data. This is why technology has trended towards higher frequencies.
+Also note that lower frequencies have a greater range, while higher frequencies can carry more data. This is why technology has trended towards higher frequencies, and why lower frequencies are more fun :)
 
 ## The Waterfall
 
