@@ -29,6 +29,11 @@ body.home nav h5 {
 #header div {
 }
 
+#header .avatar {
+  display: block;
+  margin: 0 auto;
+}
+
 #header .logo {
     margin: 0 auto;
 }
