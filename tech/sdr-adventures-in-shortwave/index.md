@@ -115,7 +115,7 @@ If you want to listen to your own, use the schedule at [priyom.org](https://priy
 
 EAMs are coded messages broadcast by the US Air Force to issue commands to units in the field. Similar to Numbers Stations, they are broadcast in an unbreakable code. Unlike Numbers Stations, they are  broadcast on dedicated frequencies and we know who is responsible for them. They are broadcast on the [High Frequency Global Communications System](https://en.wikipedia.org/wiki/High_Frequency_Global_Communications_System), a network of transmitters across the globe. 
 
-[Here is quite a long one](EAM_message_2020-08-28_1740.mp3) that I recorded on 2020-08-28 at 2240 GMT at 8992 kHz USB. In the beginning of the broadcast, which I didn't catch in the recording, he signals "All Stations". He identifies himself with the callsign "Dungaree".
+[Here is quite a long one](EAM_message_2020-08-28_1740.mp3) that I recorded on 2020-08-28 at 2240 GMT at 8992 kHz USB. In the beginning of the broadcast, which I didn't catch in the recording, he signals "All Stations". He identifies himself with the callsign "Dungaree". Most likely a training exercise, to my understanding. Either that or we're at the brink of nuclear warfare. Who knows? ¯\\_(ツ)_/¯
 
 ## "The Buzzer"
 
