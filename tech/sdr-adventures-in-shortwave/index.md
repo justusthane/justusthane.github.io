@@ -56,25 +56,33 @@ CW (Continous Wave)
 :    A very simple mode that encodes information only by turning the wave off and on. Because of this, it cannot be used to transmit analog voice signals. Often used for morse code. 
 
 :    Here's an example of what a CW signal looks like on the waterfall.
-![](cw-waterfall.gif)
-Because we can see the signal stopping and starting, it's possible to decode morse code from the waterfall display alone, without listening to it.
+
+:    ![](cw-waterfall.gif)
+
+:    Because we can see the signal stopping and starting, it's possible to decode morse code from the waterfall display alone, without listening to it.
 
 
 LSB and USB (Lower Sideband and Uppersideband)
 
 :    These are both forms of AM called Single Sideband. They use half as much bandwidth as AM. With regular AM, there's a carrier signal at the specified frequency, and the information is transmitted both above and below that frequency. In other words, it uses both sidebands. See this AM signal as an example:
-![](UnitedAM.png)
-The carrier is at 1008 kHz&mdash;this is the frequency you would tune to&mdash;and the information is transmitted in 6 kHz-wide sidebands on both sides of the carrier.
+
+:    ![](UnitedAM.png)
+
+:    The carrier is at 1008 kHz&mdash;this is the frequency you would tune to&mdash;and the information is transmitted in 6 kHz-wide sidebands on both sides of the carrier.
 
 :    In contrast, the Single Sideband modes use only a single sideband: Upper Sideband (USB) transmits information only above the carrier signal, while Lower Sideband (LSB) transmits information below the carrier.
 
 :    Here's an examble of LSB:
-![](LSB.png)
-The small vertical yellow line represents the carrier signal at 7176 kHz, while the actual information (in this case, an analog voice conversation) occupies a 3 khz-wide sideband below it.
+
+:    ![](LSB.png)
+
+:    The small vertical yellow line represents the carrier signal at 7176 kHz, while the actual information (in this case, an analog voice conversation) occupies a 3 khz-wide sideband below it.
 
 :    And here's a USB signal:
-![](USB.png)
-Carrier signal near 14135 kHz with the information occupying a 3 kHz-wide sideband above that.
+
+:    ![](USB.png)
+
+:    Carrier signal near 14135 kHz with the information occupying a 3 kHz-wide sideband above that.
 
 :    Voice broadcasts almost always use Single Sideband, but there's no rule about whether they use USB or LSB, only tradition and convention. HAMs generally use LSB below 10000 kHz and USB above, while non-HAM voice broadcasts usually use USB. Data transmissions also usually use USB.
 
@@ -85,7 +93,8 @@ AMSync (A.K.A. Syncronous AM)
 Digital Modes
 
 :    There are many types of signals that you won't be able to understand just by listening: there are any number of digital protocols for broadcasting data over radio waves. Wi-Fi is an easy example of this: of course you wan't tune into the Wi-Fi frequency and hear words (although we won't find Wi-Fi anywhere near the frequencies we're listening at). Here's an example of one:
-![](digital-waterfall.png)
+
+:    ![](digital-waterfall.png)
 
 :    [Here's a recording](digital.wav) of what I hear when I tune into that signal. Depending on the protocol being used, it may be possible to decode the audio into meaningful digital information, but that's beyond me. 
 
@@ -96,7 +105,14 @@ Digital Modes
 RADAR and other stuff
 
 :    There are any number of other things making noise on the radio spectrum. Here's an example of LORAN long-range RADAR at 100 kHz:
-![](loran-waterfall.png)
+
+:    ![](loran-waterfall.png)
+
+:    And here's Russia's over-the-horizon "Container" radar:
+
+:    ![](Kontayner-OTH-Radar-7600-kHz-2020-08-31_T2145z.png)
+
+
 
 :    Many of them can be identified by their characteristics using the [Signal ID Wiki](https://www.sigidwiki.com).
 
