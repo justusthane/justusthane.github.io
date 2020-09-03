@@ -2,13 +2,13 @@
 title: "Editing Pixel Art in Photoshop"
 date: 2020-09-02
 ---
-Editing pixel art in Photoshop isn't entirely straight forward, but easy enough with a few simple instructions.
+Editing pixel art in Photoshop isn't entirely straightforward, but easy enough with a few simple instructions.
 
 # TL;DR
 
 This whole pointlessly long page can be boiled down to the following:
 
-1. Figure out how many pixels wide your pixel art is "supposed" to be. One way to do this is to divide the width of the image (in actual pixels) by the width of one of the "pixel art pixels".
+1. Figure out how many pixels wide your pixel art is "supposed" to be. One way to do this is to divide the width of the image by the width of one of the "pixel art pixels".
 2. Resize the image to that size, using the "Nearest Neighbor" resampling mode.
 3. Make your edits using a 1px Pencil brush.
 4. If you need to make any selections, make sure to set Feather to 0px and disable anti-aliasing.
@@ -78,7 +78,7 @@ Much better.
 
 Once you've made all your desired changes, the only thing left to do is scale back up! 
 
-Again use the Image Size window, and again make sure to select the Nearest Neighbor resample mode, and return your art to its original size&mdash;or whatever size you want! Since there will be no loss of quality scaling up, the sky is the limit!
+Again use the Image Size window, and again make sure to select the Nearest Neighbor resample mode, and return your art to its original size&mdash;or whatever size you want. Since there will be no loss of quality scaling up, the sky is the limit!
 
 ![](scaleup.png)
 
