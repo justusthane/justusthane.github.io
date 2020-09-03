@@ -33,7 +33,7 @@ Result:
 
 Turns out, this is listed as a [Common Pitfall](https://www.11ty.dev/docs/dates/#dates-off-by-one-day) in the Eleventy docs, and it occurs because Eleventy assumes time is UTC (and if you don't specify a time, midnight UTC is assumed), while the templating uses your local timezone. So if you live in a timezone behind UTC, then your displayed dates are going to be a day behind your specified dates.
 
-The docs suggest resolvng this by creating a Liquid filter to call the JavaScript `toUTCString()` function:
+The docs suggest resolving this by creating a Liquid filter to call the JavaScript `toUTCString()` function:
 
 .eleventy.js:
 ``` js
@@ -86,7 +86,7 @@ module.exports = function(eleventyConfig) {
 };
 ```
 
-Now that's all down, all that's left is to call our new filter on our date string. Note that Moment uses a different [date formatting format](https://momentjs.com/docs/#/displaying/).
+Now that's all done, all that's left is to call our new filter on our date string. Note that Moment uses a different [date formatting format](https://momentjs.com/docs/#/displaying/).
 
 Template:
 ``` liquid

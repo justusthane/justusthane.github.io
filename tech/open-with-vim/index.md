@@ -2,7 +2,7 @@
 title: "'Open With' Vim from MacOS Finder"
 date: 2020-05-08
 ---
-I use Vim on the command line for almost all my text editing. Occasionally find myself browsing around in Finder and wishing I could right-click a file and open it in Vim on the terminal.
+I use Vim on the command line for almost all my text editing. Occasionally I find myself browsing around in Finder and wishing I could right-click a file and open it in Vim on the terminal.
 
 I found the following solution. First, [follow the instructions here](https://gist.github.com/charlietran/43639b0f4e0a01c7c20df8f1929b76f2) to create a "TerminalVim.app" application. At this point, we're 90% of the way there. You should be able to right-click any file, click Open With, choose Other, and browse to your new TerminalVim.app.
 
