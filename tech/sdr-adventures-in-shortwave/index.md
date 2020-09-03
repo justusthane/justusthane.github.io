@@ -211,6 +211,8 @@ The chatroom at http://websdr.ewi.utwente.nl:8901
 
 The web SDR at the University of Twente is just the beginning&mdash;there's a whole world (literally) of internet-connected SDRs that you can access and listen to. The [KiwiSDR](http://kiwisdr.com/) project is great for this. A map of all public KiwiSDRs [can be found here](http://rx.linkfanel.net/). Just click on them to connect!
 
-# Questions? Want to let me know about a mistake I've made? Share your own discoveries?
+# Comments
+
+Questions? Want to let me know about a mistake I've made? Share your own discoveries?
 
 [Email me](mailto:jg@justus.ws)!
