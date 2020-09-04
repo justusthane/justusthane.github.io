@@ -8,6 +8,28 @@ $( "body.home dl dt a" ).hover(
   }
 );
 
+$( "#header .avatar" ).hover(
+  function() {
+    $( this ).attr('src','/images/dadi-avatar_blink.png');
+  }, function() {
+    $( this ).attr('src','/images/dadi-avatar.png');
+  }
+);
+
+$( "#header .left" ).hover(
+  function() {
+    $( "#header .avatar" ).attr('src','/images/dadi-avatar_left.png');
+  }, function() {
+    $( "#header .avatar" ).attr('src','/images/dadi-avatar.png');
+  }
+);
+$( "#header .right" ).hover(
+  function() {
+    $( "#header .avatar" ).attr('src','/images/dadi-avatar_right.png');
+  }, function() {
+    $( "#header .avatar" ).attr('src','/images/dadi-avatar.png');
+  }
+);
 $( "body.home a[href='/blog']" ).hover(
     function() {
         $( this ).html('b<span class="blag">la</span>g');
