@@ -32,6 +32,26 @@ body.home nav h5 {
 #header .avatar {
   display: block;
   margin: 0 auto;
+  border-radius: 50%;
+  z-index: 200;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+#header .look {
+  height: 150px;
+  width: 50%;
+  z-index: 100;
+}
+
+#header .look.left {
+  float: left;
+}
+
+#header .look.right {
+  float: left;
 }
 
 #header .logo {
