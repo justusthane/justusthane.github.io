@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+<head>
+    <meta charset="utf-8" />
+    <title>&#39;Open With&#39; Vim from MacOS Finder | justus.ws</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
+    <link rel="canonical" href="/tech/open-with-vim/" />
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+    <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
+
+</head>
+<body id="top" class="color-auto ">
+    <div id="toggle-color">
+    </div>
+    <div id="header">
+      <img src="/images/daoi_round.png" height="150" class="avatar">
+        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus.ws</a></div> 
+        <div class="tagline">home, home on the net<br />where the links and the hypertexts play</div>
+        <div class="elsewhere">
+            <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws"><i class="far fa-envelope-open"></i></a><a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug"><i class="fas fa-camera-retro"></i></a><a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github"><i class="fab fa-github"></i></a><a href="https://keybase.io/justusthane" rel="me" data-label="<strong>encrypt</strong>&nbsp;| keybase"><i class="fab fa-keybase"></i></a>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1><a href="/tech">tech</a>/&#39;Open With&#39; Vim from MacOS Finder</h1>
+<p class="publish-date">Published 2020-05-08</p>
+<p>I use Vim on the command line for almost all my text editing. Occasionally I find myself browsing around in Finder and wishing I could right-click a file and open it in Vim on the terminal.</p>
+<p>I found the following solution. First, <a href="https://gist.github.com/charlietran/43639b0f4e0a01c7c20df8f1929b76f2">follow the instructions here</a> to create a “TerminalVim.app” application. At this point, we’re 90% of the way there. You should be able to right-click any file, click Open With, choose Other, and browse to your new TerminalVim.app.</p>
+<p>However, that’s still more steps than we would like. In order to add TerminalVim to your <strong>Open With</strong> list:</p>
+<ol>
+<li>Right-click your new <strong>TerminalVim.app</strong>, and click <strong>Show Package Contents</strong>.</li>
+<li>Open <strong>Contents/Info.plist</strong></li>
+<li>Find the line <code>&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;</code> and add new array items for each file type you want to associate with your app, as shown:</li>
+</ol>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">></span></span>CFBundleTypeExtensions<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>html<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>plist<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>csv<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">></span></span>txt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span></code></pre>
+<ol start="4">
+<li>Run <code>/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -f /Applications/TerminalVim.app</code></li>
+<li>Run <code>killall Finder</code></li>
+<li>You should now be able to right-click one of your chosen file types and open it in Vim!</li>
+</ol>
+<div id="back">
+    <a href="/tech">&lt; more tech</a>
+</div>
+
+    </div>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/scripts.js"></script>
+
+</body>
+</html>

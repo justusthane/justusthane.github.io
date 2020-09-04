@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+<head>
+    <meta charset="utf-8" />
+    <title>Eleventy static-site generator: Making Liquid play nice with dates | justus.ws</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
+    <link rel="canonical" href="/tech/eleventy-utc-dates/" />
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+    <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
+
+</head>
+<body id="top" class="color-auto ">
+    <div id="toggle-color">
+    </div>
+    <div id="header">
+      <img src="/images/daoi_round.png" height="150" class="avatar">
+        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus.ws</a></div> 
+        <div class="tagline">home, home on the net<br />where the links and the hypertexts play</div>
+        <div class="elsewhere">
+            <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws"><i class="far fa-envelope-open"></i></a><a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug"><i class="fas fa-camera-retro"></i></a><a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github"><i class="fab fa-github"></i></a><a href="https://keybase.io/justusthane" rel="me" data-label="<strong>encrypt</strong>&nbsp;| keybase"><i class="fab fa-keybase"></i></a>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1><a href="/tech">tech</a>/Eleventy static-site generator: Making Liquid play nice with dates</h1>
+<p class="publish-date">Published 2020-04-16</p>
+<nav class="toc">
+<h3>Table of Contents</h3>
+<nav class="table-of-contents"><ol><li><a href="#the-problem">The Problem</a></li><li><a href="#the-solution">The Solution</a></li></ol></nav></nav>
+<h2 id="the-problem">The Problem</h2>
+<p>I was working on rebuilding this site in the excellent <a href="https://11ty.dev">Eleventy</a> static-site generator when I noticed that when I specified a date in a template’s frontmatter, the date was a day off when displayed on the page.</p>
+<p>Frontmatter:</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">---</span><br><span class="token key atrule">title</span><span class="token punctuation">:</span> Care of cast iron pans<br><span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-02-10</span><br><span class="token punctuation">---</span></code></pre>
+<p>Template:</p>
+<pre class="language-jinja2"><code class="language-jinja2"><span class="token jinja2 language-jinja2"><span class="token delimiter punctuation">{{</span> <span class="token variable">page</span><span class="token punctuation">.</span><span class="token variable">date</span> <span class="token operator">|</span> <span class="token variable">date</span><span class="token punctuation">:</span> <span class="token string">'%Y-%m-%d'</span> <span class="token delimiter punctuation">}}</span></span></code></pre>
+<p>Result:<br>
+<img src="wrong-date.png" alt="Wrong date"><br>
+😕</p>
+<p>Turns out, this is listed as a <a href="https://www.11ty.dev/docs/dates/#dates-off-by-one-day">Common Pitfall</a> in the Eleventy docs, and it occurs because Eleventy assumes time is UTC (and if you don’t specify a time, midnight UTC is assumed), while the templating uses your local timezone. So if you live in a timezone behind UTC, then your displayed dates are going to be a day behind your specified dates.</p>
+<p>The docs suggest resolving this by creating a Liquid filter to call the JavaScript <code>toUTCString()</code> function:</p>
+<p>.eleventy.js:</p>
+<pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  eleventyConfig<span class="token punctuation">.</span><span class="token function">addLiquidFilter</span><span class="token punctuation">(</span><span class="token string">"utcDate"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <br>    <span class="token keyword">return</span> value<span class="token punctuation">.</span><span class="token function">toUTCString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>Template:</p>
+<pre class="language-jinja2"><code class="language-jinja2"><span class="token jinja2 language-jinja2"><span class="token delimiter punctuation">{{</span> <span class="token variable">page</span><span class="token punctuation">.</span><span class="token variable">date</span> <span class="token operator">|</span> <span class="token variable">utcDate</span> <span class="token delimiter punctuation">}}</span></span></code></pre>
+<p>This works…sort of. Except now it spits out the full date string:</p>
+<p><img src="right-date-wrong-format.png" alt="Right date, wrong format"></p>
+<p>And if we try to reformat it by adding the date filter back on…</p>
+<pre class="language-jinja2"><code class="language-jinja2"><span class="token jinja2 language-jinja2"><span class="token delimiter punctuation">{{</span> <span class="token variable">page</span><span class="token punctuation">.</span><span class="token variable">date</span> <span class="token operator">|</span> <span class="token variable">utcDate</span> <span class="token operator">|</span> <span class="token variable">date</span><span class="token punctuation">:</span> <span class="token string">'%Y-%m-%d'</span> <span class="token delimiter punctuation">}}</span></span></code></pre>
+<p>…we get same ol’ incorrect dates again:</p>
+<p><img src="wrong-date.png" alt="Wrong date"></p>
+<p>😕</p>
+<h2 id="the-solution">The Solution</h2>
+<p>Now that we’re done with the backstory, the solution I settled on was to write a filter that displays the date in UTC and also formats it as desired. I used the MomentJS library to help accomplish this.</p>
+<p>First install it:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># npm install moment --savedev</span></code></pre>
+<p>And then if you already have an .eleventy.js config file, add the highlighted lines below. If not, create .eleventy.js in the root of your project with all of the below.</p>
+<pre class="language-js"><code class="language-js"><mark class="highlight-line highlight-line-active"><span class="token keyword">var</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></mark><br><span class="highlight-line">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token comment">/* Other config stuff... */</span></span><br><mark class="highlight-line highlight-line-active">  eleventyConfig<span class="token punctuation">.</span><span class="token function">addFilter</span><span class="token punctuation">(</span><span class="token string">"utcDate"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> arg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> </mark><br><mark class="highlight-line highlight-line-active">    <span class="token keyword">return</span> <span class="token function">moment</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">utc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span><span class="token punctuation">;</span></mark><br><mark class="highlight-line highlight-line-active">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></mark><br><span class="highlight-line">  <span class="token comment">/* And maybe more config stuff */</span></span><br><span class="highlight-line"><span class="token punctuation">}</span><span class="token punctuation">;</span></span></code></pre>
+<p>Now that’s all done, all that’s left is to call our new filter on our date string. Note that Moment uses a different <a href="https://momentjs.com/docs/#/displaying/">date formatting format</a>.</p>
+<p>Template:</p>
+<pre class="language-liquid"><code class="language-liquid">{{ page.date <span class="token operator">|</span> utcDate<span class="token operator">:</span> 'YYYY<span class="token operator">-</span>MM<span class="token operator">-</span>DD' }}</code></pre>
+<p>Result:<br>
+<img src="right-date-right-format.png" alt="Right date, right format"></p>
+<p>BINGO!</p>
+<div id="back">
+    <a href="/tech">&lt; more tech</a>
+</div>
+
+    </div>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/scripts.js"></script>
+
+</body>
+</html>
