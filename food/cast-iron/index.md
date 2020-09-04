@@ -14,12 +14,12 @@ When people talk about “seasoning” cast iron, they’re talking about the bu
 
 I’ve seen articles [like this one](http://sherylcanter.com/wordpress/2010/01/a-science-based-technique-for-seasoning-cast-iron/) advocating the use of flaxseed oil because of its polymerizing properties. It’s expensive though, so I haven’t bothered. I tend to start by just spreading a thin layer of vegetable oil in the pan (like, very thin—pour some oil in and then wipe it out with a paper towel), and baking it in the oven for about an hour at 350F. Repeat as/if needed.
 
-After that, the seasoning will continue to improve over time (with proper care) as you cook in the pan. Just remember to use lots of oil at first—the non-stick properties won’t be perfect yet.
+After that, the seasoning will continue to improve over time (with proper care) as you cook in the pan. Use lots of oil when cooking at first&mdash;the non-stick properties won’t be perfect yet.
 
 ## Use
 Cast iron is great. Just use it. Just a couple notes:
 - If you get an empty pan really hot, you'll notice the seasoning will look sort of dry or splotchy. Just put some oil on it before it cools down.
-- Try not to cook really acidic things—or example, simmering spaghetti sauce for an extended amount of time. The acid will eat away your seasoning.
+- Try not to cook really acidic things&mdash;for example, simmering spaghetti sauce for an extended amount of time. The acid will eat away your seasoning.
 - Wash it when you're done with it. Try not to leave crusty food bits sitting in it for days.
 
 ## Washing
