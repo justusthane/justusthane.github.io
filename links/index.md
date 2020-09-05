@@ -18,6 +18,8 @@ Kicks Condor
 
 :   The blog of a guy passionate about personal websites, the indie web, discovery, and oldschool blogging (maybe?). Lots of links to lots of treasures in here. This site got me excited about personal websites again. I'm [not allowed to link to him](https://www.kickscondor.com/okay-shut-up-about-me-now)^[Take solace, Kicks, in the fact that if someone were to follow *this* link to your site and find their screen suddenly filled by this convoluted rant, they'll surely close the window immediately and never visit again.] so you'll have to type the words into your search engine.
 
+:    **Note 2020-09-05: This website is [not what it used to be](https://www.kickscondor.com/). I'm not really sure what it is now. On the other hand, I guess I'm not really sure what it was before either.**
+
 [Gossip's Cafe](http://gossips.cafe)
 
 :    A tiny online community in the form of a virtual cafe. I love this so much. The cafe is only open from 8am - 7pm daily. You can chat with other visitors to the cafe, but all messages disappear after 8 hours. There are sections where you can post songs and another for interesting links. During closed hours you can drop by and leave an emoji, which shows up in the lost+found section when the cafe opens. The whole thing is just so sweet. I love finding community projects like this.
