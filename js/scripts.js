@@ -30,6 +30,14 @@ $( "#header .right" ).hover(
     $( "#header .avatar" ).attr('src','/images/dadi-avatar.png');
   }
 );
+
+$( ".u-url.u-uid" ).hover(
+  function() {
+    $( "#header .avatar" ).attr('src','/images/dadi-avatar_down.png');
+  }, function() {
+    $( "#header .avatar" ).attr('src','/images/dadi-avatar.png');
+  }
+);
 $( "body.home a[href='/blog']" ).hover(
     function() {
         $( this ).html('b<span class="blag">la</span>g');
