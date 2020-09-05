@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html style="scroll-behavior: smooth;">
+<html style="scroll-behavior: smooth;" lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Eleventy static-site generator: Making Liquid play nice with dates | justus.ws</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
 
     <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
     <link rel="canonical" href="/tech/eleventy-utc-dates/" />
@@ -17,18 +18,21 @@
 <body id="top" class="color-auto ">
     <div id="toggle-color">
     </div>
-    <div id="header">
+    <header id="header">
         <div class="look left"></div>
         <div class="look right"></div>
-        <a href="/"><img src="/images/dadi-avatar.png" height="150" class="avatar"></a>
+        <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" height="150" class="avatar"></a>
         <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus.ws</a></div> 
-        <div class="tagline">home, home on the net<br />where the links and the hypertexts play</div>
+        <div class="tagline">home, home on the web<br />where the links and the hypertexts play</div>
         <div class="elsewhere">
-            <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws"><i class="far fa-envelope-open"></i></a><a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug"><i class="fas fa-camera-retro"></i></a><a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github"><i class="fab fa-github"></i></a><a href="https://keybase.io/justusthane" rel="me" data-label="<strong>encrypt</strong>&nbsp;| keybase"><i class="fab fa-keybase"></i></a>
+          <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws" aria-label="Email"><i class="far fa-envelope-open" aria-hidden="true"></i></a>
+          <a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug" aria-label="Photography"><i class="fas fa-camera-retro" aria-hidden="true"></i></a>
+          <a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github" aria-label="Github"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="https://keybase.io/justusthane" rel="me" data-label="<strong>encrypt</strong>&nbsp;| keybase" aria-label="Keybase"><i class="fab fa-keybase" aria-hidden="true"></i></a>
         </div>
-    </div>
+    </header>
 
-    <div id="content">
+    <main id="content">
         <h1><a href="/tech">tech</a>/Eleventy static-site generator: Making Liquid play nice with dates</h1>
 <p class="publish-date">Published 2020-04-16</p>
 <nav class="toc">
@@ -72,9 +76,9 @@
     <a href="/tech">&lt; more tech</a>
 </div>
 
-    </div>
+    </main>
 
-    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/scripts.js"></script>
 
 </body>
