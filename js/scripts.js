@@ -79,7 +79,7 @@ async function blinktimer() {
     $( "#header .avatar" ).attr('src',src);
   }
   while (true) {
-    var delay = Math.floor((Math.random() * 20000) + 0);
+    var delay = Math.floor((Math.random() * 15000) + 0);
     await sleep(delay);
     blink();
   }
