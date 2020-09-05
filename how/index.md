@@ -25,6 +25,8 @@ By me, by hand.
 
 Hosted for free on [Github Pages](https://pages.github.com/).
 
+If you're interested in deploying your own Eleventy site to Github Pages, [I wrote a guide](/tech/deploying-eleventy-to-github-pages/).
+
 ## Git
 
 The entire site is in a [Github repo](https://github.com/justusthane/justusthane.github.io). When I make a change to the site and push to the repo, a [Github Action](https://github.com/justusthane/justusthane.github.io/blob/master/.github/workflows/build.yml) runs Eleventy and rebuilds the site. I followed [these instructions](https://dev.to/sophiabrandt/how-to-deploy-eleventy-to-github-pages-with-github-actions-0) to set up the Action for Eleventy.
