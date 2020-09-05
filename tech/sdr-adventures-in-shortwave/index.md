@@ -33,7 +33,7 @@ I was confused at first by the "short" in *shortwave*. Afterall, shorter waves =
 
 The term *shortwave* predates our current high-frequency world of FM radio, television, cellphones, and Wi-Fi. When the term came about, the waves were indeed much shorter than those used at the time.
 
-![](radio-spectrum-in-demand.gif)
+![Radio spectrum infographic](radio-spectrum-in-demand.gif)
 
 This graph does a good job of illustrating the spectrum. You can see here that what's called "shortwave" is also HF, or high-frequency. You can probably guess what VLF, LF, MF, VHF, UHF, SHF, and EHF stand for. Utwente's web SDR can tune from the bottom of the VLF range to the top of the HF range.
 
@@ -43,7 +43,7 @@ Also note that lower frequencies have a greater range, while higher frequencies 
 
 The waterfall display is a visual representation of the radio spectrum, useful for finding and identifying signals. Frequency is on the X axis. Time is on the Y axis, with Y = 0 being the current moment. In other words, new signals appear at the bottom and move up. A lighter color is a stronger signal.
 
-![](waterfall.png)
+![Screenshot of the Waterfall Display](waterfall.png)
 
 In the example above, there's a strong AM signal on the right at 13650 kHz, a weak AM signal left of that at 13630 kHz, and a USB (Upper Sideband&mdash;see the Modes section next) voice transmission that has just started at 13600 kHz.
 
@@ -57,7 +57,7 @@ CW (Continous Wave)
 
 :    Here's an example of what a CW signal looks like on the waterfall.
 
-:    ![](cw-waterfall.gif)
+:    ![Waterfall display for CW signal](cw-waterfall.gif)
 
 :    Because we can see the signal stopping and starting, it's possible to decode morse code from the waterfall display alone, without listening to it.
 
@@ -66,7 +66,7 @@ LSB and USB (Lower Sideband and Uppersideband)
 
 :    These are both forms of AM called Single Sideband. They use half as much bandwidth as AM. With regular AM, there's a carrier signal at the specified frequency, and the information is transmitted both above and below that frequency. In other words, it uses both sidebands. See this AM signal as an example:
 
-:    ![](UnitedAM.png)
+:    ![Waterfall display of an AM station](UnitedAM.png)
 
 :    The carrier is at 1008 kHz&mdash;this is the frequency you would tune to&mdash;and the information is transmitted in 6 kHz-wide sidebands on both sides of the carrier.
 
@@ -74,13 +74,13 @@ LSB and USB (Lower Sideband and Uppersideband)
 
 :    Here's an examble of LSB:
 
-:    ![](LSB.png)
+:    ![Waterfall display of an LSB signal](LSB.png)
 
 :    The small vertical yellow line represents the carrier signal at 7176 kHz, while the actual information (in this case, an analog voice conversation) occupies a 3 khz-wide sideband below it.
 
 :    And here's a USB signal:
 
-:    ![](USB.png)
+:    ![Waterfall display of a USB signal](USB.png)
 
 :    Carrier signal near 14135 kHz with the information occupying a 3 kHz-wide sideband above that.
 
@@ -94,7 +94,7 @@ Digital Modes
 
 :    There are many types of signals that you won't be able to understand just by listening: there are any number of digital protocols for broadcasting data over radio waves. Wi-Fi is an easy example of this: of course you wan't tune into the Wi-Fi frequency and hear words (although we won't find Wi-Fi anywhere near the frequencies we're listening at). Here's an example of one:
 
-:    ![](digital-waterfall.png)
+:    ![Waterfall display of a digital signal](digital-waterfall.png)
 
 :    [Here's a recording](digital.wav) of what I hear when I tune into that signal. Depending on the protocol being used, it may be possible to decode the audio into meaningful digital information, but that's beyond me. 
 
@@ -106,11 +106,11 @@ RADAR and other stuff
 
 :    There are any number of other things making noise on the radio spectrum. Here's an example of LORAN long-range RADAR at 100 kHz:
 
-:    ![](loran-waterfall.png)
+:    ![Waterfall display of a LORAN signal](loran-waterfall.png)
 
 :    And here's Russia's over-the-horizon "Container" radar:
 
-:    ![](Kontayner-OTH-Radar-7600-kHz-2020-08-31_T2145z.png)
+:    ![Waterfall display of the Kontayner RADAR](Kontayner-OTH-Radar-7600-kHz-2020-08-31_T2145z.png)
 
 
 
@@ -130,11 +130,11 @@ China runs a strong shortwave game. They broadcast a station called China Radio 
 
 As an example, here's a typical AM station (United AM at [1008 kHz](http://websdr.ewi.utwente.nl:8901/?tune=1008AMSync), a hobby station out of the Netherlands&mdash;good music, btw!):
 
-![](UnitedAM.png)
+![Waterfall display of a typical AM station](UnitedAM.png)
 
 And here's China Radio International:
 
-![](ChinaRadio.png)
+![Waterfall display of China Radio International](ChinaRadio.png)
 
 The yellow bar represents the "filter"&mdash; the frequency range that the radio is listening to. In this example, the portions of the signal that are wider than the yellow bar aren't serving any real purpose. Some radios have a wider maximum filter and the greater bandwidth can result in better audio fidelity, and apparently it can also be useful in avoiding interference.
 

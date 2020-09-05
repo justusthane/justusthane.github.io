@@ -18,7 +18,7 @@ For more, read on!
 
 # Intro
 
-![](original.png)
+![Original pixel art avatar](original.png)
 
 I created this self-portrait using the fun pixel art avatar generator on the website of the Icelandic band [Daði Freyr](https://dadifreyr.com/), but it's not *quite* right. My beard is longer, my glasses aren't aviators, my eyes are blue, not black,  and my forehead *simply isn't that bulbous*. Hmph. Well, should be easy enough to fix in Photoshop, right? I immediately discovered that it wasn't *quite* as trivial as I had hoped.
 
@@ -32,59 +32,59 @@ Luckily, there's a better way to do this, and it involves returning our art to i
 
 First figure out how many *fauxels* wide your art is. To do this, measure one of them. Zoom in until you can see the pixel grid (to make sure we get our measurement perfect), and measure the width of one *fauxels* using the Ruler tool (I):
 
-![](measuring.png)
+![Measuring a pixel](measuring.png)
 
 In this case, each *fauxel* is 48 actual pixels across. Now you need the actual width of your art. Find it by opening the *Image Size* window (Image menu -> Image Size).
 
-![](imagesize.png)
+![Finding the size of the image](imagesize.png)
 
 1536 pixels. Now to figure out how many *fauxels* wide your art is, divide the actual width of the image by the width of a *fauxel*. In this case, 1536/48 = 32, so this art is 32 *fauxels* across.
 
 Now that we know that, return to the Image Size window and resize your artwork to its proper pixel-perfect size&mdash;in this example, 32 pixels wide. There's one other *very important* thing you have to do here: change the resampling mode to "Nearest Neighbor"&mdash;this will make sure Photoshop leaves your *fauxels* intact and doesn't try to do any aliasing or blending or other fancy things with them.
 
-![](resize.png)
+![Resizing the image](resize.png)
 
-![](tiny.png)
+![Screenshot of the tiny image](tiny.png)
 
 It's tiny! Zoom way in...
 
-![](pixels.png)
+![Zoomed in](pixels.png)
 
 And now you're no longer working in *fauxels*, but our good and proper pixels! What a relief, that was a dumb word anyway.
 
 Now simply use the Pencil tool (B), set to a 1px brush size, to make whatever changes you want. The Eyedropper tool (I) is also a good friend of ours to match the existing colors.
 
-![](beardgrowth.png)
+![Making my beard bigger](beardgrowth.png)
 
 I don't have any suggestions for the editing itself, it turns out pixel art is *hard*.
 
 You can also use the Selection and Move tools to select things and move them around. I'm going to move the head higher to give me more room for a glorious beard.
 
-![](select.png)
+![Selection a region](select.png)
 
 Just make sure to set Feather to 0px and uncheck Anti-alias *before* making the selection...
 
-![](featheristhedevil.png)
+![Feather and anti-alias settings](featheristhedevil.png)
 
 ...otherwise you'll end up with "transparent" pixels like this along the edges:
 
-![](itoldyou.png)
+![Transparent pixels](itoldyou.png)
 
 ***...Jump cut...***
 
 Much better.
 
-![](handsomer.png)
+![Edited pixel art](handsomer.png)
 
 Once you've made all your desired changes, the only thing left to do is scale back up! 
 
 Again use the Image Size window, and again make sure to select the Nearest Neighbor resample mode, and return your art to its original size&mdash;or whatever size you want. Since there will be no loss of quality scaling up, the sky is the limit!
 
-![](scaleup.png)
+![Scaling up](scaleup.png)
 
 Save, and you're done!
 
-![](pixel-avatar.png)
+![Finished image](pixel-avatar.png)
 
 What a handsome devil.
 
