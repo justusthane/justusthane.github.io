@@ -18,6 +18,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("style");
   eleventyConfig.addPassthroughCopy("webfonts");
   eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   eleventyConfig.addLiquidFilter("customDate", function(value, arg) { 
     return moment(value).utc().format(arg);
