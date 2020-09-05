@@ -1,4 +1,15 @@
-console.log("Loaded");
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+/*
+async function blink() {
+  var src = $(" #header .avatar ").attr('src');
+  console.log("BLINK!");
+  $( "#header .avatar" ).attr('src','/images/dadi-avatar_blink.png');
+  await sleep(150);
+  $( "#header .avatar" ).attr('src',src);
+}
+*/
 $( "body.home dl dt a" ).hover(
   function() {
       console.log("Hover");
@@ -44,7 +55,6 @@ $( "body.home a[href='/blog']" ).hover(
     }, function() {
         $( this ).html('blog');
     }
-
 );
 
 $( ' .elsewhere a ').hover(
@@ -59,3 +69,22 @@ $( ' .elsewhere a ').hover(
         $(' .tagline ').html( content );
     }
 );
+
+async function blinktimer() {
+  async function blink() {
+    var src = $(" #header .avatar ").attr('src');
+    console.log("BLINK!");
+    $( "#header .avatar" ).attr('src','/images/dadi-avatar_blink.png');
+    await sleep(150);
+    $( "#header .avatar" ).attr('src',src);
+  }
+  while (true) {
+    var delay = Math.floor((Math.random() * 20000) + 0);
+    await sleep(delay);
+    blink();
+  }
+};
+
+$( function() {
+  blinktimer();
+});
