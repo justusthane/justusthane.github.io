@@ -1,8 +1,9 @@
 ---
 title: GIFs
 date: 2020-02-12
+updated: 2020-09-05
 ---
-I like making gifs of my friends.
+Some GIFs of my friends and other things
 
 ![](CrazyEyes.GIF)
 ![](ChainsawTed.GIF)
@@ -10,3 +11,6 @@ I like making gifs of my friends.
 ![](CarolineSnipsSoup.GIF)
 ![](FlowerPower.GIF)
 ![](ZombieBiagio.GIF)
+![](cocktailmagician.gif)
+![](sunflowers.gif)
+![](backflip.gif)
