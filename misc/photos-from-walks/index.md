@@ -4,7 +4,7 @@ date: 2020-09-06
 updated: 2020-09-09
 ---
 Only photos from walks. Mostly unedited, unfussed over, unperfect.
-Inspired by https://walking.green, although I'm not really sure what that is.
+Inspired by https://walking.green
 
 ### 2020-09-09
 ![](20200909.jpg)
@@ -15,3 +15,9 @@ Inspired by https://walking.green, although I'm not really sure what that is.
 
 ### 2020-09-06
 ![](20200906.jpg)
+
+### 2020-09-04
+![](20200904.jpg)
+
+### 2020-09-02
+![](20200902.jpg)
