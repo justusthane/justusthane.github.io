@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "eleventy --serve",
-    "build": "eleventy"
+    "serve": "NODE_ENV=production eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,9 @@
   },
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "markdown-it-emoji": "^1.4.0"
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.20",
+    "markdown-it-emoji": "^1.4.0",
+    "node-fetch": "^2.6.1"
   }
 }
