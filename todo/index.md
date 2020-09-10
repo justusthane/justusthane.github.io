@@ -52,6 +52,7 @@ templateEngineOverride: md
 - [x] Add default layout for all pages
   - Done, thanks to [this](https://github.com/11ty/eleventy/issues/380#issuecomment-568033456) handy tip for accomplishing this in Eleventy
 - [ ] Sort pages by date updated rather than date created
+- [ ] Implement [MailGo](https://mailgo.dev/) for mailto: links?
 
 ## Content
 - [ ] Worm composting article?
