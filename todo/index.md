@@ -33,7 +33,6 @@ templateEngineOverride: md
    - [ ] ~~Eventually move the h-card to a footer below an hr~~
 - [ ] [Semantic elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 - [x] Favicon
-- [ ] Define the site tagline in YAML
 - [ ] Add indicator for external links
 - [x] Write Grav plugin to render these markdown checkboxes as HTML checkboxes
    - Model after Github markdown preview checkboxes
@@ -52,6 +51,7 @@ templateEngineOverride: md
     - button to load all images in page/post
 - [x] Add default layout for all pages
   - Done, thanks to [this](https://github.com/11ty/eleventy/issues/380#issuecomment-568033456) handy tip for accomplishing this in Eleventy
+- [ ] Sort pages by date updated rather than date created
 
 ## Content
 - [ ] Worm composting article?
