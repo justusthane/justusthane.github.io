@@ -1,7 +1,7 @@
 ---
 title: Wisdom
-date: '2020-04-16'
-updated: '2020-04-17'
+date: 2020-04-16
+updated: 2020-04-17
 ---
 
 - Crack eggs on a flat surface rather than on the edge of something for less risk of shell fragments.

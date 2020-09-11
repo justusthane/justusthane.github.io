@@ -1,7 +1,7 @@
 ---
 title: Marika and Biagio's new house
-date: '2019-11-08'
-updated: '2020-04-05'
+date: 2019-11-08
+updated: 2020-04-05
 ---
 <h3>Table of Contents</h3>
 

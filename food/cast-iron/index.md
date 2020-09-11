@@ -1,7 +1,7 @@
 ---
 title: Care of cast iron pans
-date: '2020-02-10'
-updated: '2020-02-11'
+date: 2020-02-10
+updated: 2020-02-11
 ---
 ![A beautifully seasoned cast iron pan](default/IMG_3510.jpeg?cropResize=800,800)
 
