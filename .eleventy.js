@@ -28,6 +28,27 @@ module.exports = function(eleventyConfig) {
     return moment(value).utc().format(arg);
   });
 
+  // This function takes an array of pages and sorts them by date updated. 
+  // If they don't have an "updated" date, it sorts them by date created instead.
+  eleventyConfig.addFilter("sortByUpdated", function(value) { 
+    
+    value.forEach(function(item) {
+      // If the page doesn't have a date updated, we'll sort it by it's date created.
+      if (typeof item.data.updated == 'undefined') {
+          item.data.sortdate = item.date;
+      } else { // Otherwise, sort by date updated
+        item.data.sortdate = item.data.updated;
+      };
+    });
+
+    // Do the sort
+    value.sort(function(a, b) {
+      return b.data.sortdate - a.data.sortdate;
+    });
+
+    return value;
+  });
+
   eleventyConfig.addNunjucksFilter("split", function(value, arg) { 
     return value.split(arg);
   });
