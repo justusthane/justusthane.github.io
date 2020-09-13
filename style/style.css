@@ -189,6 +189,24 @@ body.home nav {
     margin: 1em 0 0 0;
 }
 
+.booklist {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.booklist .bookdetails {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+.booklist figure {
+  grid-column-start: 1;
+  margin-left: 0;
+}
+
+.booklist .bookreview {
+  grid-column-start: 2;
+}
+
 #back {
     font-size: 2.5rem;
 }
