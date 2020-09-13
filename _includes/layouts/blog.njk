@@ -4,14 +4,35 @@ layout: layouts/base.njk
 <h1><a href="/">home</a>/{{ title }}</h1>
 {{ content | safe }}
 
-{% set pages = collections.blog | reverse %}
+{% set pages = collections.all | sortByUpdated %}
 
-{% for page in pages %}
-  <section class="blogPost h-entry {{ page.data.type }}">
-    <div class="title"><h2 class="p-name">{% include "includes/blog_item_title.njk" %}</h2></div>
-    <div class="date"><a href="{{page.url}}" class="dt-published u-url u-uid">{{ page.date | utcDate('YYYY-MM-DD') }}</a></div>
-    <div class="content ">
-      {{ page.templateContent | safe }}
+{% for currentPage in pages %}
+  {% if currentPage.data.tags == 'blog' %}
+    <section class="blogPost h-entry {{ currentPage.data.type }}">
+      <div class="title"><h2 class="p-name">{% include "includes/blog_item_title.njk" %}</h2></div>
+      <div class="publish-date">Published <a href="{{currentPage.url}}" class="dt-published u-url u-uid"><i class="fa fa-link"></i>{{ page.date | utcDate('YYYY-MM-DD') }}</a></div>
+      <div class="content ">
+        {{ currentPage.templateContent | safe }}
+      </div>
+    </section>
+  {% else %}
+    <section class="pageupdate">
+    {% set myArray = currentPage.url.split('/') | reverse %}
+    {% set parent = myArray[2] %}
+    {% if not parent %}
+        {% set parent = 'home' %}
+    {% endif %}
+    {% if currentPage.data.updated %}
+      <em>Page updated</em>: {{ parent }}/<a href="{{ currentPage.url }}">{{ currentPage.data.title }}</a>
+      <div class="publish-date">{{ currentPage.data.updated | utcDate('YYYY-MM-DD' ) }}</div>
+    {% else %}
+      <em>Page published</em>: {{ parent }}/<a href="{{ currentPage.url }}">{{ currentPage.data.title }}</a>
+      <div class="publish-date">{{ currentPage.date | utcDate('YYYY-MM-DD') }}</div>
+    {% endif %}
+    <div class="updatemessage">
+      {{ currentPage.data.update }}
     </div>
-  </section>
+
+    </section>
+  {% endif %}
 {% endfor %}

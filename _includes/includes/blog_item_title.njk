@@ -1,7 +1,7 @@
-{% if page.data.type == 'reply' %}
-  <i class="fas fa-reply"></i> Reply to: <a class="u-in-reply-to"  href="{{ page.data.link }}">{{ page.data.title }}</a>
-{% elif page.data.type == 'link' %}
-  <i class="fas fa-link"></i> Link: <a href="{{ page.data.link }}">{{ page.data.title }}</a>
+{% if currentPage.data.type == 'reply' %}
+  <i class="fas fa-reply"></i> Reply to: <a class="u-in-reply-to"  href="{{ currentPage.data.link }}">{{ currentPage.data.title }}</a>
+{% elif currentPage.data.type == 'link' %}
+  <i class="fas fa-link"></i> Link: <a href="{{ currentPage.data.link }}">{{ currentPage.data.title }}</a>
 {% else %}
-  {{ page.data.title }}
+  {{ currentPage.data.title }}
 {% endif %}

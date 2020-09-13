@@ -135,6 +135,19 @@ body.home nav {
     margin-bottom: 2em;
 }
 
+.pageupdate {
+  font-size: .8rem;
+  background-color: #eee;
+  padding: .5em .5em .5em .5em;
+  margin-top: .5em;
+}
+
+
+.updatemessage {
+  padding-top: .5em;
+  padding-left: 1em;
+}
+
 .blogPost.blurb .content {
   font-size: 1.7rem;
 }
@@ -235,9 +248,13 @@ dd {
         visibility: hidden;
     }
     .blogPost {
-        display: grid;
+        max-width: 600px;
+        margin: 0 auto;
+        /*display: grid;
         grid-template-columns: auto 1fr;
         grid-template-rows: auto auto;
+        */
+
     }
 
     .blogPost .title {
@@ -293,4 +310,8 @@ a:hover {
     .footnotes {
       background-color: #171619;
     }
+  .pageupdate {
+    background-color: #171619;
+  }
 }
+
