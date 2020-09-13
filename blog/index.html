@@ -34,99 +34,385 @@
 
     <main id="content">
         <h1><a href="/">home</a>/Weblog &amp; site updates</h1>
-<p>This blog serves mostly as a sort of “meta log” to list updates I’ve made elsewhere on the site, with some interspersed thoughts. If you’re curious about what I’ve added since your last visit, this is the place to check.<br>
-For more useful content, maybe take a look at the <a href="/craft">sewing/craft</a> or <a href="/tech">tech</a> sections.</p>
+<p>This blog serves mostly as a sort of “meta log” to list updates I’ve made elsewhere on the site, with some interspersed thoughts. If you’re curious about what I’ve added since your last visit, this is the place to check.</p>
 
 
 
 
 
-  <section class="blogPost h-entry post">
-    <div class="title"><h2 class="p-name">
+  
+    <section class="pageupdate">
+    
+    
+    
+        
+    
+    
+      <em>Page updated</em>: home/<a href="/todo/">Things I want to do on this site</a>
+      <div class="publish-date">2020-09-11</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="blogPost h-entry post">
+      <div class="title"><h2 class="p-name">
   Testing webmentions
 
 </h2></div>
-    <div class="date"><a href="/blog/20200911_testing-webmentions/" class="dt-published u-url u-uid">2020-09-11</a></div>
-    <div class="content ">
-      <p>Testing webmentions!</p>
+      <div class="publish-date">Published <a href="/blog/20200911_testing-webmentions/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>Testing webmentions!</p>
 
-    </div>
-  </section>
+      </div>
+    </section>
+  
 
-  <section class="blogPost h-entry ">
-    <div class="title"><h2 class="p-name">
+  
+    <section class="blogPost h-entry post">
+      <div class="title"><h2 class="p-name">
+  Unexpected behavior
+
+</h2></div>
+      <div class="publish-date">Published <a href="/blog/20200911_unexpected-behavior/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>First I added my pixel art avatar to the top of this site. Then I decided it would be fun if the eyes moved, so I created three new versions of the image, with the eyes looking left, right, and down, and wrote some Javascript to swap the images depending on the cursor location. Then I thought I’d give it some more personality by having it blink randomly, so I created another version of the image with the eyes closed, and wrote a function that, every 0 - 15 seconds, swaps the image with the eyes-closed version, waits 150 miliseconds, and swaps it back.</p>
+<p>It works really nicely. Sometimes it will go along time between blinks and you can have a staring contest. Sometimes it blinks twice in quick succession.</p>
+<p>But through some quirk in the code that I don’t understand, if you don’t interact with the site for a while it defaults to the eyes-closed state, and the eyes stay closed until you interact again. It sleeps. I don’t understand how this happens—the function is written so after 150 miliseconds, the eyes should reopen. I don’t understand it, and I love it.</p>
+
+      </div>
+    </section>
+  
+
+  
+    <section class="blogPost h-entry ">
+      <div class="title"><h2 class="p-name">
   Sort pages by date updated
 
 </h2></div>
-    <div class="date"><a href="/blog/20200910_sort-pages-by-date-updated/" class="dt-published u-url u-uid">2020-09-10</a></div>
-    <div class="content ">
-      <p>It’s been bothering me for a while that the pages on this site were sorted by the date created rather than the date updated (if there was one), so that the first created pages are always at the bottom of the list regardless of how recently they were updated. I want fresh stuff at the top! The only date that Eleventy provides out of the box is the date created—there is no concept of date modified by default. I had created a “modified” value in the YAML frontmatter for each page for display purposes, but there wasn’t a way to sort by those dates…until now!</p>
+      <div class="publish-date">Published <a href="/blog/20200910_sort-pages-by-date-updated/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>It’s been bothering me for a while that the pages on this site were sorted by the date created rather than the date updated (if there was one), so that the first created pages are always at the bottom of the list regardless of how recently they were updated. I want fresh stuff at the top! The only date that Eleventy provides out of the box is the date created—there is no concept of date modified by default. I had created a “modified” value in the YAML frontmatter for each page for display purposes, but there wasn’t a way to sort by those dates…until now!</p>
 <p>It required creating a custom Eleventy filter that takes the supplied array of pages and sorts them by my “date modified” value, and I’m super proud of myself for getting there. It’s pretty basic stuff, but it felt good to figure it out.</p>
 <p><a href="https://github.com/justusthane/justusthane.github.io/commit/0e68643daeaef6b5a6b2dd00463eb30f33b33ee8">Here’s the commit</a>.</p>
 <p>It’s cool how easy it was to make this happen (my lack of Javascript chops notwithstanding). I feel like a superhero every time I add a filter to introduce new functionality to my site. <a href="https://11ty.dev">Eleventy</a> rocks!</p>
 
-    </div>
-  </section>
+      </div>
+    </section>
+  
 
-  <section class="blogPost h-entry post">
-    <div class="title"><h2 class="p-name">
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page updated</em>: misc/<a href="/misc/photos-from-walks/">Photos from walks</a>
+      <div class="publish-date">2020-09-09</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: food/<a href="/food/granola-recipe/">Granola recipe</a>
+      <div class="publish-date">2020-09-09</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: misc/<a href="/misc/favorite-possessions/">Favorite possessions</a>
+      <div class="publish-date">2020-09-09</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page updated</em>: misc/<a href="/misc/gifs/">GIFs</a>
+      <div class="publish-date">2020-09-05</div>
+    
+    <div class="updatemessage">
+      Added some new GIFs!
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: food/<a href="/food/fruit-fly-trap/">The ultimate fruit fly trap</a>
+      <div class="publish-date">2020-09-05</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: tech/<a href="/tech/deploying-eleventy-to-github-pages/">How To Deploy an Eleventy Site to Github Pages with a Custom Domain</a>
+      <div class="publish-date">2020-09-05</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="blogPost h-entry post">
+      <div class="title"><h2 class="p-name">
   Migrated site to Github Pages
 
 </h2></div>
-    <div class="date"><a href="/blog/20200903_migrated-to-gh-pages/" class="dt-published u-url u-uid">2020-09-03</a></div>
-    <div class="content ">
-      <p>Wheeee! I migrated the site from Netlify to Github Pages. More info coming on the <a href="/how">/how</a> page soon.</p>
+      <div class="publish-date">Published <a href="/blog/20200903_migrated-to-gh-pages/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>Wheeee! I migrated the site from Netlify to Github Pages. More info coming on the <a href="/how">/how</a> page soon.</p>
 
+      </div>
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: tech/<a href="/tech/editing-pixel-art-in-photoshop/">Editing Pixel Art in Photoshop</a>
+      <div class="publish-date">2020-09-02</div>
+    
+    <div class="updatemessage">
+      
     </div>
-  </section>
 
-  <section class="blogPost h-entry link">
-    <div class="title"><h2 class="p-name">
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: tech/<a href="/tech/sdr-adventures-in-shortwave/">SDR: Digital Adventures in Shortwave Radio</a>
+      <div class="publish-date">2020-08-30</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page updated</em>: misc/<a href="/misc/can-knocky-over/">Can-Knocky-Over: A Driveway Drinking Game</a>
+      <div class="publish-date">2020-07-07</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: craft/<a href="/craft/right-to-roam-rucksack/">Sewing the Merchant &amp; Mills Right-to-Roam rucksack kit</a>
+      <div class="publish-date">2020-05-08</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: tech/<a href="/tech/open-with-vim/">&#39;Open With&#39; Vim from MacOS Finder</a>
+      <div class="publish-date">2020-05-08</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page updated</em>: misc/<a href="/misc/wisdom/">Wisdom</a>
+      <div class="publish-date">2020-04-17</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="blogPost h-entry link">
+      <div class="title"><h2 class="p-name">
   <i class="fas fa-link"></i> Link: <a href="https://omoma.glitch.me">LIKELIKE online</a>
 
 </h2></div>
-    <div class="date"><a href="/blog/2020-04-17_LIKELIKE/" class="dt-published u-url u-uid">2020-04-17</a></div>
-    <div class="content ">
-      <p>This is an amazing multiplayer virtual museum, complete with different interactive exhibits in the form of rooms. There’s a rhyme room where you can only say things that rhyme with what’s already been said. There’s a mirror room. There’s a censorship room where each word can only be said once. I did manage to say my name in the censorship room though.</p>
+      <div class="publish-date">Published <a href="/blog/2020-04-17_LIKELIKE/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>This is an amazing multiplayer virtual museum, complete with different interactive exhibits in the form of rooms. There’s a rhyme room where you can only say things that rhyme with what’s already been said. There’s a mirror room. There’s a censorship room where each word can only be said once. I did manage to say my name in the censorship room though.</p>
 <p><img src="censored.png" alt="Censored"></p>
 
-    </div>
-  </section>
+      </div>
+    </section>
+  
 
-  <section class="blogPost h-entry blurb">
-    <div class="title"><h2 class="p-name">
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: tech/<a href="/tech/eleventy-utc-dates/">Eleventy static-site generator: Making Liquid play nice with dates</a>
+      <div class="publish-date">2020-04-16</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: tech/<a href="/tech/how-to-switch-away-from-gmail/">How to switch away from Gmail</a>
+      <div class="publish-date">2020-04-16</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="blogPost h-entry blurb">
+      <div class="title"><h2 class="p-name">
   
 
 </h2></div>
-    <div class="date"><a href="/blog/2020-04-09_terraces/" class="dt-published u-url u-uid">2020-04-09</a></div>
-    <div class="content ">
-      <p>Every year passed without a house with a terrace in the sun is another year of my life wasted.</p>
+      <div class="publish-date">Published <a href="/blog/2020-04-09_terraces/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>Every year passed without a house with a terrace in the sun is another year of my life wasted.</p>
 
+      </div>
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: misc/<a href="/misc/awful-affirmations/">Awful Affirmations</a>
+      <div class="publish-date">2020-04-06</div>
+    
+    <div class="updatemessage">
+      
     </div>
-  </section>
 
-  <section class="blogPost h-entry reply">
-    <div class="title"><h2 class="p-name">
-  <i class="fas fa-reply"></i> Reply to: <a class="u-in-reply-to"  href="https://www.kickscondor.com/okay-shut-up-about-me-now">Kicks Condor</a>
+    </section>
+  
 
-</h2></div>
-    <div class="date"><a href="/blog/20200304_reply-kicks-condor/" class="dt-published u-url u-uid">2020-03-04</a></div>
-    <div class="content ">
-      <p>Hey, wow, I’m honored! And I hope you appreciate that on my <a href="/links">Links</a> page I literally just have the word “Kickscondor” because I was too lazy to turn it into a link. Heck, I was even too lazy to just type a space. And today I told a friend about your site, but I just scribbled “Kicks Condor” on a scap of paper and handed it to him. That’s gotta be worth something, right?</p>
-<p>Hey, maybe that’s the answer. Maybe we need to take the <em>h</em> out of <em>href</em>. Maybe we need to take the <em>hyper</em> out of <em>hyperlink</em>. If someone really cares, they’ll have to manually type the words into their search engine. That’ll stop those link cowboys!</p>
-<p>Incidentally, I’m pretty sure I can handle at least 20 links before certain destruction—so feel free to keep on linking.</p>
-
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page updated</em>: misc/<a href="/misc/marika-and-biagio-house/">Marika and Biagio&#39;s new house</a>
+      <div class="publish-date">2020-04-05</div>
+    
+    <div class="updatemessage">
+      
     </div>
-  </section>
 
-  <section class="blogPost h-entry link">
-    <div class="title"><h2 class="p-name">
+    </section>
+  
+
+  
+    <section class="blogPost h-entry link">
+      <div class="title"><h2 class="p-name">
   <i class="fas fa-link"></i> Link: <a href="https://telegra.ph/On-Attention-Span-12-19">On Attention Span</a>
 
 </h2></div>
-    <div class="date"><a href="/blog/20200304_link-on-attention/" class="dt-published u-url u-uid">2020-03-04</a></div>
-    <div class="content ">
-      <p>Fittingly brief piece on our decreasing attention spans in this tweetable era. Krish’s thesis is that the problem can’t be solved from a capitalist perspective because companies sell what people want, so instead of trying to solve it we should adapt to it, be prepared for it, and think about how our thinking and communication will be changed in the long term.</p>
+      <div class="publish-date">Published <a href="/blog/20200304_link-on-attention/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>Fittingly brief piece on our decreasing attention spans in this tweetable era. Krish’s thesis is that the problem can’t be solved from a capitalist perspective because companies sell what people want, so instead of trying to solve it we should adapt to it, be prepared for it, and think about how our thinking and communication will be changed in the long term.</p>
 <p>Krish suggests that while our intra-personal communication will become decreasingly verbose, it may also become increasingly efficient, until we no longer need to use words and can communicate sensations directly, and that this could have beneficial implications for equality and education, as communication/language barriers will cease to be barriers to understanding.</p>
 <p>There’s a cameo from Kanye in the article, who has an interesting take. Awesome:</p>
 <blockquote>
@@ -135,58 +421,219 @@ For more useful content, maybe take a look at the <a href="/craft">sewing/craft<
 <p>It’s an interesting take, but I feel it’s rather optimistic about the outcome of decreasing attention spans. I think if we lose our ability to focus for longer than the length of a tweet we won’t possibly be capable of implementing the required drastic changes to adapt to what we’re talking about.</p>
 <p>I’m also less <em>pessimistic</em>, in a way: I don’t think this is an inevitability. While it’s true that attention spans are surely decreasing, I think people recognize it as a problem in themselves and will strive to overcome.</p>
 
-    </div>
-  </section>
+      </div>
+    </section>
+  
 
-  <section class="blogPost h-entry post">
-    <div class="title"><h2 class="p-name">
+  
+    <section class="blogPost h-entry reply">
+      <div class="title"><h2 class="p-name">
+  <i class="fas fa-reply"></i> Reply to: <a class="u-in-reply-to"  href="https://www.kickscondor.com/okay-shut-up-about-me-now">Kicks Condor</a>
+
+</h2></div>
+      <div class="publish-date">Published <a href="/blog/20200304_reply-kicks-condor/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>Hey, wow, I’m honored! And I hope you appreciate that on my <a href="/links">Links</a> page I literally just have the word “Kickscondor” because I was too lazy to turn it into a link. Heck, I was even too lazy to just type a space. And today I told a friend about your site, but I just scribbled “Kicks Condor” on a scap of paper and handed it to him. That’s gotta be worth something, right?</p>
+<p>Hey, maybe that’s the answer. Maybe we need to take the <em>h</em> out of <em>href</em>. Maybe we need to take the <em>hyper</em> out of <em>hyperlink</em>. If someone really cares, they’ll have to manually type the words into their search engine. That’ll stop those link cowboys!</p>
+<p>Incidentally, I’m pretty sure I can handle at least 20 links before certain destruction—so feel free to keep on linking.</p>
+
+      </div>
+    </section>
+  
+
+  
+    <section class="blogPost h-entry post">
+      <div class="title"><h2 class="p-name">
   Around town
 
 </h2></div>
-    <div class="date"><a href="/blog/20200224_around-town/" class="dt-published u-url u-uid">2020-02-24</a></div>
-    <div class="content ">
-      <p>Yesterday was just a gorgeous day—sunny, temps above freezing, everything melting and flowing. I didn’t get to spend much time outside, but I walked down to the liquour store to meet Caroline on her way into town (quotes for wedding booze), and I savored the walk down.<br>
+      <div class="publish-date">Published <a href="/blog/20200224_around-town/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>Yesterday was just a gorgeous day—sunny, temps above freezing, everything melting and flowing. I didn’t get to spend much time outside, but I walked down to the liquour store to meet Caroline on her way into town (quotes for wedding booze), and I savored the walk down.<br>
 <img src="photo.jpeg?cropResize=800,800" alt="around town"></p>
 
+      </div>
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+        
+    
+    
+      <em>Page published</em>: home/<a href="/links/">links &amp; other things I like</a>
+      <div class="publish-date">2020-02-15</div>
+    
+    <div class="updatemessage">
+      
     </div>
-  </section>
 
-  <section class="blogPost h-entry ">
-    <div class="title"><h2 class="p-name">
-  GIFs
+    </section>
+  
 
-</h2></div>
-    <div class="date"><a href="/blog/20200211_gifs/" class="dt-published u-url u-uid">2020-02-11</a></div>
-    <div class="content ">
-      <p><em>this content has moved to <a href="/misc/gifs">misc/gifs</a></em></p>
-
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page updated</em>: food/<a href="/food/cast-iron/">Care of cast iron pans</a>
+      <div class="publish-date">2020-02-11</div>
+    
+    <div class="updatemessage">
+      
     </div>
-  </section>
 
-  <section class="blogPost h-entry blurb">
-    <div class="title"><h2 class="p-name">
+    </section>
+  
+
+  
+    <section class="blogPost h-entry blurb">
+      <div class="title"><h2 class="p-name">
   
 
 </h2></div>
-    <div class="date"><a href="/blog/20200211_content/" class="dt-published u-url u-uid">2020-02-11</a></div>
-    <div class="content ">
-      <p>I’m spending a lot of time and having a lot of fun building this site, but I’m a little bit concerned about whether I’ll actually make content to populate it. But maybe the more excited about the site I am, the more likely I’ll be to make content for it?</p>
+      <div class="publish-date">Published <a href="/blog/20200211_content/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>I’m spending a lot of time and having a lot of fun building this site, but I’m a little bit concerned about whether I’ll actually make content to populate it. But maybe the more excited about the site I am, the more likely I’ll be to make content for it?</p>
 <p><em>Edit</em>: Or maybe half of the value is just in the building of it anyway.</p>
 
-    </div>
-  </section>
+      </div>
+    </section>
+  
 
-  <section class="blogPost h-entry post">
-    <div class="title"><h2 class="p-name">
+  
+    <section class="blogPost h-entry ">
+      <div class="title"><h2 class="p-name">
+  GIFs
+
+</h2></div>
+      <div class="publish-date">Published <a href="/blog/20200211_gifs/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p><em>this content has moved to <a href="/misc/gifs">misc/gifs</a></em></p>
+
+      </div>
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+        
+    
+    
+      <em>Page published</em>: home/<a href="/test/"></a>
+      <div class="publish-date">2020-02-10</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="blogPost h-entry post">
+      <div class="title"><h2 class="p-name">
   Siri
 
 </h2></div>
-    <div class="date"><a href="/blog/20200206_siri/" class="dt-published u-url u-uid">2020-02-06</a></div>
-    <div class="content ">
-      <p>I was thinking about how personal assistants—Siri, et al.—have almost exlusively female voices by default. I’m sure it’s because in general people tend to be less threatened by women and so are more likely to be comfortable with a woman’s voice living in their pocket. Isn’t that a little sexist though? Anyway, I changed my Siri’s voice to a male’s a few weeks ago, and my life is still fine.</p>
+      <div class="publish-date">Published <a href="/blog/20200206_siri/" class="dt-published u-url u-uid"><i class="fa fa-link"></i>2020-09-13</a></div>
+      <div class="content ">
+        <p>I was thinking about how personal assistants—Siri, et al.—have almost exlusively female voices by default. I’m sure it’s because in general people tend to be less threatened by women and so are more likely to be comfortable with a woman’s voice living in their pocket. Isn’t that a little sexist though? Anyway, I changed my Siri’s voice to a male’s a few weeks ago, and my life is still fine.</p>
 
+      </div>
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: craft/<a href="/craft/speedy-stitcher/">Speedy Stitcher saved my shoulder bag</a>
+      <div class="publish-date">2020-01-30</div>
+    
+    <div class="updatemessage">
+      
     </div>
-  </section>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: craft/<a href="/craft/tent-stake-bag/">Tent stake bag</a>
+      <div class="publish-date">2020-01-30</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+        
+    
+    
+      <em>Page published</em>: home/<a href="/how/">How does this site work?</a>
+      <div class="publish-date">2020-01-15</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+        
+    
+    
+      <em>Page published</em>: home/<a href="/why/">Why does this website exist?</a>
+      <div class="publish-date">2020-01-15</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
+
+  
+    <section class="pageupdate">
+    
+    
+    
+    
+      <em>Page published</em>: writings/<a href="/writings/i-fell-in-love-with-the-cashier-at-kohls/">I fell in love with the cashier at Kohl&#39;s</a>
+      <div class="publish-date">2014-08-31</div>
+    
+    <div class="updatemessage">
+      
+    </div>
+
+    </section>
+  
 
 
     </main>
