@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/page.njk'
 title: 'How does this site work?'
+date: 2020-01-15
 menu: 'how'
 tagline: '&nbsp;does this site work?'
 ---

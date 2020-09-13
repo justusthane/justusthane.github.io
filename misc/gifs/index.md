@@ -2,6 +2,7 @@
 title: GIFs
 date: 2020-02-12
 updated: 2020-09-05
+update: 'Added some new GIFs!'
 ---
 Some GIFs of my friends and other things
 

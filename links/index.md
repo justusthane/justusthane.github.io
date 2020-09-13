@@ -3,6 +3,7 @@ layout: layouts/page.njk
 menu: 'links'
 tagline: '&nbsp;&amp;&nbsp;other things I like'
 title: 'links & other things I like'
+date: '2020-02-15'
 ---
 
 <h3>Table of Contents</h3>
