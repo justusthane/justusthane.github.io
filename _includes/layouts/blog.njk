@@ -10,7 +10,7 @@ layout: layouts/base.njk
   {% if currentPage.data.tags == 'blog' %}
     <section class="blogPost h-entry {{ currentPage.data.type }}">
       <div class="title"><h2 class="p-name">{% include "includes/blog_item_title.njk" %}</h2></div>
-      <div class="publish-date">Published <a href="{{currentPage.url}}" class="dt-published u-url u-uid"><i class="fa fa-link"></i>{{ page.date | utcDate('YYYY-MM-DD') }}</a></div>
+      <div class="publish-date">Published <a href="{{currentPage.url}}" class="dt-published u-url u-uid"><i class="fa fa-link"></i>{{ currentPage.date | utcDate('YYYY-MM-DD') }}</a></div>
       <div class="content ">
         {{ currentPage.templateContent | safe }}
       </div>
