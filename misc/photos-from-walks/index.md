@@ -6,6 +6,9 @@ updated: 2020-09-09
 Only photos from walks. Mostly unedited, unfussed over, unperfect.
 Inspired by https://walking.green
 
+### 2020-09-12
+![](20200912.jpg)
+
 ### 2020-09-09
 ![](20200909.jpg)
 
