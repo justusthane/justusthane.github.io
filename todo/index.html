@@ -37,72 +37,12 @@
 <p class="publish-date">Published 2020-02-11, updated 2020-09-11</p>
 <h2 id="site">Site</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Stop images from being sideways :\
-<ul>
-<li><em><a href="https://stackoverflow.com/questions/20290419/why-do-my-webpage-images-appear-sideways-in-my-html-but-correct-when-in-full-scr">This was apparently just an issue with the exif data from iPhone photos</a>. Opening the images in Preview and saving them fixed it.</em></li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Fix site tagline on mobile</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Manual ordering for home page links</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Split homepage into “Here” and “Elsewhere” sections
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Figure out better way to manage homepage <em>elsewhere</em> links other than hardcoded in the template
-<ul>
-<li><em><a href="https://github.com/justusthane/grav-justus.ws/commit/294faf768b95e80e0b8ba2b7028cc7ca797f202e">Links now defined in home page frontmatter YAML</a> rather than hardcoded into template. Yay!</em></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Resize images</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Fix images on blog!</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Fix disappearing taglines on small site</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Make blog
-<ul class="contains-task-list">
-<li><em><a href="https://github.com/justusthane/grav-justus.ws/commit/e3a307f5c5976b22ed4dd1e2932df896f8dbdaf6">Made blog</a>!</em></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Different content types (long post, blurb, photo, link, etc)
-<ul>
-<li>Trying to figure out how to embed the posts on the blog page using the partials template corresponding to the post type. The problem is that the normal way of embedding, <code>{% include 'partials/post.md' with {'page': 'item'} %}</code>, explicitly defines the template, where I want to use a template depending on the embedded page type (e.g. <a href="http://photo.md">photo.md</a> should use partials/photo.twig.html).
-<ul>
-<li>One possibility might be to build the blog as a modular page, which appears to do this automatically. However, I’m not sure if that will work since each post should also be accessible individually by its own URL</li>
-<li>It also appears from the <a href="https://twig.symfony.com/doc/2.x/tags/include.html">Twig documentation</a> that the template name can be a Twig expression, so there might be some room to play there.
-<ul>
-<li><em><a href="https://github.com/justusthane/grav-justus.ws/commit/d4b3607705bf5760afa877bc220391db318ae5d5">Figured it out</a>, and this ended up being the way. Ended up being super easy: <code>{% include 'partials/' ~ child.template ~ '.html.twig' with {page: child, embed: true} %}</code></em></li>
-</ul>
-</li>
-<li>I’ve also posted on the Grav forum looking for help.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Tags</li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Automatic ToC for long pages?
-<ul>
-<li>How to parse Markdown and pull headers into Twig template?</li>
-</ul>
-</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> On listing pages show date published/date updated</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Figure out how to unobstrusively integrate an <a href="http://microformats.org/wiki/h-card">h-Card</a> into the homepage?
-<ul class="contains-task-list">
-<li>Maybe integrate with the Elsewhere section, since that’s mostly links to me at other places?</li>
-<li>Or “Me” section?</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> <s>Eventually move the h-card to a footer below an hr</s></li>
-</ul>
-</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">Semantic elements</a></li>
 <li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Favicon</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Add indicator for external links</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Write Grav plugin to render these markdown checkboxes as HTML checkboxes
-<ul>
-<li>Model after Github markdown preview checkboxes</li>
-<li><em>Done! Well, I didn’t write a Grav plugin, instead I rebuilt the site in the pretty cool <a href="https://11ty.dev">Eleventy static site generator</a>, which uses <a href="http://markdown.it">markdown.it</a>, and it turns out there’s a <a href="https://www.npmjs.com/package/markdown-it-task-lists">markdown.it plugin</a> that does exactly what I wanted. Awesome!</em></li>
-</ul>
-</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Add <em>Links</em> page
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> Maybe actually put links on the links page</li>
-</ul>
-</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Add RSS feeds</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Add options page
 <ul class="contains-task-list">
@@ -132,6 +72,7 @@
 </li>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Sort pages by date updated rather than date created</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Implement <a href="https://mailgo.dev/">MailGo</a> for mailto: links?</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Change my <a href="/tech/eleventy-utc-dates/">utcDate filter</a> to use Luxon instead of MomentJS, since Eleventy already includes Luxon.</li>
 </ul>
 <h2 id="content">Content</h2>
 <ul class="contains-task-list">
