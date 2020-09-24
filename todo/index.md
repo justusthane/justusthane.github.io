@@ -8,9 +8,8 @@ templateEngineOverride: md
 ---
 
 ## Site
+- [ ] Fix images on blog!
 - [ ] Fix disappearing taglines on small site
-- [ ] Automatic ToC for long pages?
-   - How to parse Markdown and pull headers into Twig template?
 - [x] On listing pages show date published/date updated
 - [ ] [Semantic elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 - [x] Favicon
