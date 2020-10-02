@@ -1,5 +1,5 @@
 ---
-title: Black Holes are Dark Matter?
+title: Black Holes From the Big Bang Could Be the Dark Matter
 link: https://www.quantamagazine.org/black-holes-from-the-big-bang-could-be-the-dark-matter-20200923/
 date: 2020-09-24
 tags: blog
