@@ -28,9 +28,26 @@ module.exports = function(eleventyConfig) {
     return moment(value).utc().format(arg);
   });
 
+  eleventyConfig.addFilter("getParent", function(currentUrl) {
+    // This function takes the URL of the curent page and returns the parent URL and
+    // parent slug
+    let array = currentUrl.split('/');
+    array.pop();
+    array.pop();
+    let parentUrl = array.join('/');
+    let parentSlug = array.pop();
+    if (parentSlug == '') {
+      parentSlug = 'home';
+    }
+    if (parentUrl == '') {
+      parentUrl = '/';
+    }
+    return [parentUrl,parentSlug];
+  });
+
+  eleventyConfig.addFilter("sortByUpdated", function(value) { 
   // This function takes an array of pages and sorts them by date updated. 
   // If they don't have an "updated" date, it sorts them by date created instead.
-  eleventyConfig.addFilter("sortByUpdated", function(value) { 
     
     value.forEach(function(item) {
       // If the page doesn't have a date updated, we'll sort it by it's date created.

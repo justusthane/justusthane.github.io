@@ -2,25 +2,15 @@
 layout: layouts/base.njk
 ---
 {% extends "layouts/pagewrap.njk" %}
-{% set myArray = page.url | split('/') | reverse %}
-{% set parent = myArray[2] %}
-{% if not parent %}
-    {% set parent = 'home' %}
-{% endif %}
 
 {% block content %}
 {{ content | safe }}
-<ul>
+<div class="gallery">
 {% for page in collections[cat] | sortByUpdated %}
-  <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
+  <figure class="galleryItem">
+    <a href="{{ page.url }}"><img src="{{ page.url}}/{{ page.data.thumbnail }}"></a>
+  <figcaption><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></figcaption>
+  </figure>
 {% endfor %}
-</ul>
-
-
-<ul>
-{% for page in getChildren %}
-  <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
-{% endfor %}
-</ul>
-{{ page.url }}
+</div>
 {% endblock %}
