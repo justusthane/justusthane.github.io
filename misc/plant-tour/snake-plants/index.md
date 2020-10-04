@@ -4,7 +4,7 @@ date: 2020-10-04
 thumbnail: IMG_5889_thumb.jpg
 tags: plant
 ---
-I haven't had snake plants for very long, but what I have learned is that they are *incredibly* resilient.
+I haven't had snake plants for very long, but what I have learned is that they are *incredibly* resilient and tolerant of butchery. Maybe even moreso than jades.
 
 ![](IMG_5883.jpeg)![](IMG_5889.jpeg)
 
