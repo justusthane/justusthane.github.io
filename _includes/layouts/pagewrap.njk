@@ -1,11 +1,11 @@
 {% set array = page.url | getParent %}
 {% set parentUrl = array[0] %}
 {% set parentSlug = array[1] %}
-<h1><a href="{{ parentUrl }}">{{ parentSlug }}</a>/{{ title }}</h1>
+<div class="narrow"><h1><a href="{{ parentUrl }}">{{ parentSlug }}</a>/{{ title }}</h1></div>
 {% block content %}
 {% endblock %}
 {% if parent != 'home' %}
-<div id="back">
+<div id="back" class="narrow">
   <a href="{{ parentUrl }}">&lt; more {{ parentSlug }}</a>
 </div>
 {% endif %}

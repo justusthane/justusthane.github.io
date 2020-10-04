@@ -9,10 +9,12 @@ layout: layouts/base.njk
 {% endif %}
 
 {% block content %}
+  <section class="narrow">
 {{ content | safe }}
 <ul>
 {% for page in collections[cat] | sortByUpdated %}
   <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
 {% endfor %}
 </ul>
+  </section>
 {% endblock %}
