@@ -2,7 +2,6 @@
 title: Books I've read
 date: 2020-09-13
 tags: misc
-templateEngineOverride: njk,md
 ---
 <div class="booklist">
 {% for currentPage in collections['books'] | reverse %}
