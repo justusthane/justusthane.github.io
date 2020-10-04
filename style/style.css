@@ -207,6 +207,15 @@ body.home nav {
   grid-column-start: 2;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.galleryItem {
+  max-width: 280px;
+}
+
 #back {
     font-size: 2.5rem;
 }
