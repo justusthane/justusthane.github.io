@@ -87,7 +87,7 @@ body.home nav {
 }
 
 #content {
-    max-width: 800px;
+    /* max-width: 800px;*/
     margin: 0 auto;
     font-size: 1.3rem;
     line-height: 1.4;
@@ -100,6 +100,11 @@ body.home nav {
 #content { 
   font-family: 'Inter', sans-serif;
   font-feature-settings: "ss02", "cv02", "frac";
+}
+
+.narrow {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @supports (font-variation-settings: normal) {
@@ -205,6 +210,16 @@ body.home nav {
 
 .booklist .bookreview {
   grid-column-start: 2;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galleryItem {
+  max-width: 280px;
 }
 
 #back {
