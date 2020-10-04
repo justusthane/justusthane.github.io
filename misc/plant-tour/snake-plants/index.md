@@ -8,9 +8,9 @@ I haven't had snake plants for very long, but what I have learned is that they a
 
 ![](IMG_5883.jpeg)![](IMG_5889.jpeg)
 
-These two were originally the same plant, received from my mom. I had it sitting on a windowsill and while I was out of town for a while some friends stayed at my place. I don't know what happened, but when I got home the snake plant had been snapped off at its stem---the majority of the plant was lying on the floor.
+These two were originally the same plant, received from my mom. I had it sitting on a windowsill and while I was out of town for a while a few different friends stayed at my place. When I got home the snake plant had been snapped off at its stem---most of the plant was lying on the floor. I certainly don't blame anyone---I had it in a place where it was easy to lower the window shade on top of it, which I think is what happened.
 
-I wasn't sure what else to do, so I just stuck the snapped off portion back in the pot, and to my surprise, *both* sections lived and continued to grow---the snapped off top put down new roots, and the existing roots shot up new leaves!
+I was kind of sad about it and wasn't sure what else to do, so I just stuck the snapped off portion back in the pot, and to my surprise, *both* sections lived and continued to grow---the snapped off top put down new roots, and the existing roots shot up new leaves!
 
 Once I realized what was happening, I seperated them into their own pots.
 
