@@ -2,7 +2,6 @@ var moment = require('moment');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function(eleventyConfig) {
-  markdownTemplateEngine: "njk";
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.setTemplateFormats([
@@ -68,15 +67,19 @@ module.exports = function(eleventyConfig) {
     breaks: true,
     linkify: true,
     typographer: true
-};
+  };
   let markdownLib = markdownIt(options).use(markdownItDeflist).use(markdownItFootnote).use(markdownItAnchor).use(markdownItTocDoneRight).use(markdownItAttrs).use(markdownItTaskLists).use(markdownItEmoji);
   eleventyConfig.setLibrary("md", markdownLib);
 
-markdownLib.renderer.rules.footnote_block_open = () => (
-  '<h3>Footnotes</h3>\n' +
-  '<section class="footnotes">\n' +
-  '<ol class="footnotes-list">\n'
-);
+  markdownLib.renderer.rules.footnote_block_open = () => (
+    '<h3>Footnotes</h3>\n' +
+    '<section class="footnotes">\n' +
+    '<ol class="footnotes-list">\n'
+  );
+
+  return {
+    markdownTemplateEngine: "njk"
+  };
 
 };
 
