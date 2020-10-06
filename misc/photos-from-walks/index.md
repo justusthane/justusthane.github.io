@@ -1,10 +1,27 @@
 ---
 title: "Photos from walks"
 date: 2020-09-06
-updated: 2020-09-09
+updated: 2020-10-04
 ---
 Only photos from walks. Mostly unedited, unfussed over, unperfect.
 Inspired by https://walking.green
+
+### 2020-09-04
+![](20201004.jpg)
+
+### 2020-10-03
+![](20201003.jpg)
+![](20201003_1.jpg)
+
+### 2020-09-30
+![](20200930.jpg)
+
+### 2020-09-28
+![](20200928.jpg)
+![](20200928_1.jpeg)
+
+### 2020-09-26
+![](20200926.jpg)
 
 ### 2020-09-15
 ![](20200915.jpg)
