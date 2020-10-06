@@ -91,15 +91,12 @@ body.home nav {
     margin: 0 auto;
     font-size: 1.3rem;
     line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "ss02", "cv02", "frac";
 }
 
 #content p {
     text-align: justify;
-}
-
-#content { 
-  font-family: 'Inter', sans-serif;
-  font-feature-settings: "ss02", "cv02", "frac";
 }
 
 .narrow {
