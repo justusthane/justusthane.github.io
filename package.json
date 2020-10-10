@@ -29,6 +29,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.20",
+    "markdown-it-container": "^3.0.0",
     "markdown-it-emoji": "^1.4.0",
     "node-fetch": "^2.6.1"
   }

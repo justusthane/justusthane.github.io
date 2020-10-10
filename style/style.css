@@ -4,6 +4,7 @@
 body {
     font-family: ;
     /*background-color: #fefefe;*/
+    box-sizing: border-box;
 }
 
 h1,h2,h3,h4,h5 {
@@ -81,14 +82,26 @@ body.home nav {
     font-size: 2.5rem;
 }
 
+.thegrid {
+    display: grid;
+    grid-template-columns: 1fr min(65ch, 100%) 1fr;
+}
+
+.thegrid > * {
+    grid-column: 2;
+}
+.full-bleed, pre {
+    width: 100%;
+    grid-column: 1 / 4 !important;
+    box-sizing: border-box;
+}
+
 .blag {
     /* Not needed with Interfont */
     /* letter-spacing: 0.08rem; */
 }
 
 #content {
-    /* max-width: 800px;*/
-    margin: 0 auto;
     font-size: 1.3rem;
     line-height: 1.4;
     font-family: 'Inter', sans-serif;
@@ -100,8 +113,6 @@ body.home nav {
 }
 
 .narrow {
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 @supports (font-variation-settings: normal) {

@@ -78,6 +78,7 @@ module.exports = function(eleventyConfig) {
   let markdownItAttrs = require("markdown-it-attrs");
   let markdownItTaskLists = require("markdown-it-task-lists");
   let markdownItEmoji = require("markdown-it-emoji");
+  let markdownItContainer = require("markdown-it-container");
 
   let options = {
     html: true,
@@ -85,7 +86,7 @@ module.exports = function(eleventyConfig) {
     linkify: true,
     typographer: true
   };
-  let markdownLib = markdownIt(options).use(markdownItDeflist).use(markdownItFootnote).use(markdownItAnchor).use(markdownItTocDoneRight).use(markdownItAttrs).use(markdownItTaskLists).use(markdownItEmoji);
+  let markdownLib = markdownIt(options).use(markdownItDeflist).use(markdownItFootnote).use(markdownItAnchor).use(markdownItTocDoneRight).use(markdownItAttrs).use(markdownItTaskLists).use(markdownItEmoji).use(markdownItContainer, 'full-bleed');
   eleventyConfig.setLibrary("md", markdownLib);
 
   markdownLib.renderer.rules.footnote_block_open = () => (

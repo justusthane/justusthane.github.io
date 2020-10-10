@@ -4,8 +4,8 @@ layout: layouts/base.njk
 {% extends "layouts/pagewrap.njk" %}
 
 {% block content %}
-  <section class="narrow">{{ content | safe }}</section>
-<div class="gallery">
+  {{ content | safe }}
+<div class="gallery full-bleed">
 {% for page in collections[cat] | sortByUpdated %}
   <figure class="galleryItem">
     <a href="{{ page.url }}"><img src="{{ page.url}}/{{ page.data.thumbnail }}"></a>
