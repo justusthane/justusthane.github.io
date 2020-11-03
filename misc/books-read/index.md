@@ -10,7 +10,7 @@ tags: misc
   </div>
   <figure style="float: left;"><img style="width: 150px;" src="{{ currentPage.data.cover }}"></figure>
   <div class="bookreview">
-  <p>Finished {{ currentPage.date | utcDate("YYYY-MM-DD") }}</p>
+  <p><span class="{% if currentPage.data.dnf %}strike{% endif %}">Finished {{ currentPage.date | utcDate("YYYY-MM-DD") }}</span> {% if currentPage.data.dnf %}<strong>Did Not Finish</strong>{% endif %}</p>
     <p>{{ currentPage.templateContent | safe }}</p>
   </div>
 {% endfor %}
