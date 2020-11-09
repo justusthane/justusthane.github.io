@@ -79,6 +79,14 @@ body.home nav h5 {
   border-bottom: 5px dashed var(--dark-gray);
 }
 
+#menuMobile {
+  padding: 24px;
+}
+
+#menuDesktop {
+  display: none;
+}
+
 #content {
   grid-area: content;
     font-size: 1.3rem;
@@ -98,6 +106,10 @@ body.home nav h5 {
 
 #header .look.right {
   float: left;
+}
+
+img {
+  box-shadow: 5px 5px 0 red;
 }
 
 
@@ -302,6 +314,14 @@ dd {
       padding-left: 20px;
       padding-right: 20px;
       border-left: 5px dashed var(--dark-gray);
+    }
+
+    #menuMobile {
+      display: none;
+    }
+
+    #menuDesktop {
+      display: block;
     }
 
     .blogPost {
