@@ -4,6 +4,8 @@
 {% set parentSlug = array[1] %}
 {% block sidebar %}
 {% set navPages = collections.all | eleventyNavigation('home') %}
+<details id="menuMobile">
+  <summary>Menu</summary>
         <ul>
           {% for entry in navPages %}
           <li{% if entry.url == page.url %} class="currentPageIndicator"{% endif %}>
@@ -11,6 +13,16 @@
           </li>
           {% endfor %}
         </ul>
+</details>
+        <div id="menuDesktop">
+          <ul>
+            {% for entry in navPages %}
+            <li{% if entry.url == page.url %} class="currentPageIndicator"{% endif %}>
+              <a href="{{ entry.url | url }}">{{ entry.title }}</a>{{ entry.tagline }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
 {% endblock %}
 {% block content %}
 {{ breadcrumbs | dump | safe }}
