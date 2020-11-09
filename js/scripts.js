@@ -10,14 +10,6 @@ async function blink() {
   $( "#header .avatar" ).attr('src',src);
 }
 */
-$( "body.home dl dt a" ).hover(
-  function() {
-      console.log("Hover");
-    $( this ).parent().next().css("visibility","visible");
-  }, function() {
-    $( this ).parent().next().css("visibility","hidden");
-  }
-);
 
 $( "#header .avatar" ).hover(
   function() {
@@ -44,7 +36,7 @@ $( "#header .right" ).hover(
 
 $( ".u-url.u-uid" ).hover(
   function() {
-    $( "#header .avatar" ).attr('src','/images/dadi-avatar_down.png');
+    $( "#header .avatar" ).attr('src','/images/dadi-avatar_right.png');
   }, function() {
     $( "#header .avatar" ).attr('src','/images/dadi-avatar.png');
   }

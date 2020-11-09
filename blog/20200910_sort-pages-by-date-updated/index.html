@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://justus.ws/blog/20200910_sort-pages-by-date-updated/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
     <link rel="webmention" href="https://webmention.io/justus.ws/webmention" />
 
@@ -20,38 +21,27 @@
     <div id="toggle-color">
     </div>
     <header id="header">
-        <div class="look left"></div>
-        <div class="look right"></div>
-        <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" height="150" class="avatar"></a>
-        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus.ws</a></div> 
+        <div class="avatarContainer">
+          <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" height="150" class="avatar"></a>
+        </div>
+        <div class="sitetitle">
+          <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus grunow</a></div> 
+        </div>
         <div class="tagline">home, home on the web<br />where the links and the hypertexts play</div>
         <div class="elsewhere">
           <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws" aria-label="Email"><i class="far fa-envelope-open" aria-hidden="true"></i></a>
           <a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug" aria-label="Photography"><i class="fas fa-camera-retro" aria-hidden="true"></i></a>
           <a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github" aria-label="Github"><i class="fab fa-github" aria-hidden="true"></i></a>
         </div>
+        <div class="sidebar">
+    
+    </div>
     </header>
 
-    <main id="content" class="thegrid">
-        
+<main id="content">
 
 
-<div class="narrow"><h1><a href="/blog">blog</a>/Sort pages by date updated</h1></div>
-
-<p class="publish-date">Published 2020-09-10</p>
-<p>It’s been bothering me for a while that the pages on this site were sorted by the date created rather than the date updated (if there was one), so that the first created pages are always at the bottom of the list regardless of how recently they were updated. I want fresh stuff at the top! The only date that Eleventy provides out of the box is the date created—there is no concept of date modified by default. I had created a “modified” value in the YAML frontmatter for each page for display purposes, but there wasn’t a way to sort by those dates…until now!</p>
-<p>It required creating a custom Eleventy filter that takes the supplied array of pages and sorts them by my “date modified” value, and I’m super proud of myself for getting there. It’s pretty basic stuff, but it felt good to figure it out.</p>
-<p><a href="https://github.com/justusthane/justusthane.github.io/commit/0e68643daeaef6b5a6b2dd00463eb30f33b33ee8">Here’s the commit</a>.</p>
-<p>It’s cool how easy it was to make this happen (my lack of Javascript chops notwithstanding). I feel like a superhero every time I add a filter to introduce new functionality to my site. <a href="https://11ty.dev">Eleventy</a> rocks!</p>
-
-
-
-<div id="back" class="narrow">
-  <a href="/blog">&lt; more blog</a>
-</div>
-
-
-    </main>
+</main>
 
     <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/scripts.js"></script>

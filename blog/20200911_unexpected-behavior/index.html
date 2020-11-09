@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://justus.ws/blog/20200911_unexpected-behavior/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
     <link rel="webmention" href="https://webmention.io/justus.ws/webmention" />
 
@@ -20,37 +21,27 @@
     <div id="toggle-color">
     </div>
     <header id="header">
-        <div class="look left"></div>
-        <div class="look right"></div>
-        <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" height="150" class="avatar"></a>
-        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus.ws</a></div> 
+        <div class="avatarContainer">
+          <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" height="150" class="avatar"></a>
+        </div>
+        <div class="sitetitle">
+          <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus grunow</a></div> 
+        </div>
         <div class="tagline">home, home on the web<br />where the links and the hypertexts play</div>
         <div class="elsewhere">
           <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws" aria-label="Email"><i class="far fa-envelope-open" aria-hidden="true"></i></a>
           <a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug" aria-label="Photography"><i class="fas fa-camera-retro" aria-hidden="true"></i></a>
           <a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github" aria-label="Github"><i class="fab fa-github" aria-hidden="true"></i></a>
         </div>
+        <div class="sidebar">
+    
+    </div>
     </header>
 
-    <main id="content" class="thegrid">
-        
+<main id="content">
 
 
-<div class="narrow"><h1><a href="/blog">blog</a>/Unexpected behavior</h1></div>
-
-<p class="publish-date">Published 2020-09-11</p>
-<p>First I added my pixel art avatar to the top of this site. Then I decided it would be fun if the eyes moved, so I created three new versions of the image, with the eyes looking left, right, and down, and wrote some Javascript to swap the images depending on the cursor location. Then I thought I’d give it some more personality by having it blink randomly, so I created another version of the image with the eyes closed, and wrote a function that, every 0 - 15 seconds, swaps the image with the eyes-closed version, waits 150 miliseconds, and swaps it back.</p>
-<p>It works really nicely. Sometimes it will go along time between blinks and you can have a staring contest. Sometimes it blinks twice in quick succession.</p>
-<p>But through some quirk in the code that I don’t understand, if you don’t interact with the site for a while it defaults to the eyes-closed state, and the eyes stay closed until you interact again. It sleeps. I don’t understand how this happens—the function is written so after 150 miliseconds, the eyes should reopen. I don’t understand it, and I love it.</p>
-
-
-
-<div id="back" class="narrow">
-  <a href="/blog">&lt; more blog</a>
-</div>
-
-
-    </main>
+</main>
 
     <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/scripts.js"></script>

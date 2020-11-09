@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://justus.ws/blog/20201009_getting-stuck-on-an-approach/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
     <link rel="webmention" href="https://webmention.io/justus.ws/webmention" />
 
@@ -20,49 +21,27 @@
     <div id="toggle-color">
     </div>
     <header id="header">
-        <div class="look left"></div>
-        <div class="look right"></div>
-        <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" height="150" class="avatar"></a>
-        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus.ws</a></div> 
+        <div class="avatarContainer">
+          <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" height="150" class="avatar"></a>
+        </div>
+        <div class="sitetitle">
+          <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus grunow</a></div> 
+        </div>
         <div class="tagline">home, home on the web<br />where the links and the hypertexts play</div>
         <div class="elsewhere">
           <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws" aria-label="Email"><i class="far fa-envelope-open" aria-hidden="true"></i></a>
           <a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug" aria-label="Photography"><i class="fas fa-camera-retro" aria-hidden="true"></i></a>
           <a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github" aria-label="Github"><i class="fab fa-github" aria-hidden="true"></i></a>
         </div>
+        <div class="sidebar">
+    
+    </div>
     </header>
 
-    <main id="content" class="thegrid">
-        
+<main id="content">
 
 
-<div class="narrow"><h1><a href="/blog">blog</a>/Getting stuck on an approach</h1></div>
-
-<p class="publish-date">Published 2020-10-09</p>
-<p>Once I start trying to solve a problem in a particular way, I find it very difficult to give up and look for an alternative approach—even though the alternative approach often ends up being much simpler.</p>
-<p>I have an html file containing the lyrics to Radiohead’s <em>Fitter Happier</em>:</p>
-<pre class="language-html"><code class="language-html">Fitter, happier, more productive<br>Comfortable (not drinking too much)<br>Regular exercise at the gym (3 days a week)<br>Getting on better with your associate employee contemporaries<br>At ease<br>Eating well (no more microwave dinners and saturated fats)<br>A patient, better driver<br>A safer car (baby smiling in back seat)<br>Sleeping well (no bad dreams)</code></pre>
-<p>And I wanted to transform it such that each word/phrase is a link to a Google search for that same word/phrase, as such:</p>
-<div class="full-bleed">
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://google.com/search?q=Fitter&amp;btnI<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Fitter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://google.com/search?q=happier&amp;btnI<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>happier<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://google.com/search?q=more productive&amp;btnI<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>more productive<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://google.com/search?q=Comfortable&amp;btnI<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Comfortable<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> (<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://google.com/search?q=not drinking too much&amp;btnI<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>not drinking too much<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>)<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://google.com/search?q=Regular exercise at the gym&amp;btnI<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Regular exercise at the gym<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> (<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://google.com/search?q=3 days a week&amp;btnI<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>3 days a week<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>)</code></pre>
-</div>
-<p>…and so on (let’s not worry about <em>why</em> right now). Of course this would be a pain in the ass to do manually, but I knew Vim would help me out.</p>
-<p>It was clear upfront that a one-size-fits-all RegEx wouldn’t do the trick here, since some of the links need to be a single word, while some are a phrase, and there’s no obvious pattern—I need to decide for each one what I want the link to consist of.</p>
-<p>My first approach, and the one that I got stuck on, was trying to use a visual selection in a search &amp; replace expression. I figured that I could select a word or phrase, and then run a search &amp; replace within that visual selection, replacing the selection with the appropriate HTML for a link to the selection. In Regular Expression terms, I’d be looking for <code>(.*)</code> within the selection (in other words, the entire selection), and replacing it with <code>&lt;a href=&quot;https://google.com/search\?q=$1&amp;btnI&quot;&gt;$1&lt;/a&gt;</code></p>
-<p>I tried to make this work for almost two hours—the issue was that I couldn’t get Vim to save the entire visual selection to a single capture group, no matter what I tried. There’s probably a way to do it, but I don’t know it. Finally, it occured to me that macros would probably provide a solution. Macros allow you to record and reply a set of keystrokes. By this point I was frustrated and ready for a break, so I took Tawny for a walk, and while walking the (easy) solution came to me:</p>
-<pre class="language-vim"><code class="language-vim">v2e <span class="token comment">" Make any visual selection---in this case, we're selecting the next two words</span><br><span class="token keyword">qa</span> <span class="token comment">" Begin recording a macro to register A</span><br><span class="token string">"zc "</span> Yank the <span class="token builtin">selection</span> <span class="token keyword">to</span> the Z register<span class="token punctuation">,</span> <span class="token keyword">delete</span> it<span class="token punctuation">,</span> and switch <span class="token keyword">to</span> Insert <span class="token keyword">mode</span><br><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"https://google.com/search?q= "</span> Start typing our replacement string<br>^rz <span class="token comment">" Paste the contents of the Z buffer without leaving Insert mode</span><br>&amp;btnI<span class="token string">"> "</span> Continue typing our replacement string<br>^rz <span class="token comment">" Again paste the contents of the Z buffer</span><br><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span> <span class="token comment">" Finish typing our replacement string</span><br><span class="token operator">&lt;</span>esc<span class="token operator">></span> <span class="token comment">" Leave Insert mode</span><br><span class="token keyword">q</span> <span class="token comment">" Stop recording our buffer</span></code></pre>
-<p>Now that we have our macro built, all we have to do to make the rest of the changes is select a word or phrase we want to “linkify”, and execute our macro with <code>@a</code></p>
-<p>Here’s the magic in action:</p>
-<script id="asciicast-xOq4vvQ1ze66wWIYgOqNsaXHP" src="https://asciinema.org/a/xOq4vvQ1ze66wWIYgOqNsaXHP.js" async></script>
-
-
-
-<div id="back" class="narrow">
-  <a href="/blog">&lt; more blog</a>
-</div>
-
-
-    </main>
+</main>
 
     <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/scripts.js"></script>
