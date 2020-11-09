@@ -2,6 +2,9 @@
 title: "Photos from walks"
 date: 2020-09-06
 updated: 2020-10-04
+eleventyNavigation:
+  parent: misc
+  key: Photos from walks
 ---
 Only photos from walks. Mostly unedited, unfussed over, unperfect.
 Inspired by https://walking.green
