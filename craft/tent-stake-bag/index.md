@@ -1,6 +1,9 @@
 ---
 title: 'Tent stake bag'
 date: 2020-01-30
+eleventyNavigation:
+  key: Tent stake bag
+  parent: craft
 ---
 
 We use 10” [barn spikes](https://www.homedepot.com/p/Grip-Rite-3-8-in-x-10-in-Galvanized-Spike-Nails-10HGSPKE/100187580) as stakes for our winter tent, because they’re cheap. We didn’t have a bag for them though, so I used some leftover canvas and made one up.

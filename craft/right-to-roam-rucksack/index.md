@@ -1,6 +1,9 @@
 ---
 title: Sewing the Merchant & Mills Right-to-Roam rucksack kit
 date: 2020-05-08
+eleventyNavigation:
+  key: rucksack
+  parent: craft
 ---
 ![Finished rucksack](IMG_4334.jpeg)
 

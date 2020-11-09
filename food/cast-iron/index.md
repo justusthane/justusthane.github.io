@@ -2,6 +2,9 @@
 title: Care of cast iron pans
 date: 2020-02-10
 updated: 2020-02-11
+eleventyNavigation:
+  parent: food
+  key: Care of cast iron pans
 ---
 ![A beautifully seasoned cast iron pan](default/IMG_3510.jpeg?cropResize=800,800)
 

@@ -1,55 +1,29 @@
 ---
-layout: layouts/base.njk
 title: "justus.ws"
 bodyclasses: "home"
-eleventyExcludeFromCollections: true
-homeNav:
-    - 
-        menu: craft/sewing
-        tagline: '&nbsp;projects'
-        url: /craft
-    - 
-        menu: tech
-        tagline: '&nbsp;stuff'
-        url: /tech
-    - 
-        menu: food
-        tagline: '&nbsp;&amp; kitchen'
-        url: /food
-    - 
-        menu: writings
-        tagline: '&nbsp;&amp; musings'
-        url: /writings
-    - 
-        menu: misc
-        tagline: '&nbsp;???'
-        url: /misc
-    - 
-        menu: blog
-        tagline: '/site updates'
-        url: /blog
-    - 
-        menu: why
-        tagline: '&nbsp;does this site exist?'
-        url: /why
-    - 
-        menu: how
-        tagline: '&nbsp;does this site work?'
-        url: /how
-    - 
-        menu: links
-        tagline: '&nbsp;&amp; other things I like'
-        url: /links
-    - 
-        menu: todo
-        tagline: '&nbsp;for this site'
-        url: /todo
 ---
-<nav class="full-bleed">
-    <dl>
-        {% for item in homeNav %}
-        <dt><a href="{{ item.url }}">{{ item.menu }}</a></dt>
-            <dd style="margin-top: 0; margin-bottom: 0;">{{ item.tagline }}</dd>
-        {% endfor %}
-    </dl>
-</nav>
+{% extends "layouts/base.njk" %}
+{% block sidebar %}
+{% set navPages = collections.all | eleventyNavigation('home') %}
+        <ul>
+          {% for entry in navPages %}
+          <li{% if entry.url == page.url %} class="currentPageIndicator"{% endif %}>
+            <a href="{{ entry.url | url }}">{{ entry.title }}</a>{{ entry.tagline }}
+          </li>
+          {% endfor %}
+        </ul>
+{% endblock %}
+{% block content %}
+<p>
+Hi! Welcome to my site. My name is <a href="mailto:jg@justus.ws">Justus</a>, and this is my personal playground on the web. For more about why this site exists, see <a href="/why">why</a>, or for the technical details, see <a href="/ow">how does this site work</a>.
+</p>
+<p>
+I do system administration during the day, and enjoy playing with web technologies and doing other digital tinkering in my free time&mdash;I have a handful of write-ups and guides about such things in the <a href="/tech">tech</a> section. I try to avoid spending too much time looking at screens by also engaging in hands-on hobbies, including <a href="/food">cooking</a> and <a href="/craft">sewing</a>.
+<p>
+If you really want to deep-dive into my world, check out <a href="/misc">misc</a> where you can find a list of <a href="/misc/books-read/">books I've read</a>, a tour of <a href="/misc/plant-tour">my houseplants</a>, and...more.</p>
+</p>
+<p>
+Finally, because links make the web go 'round, check out my <a href="/links">links page</a> for other things I like.
+</p>
+<p>I love hearing from people&mdash;feel free to <a href="mailto:jg@justus.ws">email me</a>! Thanks for visiting!</p>
+{% endblock %}

@@ -1,6 +1,3 @@
----
-layout: layouts/base.njk
----
 {% extends "layouts/pagewrap.njk" %}
 {% set myArray = page.url | split('/') | reverse %}
 {% set parent = myArray[2] %}
@@ -8,13 +5,14 @@ layout: layouts/base.njk
     {% set parent = 'home' %}
 {% endif %}
 
+{% block nav %}
+{% endblock %}
 {% block content %}
-  <section class="narrow">
+{{ super() }}
 {{ content | safe }}
 <ul>
 {% for page in collections[cat] | sortByUpdated %}
   <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
 {% endfor %}
 </ul>
-  </section>
 {% endblock %}
