@@ -12,14 +12,14 @@ body {
     color: var(--dark-gray);
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 150px 250px 1fr;
-    grid-template-rows: 150px min-content 1fr;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: 120px min-content 1fr;
     gap: 10px;
     grid-template-areas:
-      "avatar  sitetitle sitetitle"
-      "tagline tagline   tagline"
-      "sidebar sidebar   sidebar"
-      "content content   content";
+      "sitetitle sitetitle"
+      "tagline   tagline"
+      "sidebar   sidebar"
+      "content   content";
 }
 h1,h2,h3,h4,h5 {
     font-weight: normal;
@@ -38,8 +38,19 @@ body.home nav h5 {
 .currentPageIndicator {
   text-shadow: 1px 1px 4px #ff1493;
 }
+
+#titleContainer {
+  grid-area: sitetitle;
+  justify-self: center;
+  width: 320px;
+}
 #avatar {
   grid-area: avatar;
+}
+
+.avatar {
+  width: 120px;
+  float: left;
 }
 
 #header .avatar {
@@ -48,15 +59,16 @@ body.home nav h5 {
 }
 
 #sitetitle {
-  grid-area: sitetitle;
-  font-size: 4em;
+  float: left;
+  padding-left: 10px;
+  font-size: 3em;
 }
 
 #tagline { 
     grid-area: tagline;
     color: var(--accent);
     font-family: 'bad_scriptregular', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
 }
 
@@ -267,13 +279,13 @@ dd {
 }
 
 
-@media only screen and (min-width: 625px) {
+@media only screen and (min-width: 700px) {
 
   body {
     grid-template-areas:
-      "avatar  sitetitle content"
-      "tagline tagline   content"
-      "sidebar sidebar   content";
+      "sitetitle content"
+      "tagline   content"
+      "sidebar   content";
     }
 
 
@@ -326,7 +338,7 @@ a,a:visited {
 a:hover {
     text-decoration:    none;
     /*color:              #efaa28;*/
-    color: #ff1493;
+    color: var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
