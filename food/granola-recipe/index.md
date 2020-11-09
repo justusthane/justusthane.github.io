@@ -1,6 +1,9 @@
 ---
 title: "Granola recipe"
 date: 2020-09-09
+eleventyNavigation:
+  key: Granola recipe
+  parent: food
 ---
 ![Granola](granola.jpeg)
 

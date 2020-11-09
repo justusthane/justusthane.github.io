@@ -1,6 +1,9 @@
 ---
 title: The ultimate fruit fly trap
 date: 2020-09-05
+eleventyNavigation:
+  parent: food
+  key: The ultimate fruit fly trap
 ---
 ![The trap](trap.jpeg)
 

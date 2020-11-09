@@ -1,1 +1,1 @@
-module.exports = "layouts/page.njk"
+module.exports = ""

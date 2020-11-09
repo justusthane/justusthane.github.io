@@ -2,5 +2,8 @@
 layout: layouts/listing.njk
 title: Recipes & tools
 tags: ''
-eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: food
+  tagline: ' & kitchen'
+  order: 30
 ---

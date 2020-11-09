@@ -1,10 +1,7 @@
----
-layout: layouts/base.njk
-templateEngineOverride: njk,md
----
 {% extends "layouts/pagewrap.njk" %}
 
 {% block content %}
+{{ super() }}
 <p class="publish-date">Published {{ page.date | utcDate('YYYY-MM-DD') }}{% if updated %}, updated {{ updated | utcDate('YYYY-MM-DD')}}{% endif %}</p>
 {{ content | safe }}
 {% endblock %}

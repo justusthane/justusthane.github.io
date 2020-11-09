@@ -2,5 +2,9 @@
 layout: layouts/listing.njk
 title: Techsmithing
 tags: ''
-eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: tech
+  parent: home
+  tagline: ' stuff'
+  order: 20
 ---

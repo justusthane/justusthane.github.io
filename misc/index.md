@@ -2,5 +2,9 @@
 layout: 'layouts/listing.njk'
 title: 'Miscellaneous'
 tags: ''
-eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: misc
+  parent: home
+  tagline: '???'
+  order: 40
 ---
