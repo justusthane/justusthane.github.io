@@ -1,9 +1,7 @@
----
-layout: layouts/base.njk
----
 {% extends "layouts/pagewrap.njk" %}
 
 {% block content %}
+  {{ super() }}
   {{ content | safe }}
 <div class="gallery full-bleed">
 {% for page in collections[cat] | sortByUpdated %}
