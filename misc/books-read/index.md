@@ -6,7 +6,7 @@ tags: misc
 <div class="booklist">
 {% for currentPage in collections['books'] | reverse %}
   <div class="bookdetails">
-  <h2>{{ currentPage.data.title }} by {{ currentPage.data.author }}</h2>
+  <h2><em>{{ currentPage.data.title }}</em> by {{ currentPage.data.author }}</h2>
   </div>
   <figure style="float: left;"><img style="width: 150px;" src="{{ currentPage.data.cover }}"></figure>
   <div class="bookreview">
