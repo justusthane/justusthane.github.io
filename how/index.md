@@ -21,10 +21,6 @@ Contast that with Eleventy, which is perfectly happy to just suck things in one 
 
 Local development with Eleventy is really sweet as well. It comes with a local webserver that watches your source files for changes, and automatically rebuilds the site *and* refreshes your web browser whenever you modify a file. No more save, refresh. Save, refresh.
 
-## Design
-
-By me, by hand.
-
 ## Hosting
 
 Hosted for free on [Github Pages](https://pages.github.com/).
