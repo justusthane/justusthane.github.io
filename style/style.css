@@ -36,7 +36,7 @@ body.home nav h5 {
 }
 
 .currentPageIndicator {
-  text-shadow: 1px 1px 4px #ff1493;
+  text-shadow: 2px 2px 1px var(--accent);
 }
 
 #titleContainer {
