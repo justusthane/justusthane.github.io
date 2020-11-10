@@ -28,5 +28,6 @@
 {% endblock %}
 {% block content %}
 {{ breadcrumbs | dump | safe }}
+<a href="{{ parentUrl }}"><i class="fas fa-arrow-circle-left"></i>&nbsp;{{ parentSlug }}</a>
   <h1>{{ title }}</h1>
 {% endblock %}
