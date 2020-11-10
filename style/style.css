@@ -372,7 +372,7 @@ a:hover {
     }
 
     body.color-auto a:hover {
-        color: #ff1493;
+        color: var(--accent);
     }
 
     #toc {
