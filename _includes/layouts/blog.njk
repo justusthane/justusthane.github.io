@@ -1,10 +1,11 @@
 {% extends "layouts/pagewrap.njk" %}
-<section class="narrow">
-<h1><a href="/">home</a>/{{ title }}</h1>
+{% block content %}
+<h1>{{ title }}</h1>
 {{ content | safe }}
 
 {% set pages = collections.all | sortByUpdated %}
 
+<ul>
 {% for currentPage in pages %}
   {% if currentPage.data.tags == 'blog' %}
     <section class="blogPost h-entry {{ currentPage.data.type }}">
@@ -35,4 +36,5 @@
     </section>
   {% endif %}
 {% endfor %}
-</section>
+</ul>
+{% endblock %}
