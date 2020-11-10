@@ -11,7 +11,7 @@ async function blink() {
 }
 */
 
-$( "#header .avatar" ).hover(
+$( ".avatar" ).hover(
   function() {
     $( this ).attr('src','/images/dadi-avatar_blink.png');
   }, function() {
@@ -36,12 +36,12 @@ $( "#header .right" ).hover(
 
 $( ".u-url.u-uid" ).hover(
   function() {
-    $( "#header .avatar" ).attr('src','/images/dadi-avatar_right.png');
+    $( ".avatar" ).attr('src','/images/dadi-avatar_right.png');
   }, function() {
-    $( "#header .avatar" ).attr('src','/images/dadi-avatar.png');
+    $( ".avatar" ).attr('src','/images/dadi-avatar.png');
   }
 );
-$( "body.home a[href='/blog']" ).hover(
+$( "a[href='/blog/']" ).hover(
     function() {
         $( this ).html('b<span class="blag">la</span>g');
     }, function() {
