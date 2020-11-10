@@ -41,6 +41,14 @@ $( ".u-url.u-uid" ).hover(
     $( ".avatar" ).attr('src','/images/dadi-avatar.png');
   }
 );
+
+$( "#sidebar a" ).hover(
+  function() {
+    $( ".avatar" ).attr('src','/images/dadi-avatar_down.png');
+  }, function() {
+    $( ".avatar" ).attr('src','/images/dadi-avatar.png');
+  }
+);
 $( "a[href='/blog/']" ).hover(
     function() {
         $( this ).html('b<span class="blag">la</span>g');
