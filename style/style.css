@@ -5,12 +5,13 @@
   --accent: pink;
   --link-blue: #024def;
   --dark-mode-link-blue: #02c4ef;
+  --background-color: #fff6ed;
 }
 
 body {
     font-family: ;
     font-family: 'Inter var', sans-serif;
-    background-color: #fef9e2;
+    background-color: var(--background-color);
     color: var(--dark-gray);
     box-sizing: border-box;
     display: grid;
