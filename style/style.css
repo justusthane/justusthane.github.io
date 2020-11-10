@@ -3,6 +3,8 @@
 :root {
   --dark-gray: #303030;
   --accent: pink;
+  --link-blue: #024def;
+  --dark-mode-link-blue: #02c4ef;
 }
 
 body {
@@ -110,6 +112,10 @@ body.home nav h5 {
 
 img {
   box-shadow: 5px 5px 0 red;
+}
+
+a img:hover {
+  box-shadow: 5px 5px 0 var(--link-blue);
 }
 
 
@@ -351,7 +357,7 @@ dd {
 
 a,a:visited {
     text-decoration:    underline;
-    color:              #024def;
+    color:              var(--link-blue);
 }
 
 a:hover {
@@ -367,11 +373,15 @@ a:hover {
     }
 
     body.color-auto a, body.color-auto a:visited {
-        color: #02c4ef;
+        color: var(--dark-mode-link-blue);
     }
 
     body.color-auto a:hover {
         color: var(--accent);
+    }
+
+    a img:hover {
+      box-shadow: 5px 5px 0 var(--dark-mode-link-blue);
     }
 
     #toc {
