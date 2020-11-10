@@ -6,6 +6,7 @@ bodyclasses: "home"
 {% block sidebar %}
 {% set navPages = collections.all | eleventyNavigation('home') %}
         <ul>
+          <li class="currentPageIndicator"><a href="/">home</a></li>
           {% for entry in navPages %}
           <li{% if entry.url == page.url %} class="currentPageIndicator"{% endif %}>
             <a href="{{ entry.url | url }}">{{ entry.title }}</a>{{ entry.tagline }}

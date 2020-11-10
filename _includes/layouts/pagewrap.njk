@@ -7,6 +7,7 @@
 <details id="menuMobile">
   <summary>Menu</summary>
         <ul>
+          <li><a href="/">home</a></li>
           {% for entry in navPages %}
           <li{% if entry.url == page.url %} class="currentPageIndicator"{% endif %}>
             <a href="{{ entry.url | url }}">{{ entry.title }}</a>{{ entry.tagline }}
@@ -16,6 +17,7 @@
 </details>
         <div id="menuDesktop">
           <ul>
+          <li><a href="/">home</a></li>
             {% for entry in navPages %}
             <li{% if entry.url == page.url %} class="currentPageIndicator"{% endif %}>
               <a href="{{ entry.url | url }}">{{ entry.title }}</a>{{ entry.tagline }}
