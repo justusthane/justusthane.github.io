@@ -10,4 +10,4 @@ At the end of the course our facilitator Jared proposed a lovely final exercise 
 
 I asked people to send me a photo of one of their favorite posessions along with a writeup of why it's important to them. These are the gifts I received.
 
-I'd love to collect more! If you would like to give me a housewarming gift, just [email me](jg@justus.ws) a photo of a favorite possession, a description of why it's meaningful, and your website (if you want it linked).
+I'd love to collect more! If you would like to give me a housewarming gift, just [email me](mailto:jg@justus.ws) a photo of a favorite possession, a description of why it's meaningful, and your website (if you want it linked).
