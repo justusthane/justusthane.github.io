@@ -82,7 +82,7 @@ body.home nav h5 {
   border-bottom: 5px dashed var(--dark-gray);
 }
 
-#menuMobile {
+#menuMobile summary {
   padding: 24px;
 }
 
