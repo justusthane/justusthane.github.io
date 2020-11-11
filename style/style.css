@@ -92,6 +92,8 @@ body.home nav h5 {
 
 #content {
   grid-area: content;
+    /*Stop child <pre> elements from overflowing */
+    overflow: auto;
     font-size: 1.3rem;
     line-height: 1.4;
     font-family: 'Inter', sans-serif;
@@ -131,10 +133,14 @@ body.home nav {
 .thegrid > * {
     grid-column: 2;
 }
-.full-bleed, pre {
+/*.full-bleed, pre {
     width: 100%;
     grid-column: 1 / 4 !important;
     box-sizing: border-box;
+}*/
+
+pre {
+  overflow-x: scroll;
 }
 
 .blag {
