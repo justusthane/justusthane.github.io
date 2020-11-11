@@ -5,7 +5,7 @@ date: 2020-11-10
 
 ![](IMG_3233.jpeg)
 
-I made this waxed-canvas tool roll for Dad last Christmas. It's based on a knife roll from the book *Heavy-Duty Sewing* by Anton Sandqvist, wich some modifications: particularly an extra layer of canvas to hide the pocket stitching and a different closure.
+I made this waxed-canvas tool roll for Dad last Christmas. It's based on a knife roll from the book *Heavy-Duty Sewing* by Anton Sandqvist, with some modifications: particularly an extra layer of canvas to hide the pocket stitching and a different closure.
 
 It was a really fun and easy project---I highly recommend working with some lightweight waxed canvas if you can. It's a joy---it's easy to crease and stays folded once you fold it.
 
