@@ -14,6 +14,9 @@ body {
     background-color: var(--background-color);
     color: var(--dark-gray);
     box-sizing: border-box;
+}
+
+#wrapper {
     display: grid;
     grid-template-columns: 320px 1fr;
     grid-template-rows: 120px min-content 1fr;
@@ -24,6 +27,7 @@ body {
       "sidebar   sidebar"
       "content   content";
 }
+
 h1,h2,h3,h4,h5 {
     font-weight: normal;
     line-height: 1.2em;
@@ -305,7 +309,7 @@ dd {
 
 @media only screen and (min-width: 700px) {
 
-  body {
+  #wrapper {
     grid-template-areas:
       "sitetitle content"
       "tagline   content"
