@@ -11,7 +11,7 @@ Three days ago I happened across a website posted in an unrelated forum:
 
 Behind this inauspicious URL hides an entire realm of secrets. It is a gateway to a world that I've only had the vaguest idea of. Let me explain.
 
-The parts of the radio spectrum that you're probably most familiar with are 88 &ndash; 108 and 530 &ndash; 1700 MHz: the FM and AM bands that you can receive from your radio in your car or at home. You probably also know that there's a huge usable radio spectrum outside of this. You've heard of HAM radio, shortwave radio, CB, VHF, etc. These are all located in areas of the spectrum not receivable by your home radio (actually, not quite&mdash;the bands that you can receive on your home radio occupy a small portion of the larger VHF band). Typically, you would need specialized equipment to pick them up: perhaps a HAM radio setup costing thousands of dollars, or at least a cheaper handheld receiver.
+The parts of the radio spectrum that you're probably most familiar with are 88 &ndash; 108 and 530 &ndash; 1700 MHz: the FM and AM bands that you can receive from your radio in your car or at home. You probably also know that there's a huge usable radio spectrum outside of this. You've heard of ham radio, shortwave radio, CB, VHF, etc. These are all located in areas of the spectrum not receivable by your home radio (actually, not quite&mdash;the bands that you can receive on your home radio occupy a small portion of the larger VHF band). Typically, you would need specialized equipment to pick them up: perhaps a ham radio setup costing thousands of dollars, or at least a cheaper handheld receiver.
 
 ## What is SDR?
 
@@ -21,7 +21,7 @@ This brings us back to the website above: The Amateur Radio Club at the Universi
 
 Note: From here on we're going to be using kHz (kilohertz) instead of of MHz (megahertz) since we'll be discussing frequencies much lower than those received by your home radio. 1 MHz = 1000 kHz.
 
-Utwente's radio can pick up the the Low Frequency range from 30 - 300 kHz that militaries use to communicate with submarines under the ocean. It can pick up the various amateur HAM radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at what times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded broadcasts from foreign intelligence agencies.
+Utwente's radio can pick up the the Low Frequency range from 30 - 300 kHz that militaries use to communicate with submarines under the ocean. It can pick up the various amateur ham radio bands scattered between 1800 kHz and 29000 kHz. It can pick up a whole world of commercial and hobbyist AM radio stations that aren't like the ones you can tune into on your home radio. Because of their lower frequency, the signals travel much farther, and there are complicated schedules dictating who is allowed to transmit on what frequency at what times&mdash;so you might find an AM station that only transmits for an hour once a week, and the next hour it's a different station coming from another country on the same frequency. It can pick up coded broadcasts from foreign intelligence agencies.
 
 # Tech Notes
 
@@ -84,7 +84,7 @@ LSB and USB (Lower Sideband and Uppersideband)
 
 :    Carrier signal near 14135 kHz with the information occupying a 3 kHz-wide sideband above that.
 
-:    Voice broadcasts almost always use Single Sideband, but there's no rule about whether they use USB or LSB, only tradition and convention. HAMs generally use LSB below 10000 kHz and USB above, while non-HAM voice broadcasts usually use USB. Data transmissions also usually use USB.
+:    Voice broadcasts almost always use Single Sideband, but there's no rule about whether they use USB or LSB, only tradition and convention. Hams generally use LSB below 10000 kHz and USB above, while non-ham voice broadcasts usually use USB. Data transmissions also usually use USB.
 
 AMSync (A.K.A. Syncronous AM)
 
@@ -98,7 +98,7 @@ Digital Modes
 
 :    [Here's a recording](digital.wav) of what I hear when I tune into that signal. Depending on the protocol being used, it may be possible to decode the audio into meaningful digital information, but that's beyond me. 
 
-:    HAM operators may also use (much simpler) digital signals to make contact with each other. You can imagine that it would be much more convenient if your computer was listening for the signal and showed an alert saying "So-and-so is hailing you on 18439 kHz" instead of having to listen 24/7. They can also faciliate sending information over very weak signals.
+:    ham operators may also use (much simpler) digital signals to make contact with each other. You can imagine that it would be much more convenient if your computer was listening for the signal and showed an alert saying "So-and-so is hailing you on 18439 kHz" instead of having to listen 24/7. They can also faciliate sending information over very weak signals.
 
 :    The [Signal ID Wiki](https://www.sigidwiki.com/wiki/Category:Digital) can be used to attempt to indentify these, and other unknown, signals.
 
@@ -171,7 +171,7 @@ I also like Absolute Radio at [1215 kHz](http://websdr.ewi.utwente.nl:8901/?tune
 
 [short-wave.info](https://short-wave.info/index.php) is a great resource for finding the schedules and frequences of stations. Keep in mind that the radio we're using is located in the Netherlands - pay attention to the location of the transmitting station to determine whether you'll be able to get a clear signal. If you set your location, short-wave.info will show you the estimated signal strength. Shortwave signals don't travel well between night and daytime. In other words, when it's daytime in the Netherlands, you'll get a better signal from transmitters that are also in the daylight, and vice versa for nighttime. 
 
-## Amateur Operators (HAM radio)
+## Amateur Operators (ham radio)
 
 [In this recording](USA-to-Slovenia_2020-08-30T21-15-31Z_14240.0kHz.mp3) I made at 21:13 GMT on 2020-08-30 at 14240 kHz, we can hear someone with callsign [S51DX](https://www.qrzcq.com/call/S51DX) (Slovenia) hailing someone in North America with the callsign [KD8XK](https://www.qrzcq.com/call/KD8XK) (West Virginia). On our end we can only just barely hear the response from North America, but it's there. Trans-Atlantic communication!
 
@@ -216,3 +216,19 @@ The web SDR at the University of Twente is just the beginning&mdash;there's a wh
 Questions? Want to let me know about a mistake I've made? Share your own discoveries?
 
 [Email me](mailto:jg@justus.ws)!
+
+2020-11-27:
+
+   > Great write up! 
+   >
+   > Just one thing I’d recommend fixing— 
+   >
+   > It’s “ham radio” and not “HAM radio”. 
+   >
+   > Etymologically, “ham” in “ham radio” is literally the word “ham” (as in pork) and not an acronym. 
+   >
+   > Cheers
+   >
+   > Branden Frederick
+
+Thanks Branden! Fixed! &ndash;jg
