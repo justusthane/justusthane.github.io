@@ -306,6 +306,11 @@ dd {
     text-decoration: line-through;
 }
 
+blockquote {
+  border: 2px dashed;
+  padding: 0 10px 0 10px;
+}
+
 
 @media only screen and (min-width: 700px) {
 
