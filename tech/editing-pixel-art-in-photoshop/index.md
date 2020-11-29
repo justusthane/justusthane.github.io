@@ -2,7 +2,7 @@
 title: "Editing Pixel Art in Photoshop"
 date: 2020-09-02
 ---
-Editing pixel art in Photoshop isn't entirely straightforward, but easy enough with a few simple instructions.
+Editing pixel art in Photoshop isn't entirely straightforward, but easy enough with a few simple techniques.
 
 # TL;DR
 
@@ -20,9 +20,9 @@ For more, read on!
 
 ![Original pixel art avatar](original.png)
 
-I created this self-portrait using the fun pixel art avatar generator on the website of the Icelandic band [Daði Freyr](https://dadifreyr.com/), but it's not *quite* right. My beard is longer, my glasses aren't aviators, my eyes are blue, not black,  and my forehead *simply isn't that bulbous*. Hmph. Well, should be easy enough to fix in Photoshop, right? I immediately discovered that it wasn't *quite* as trivial as I had hoped.
+I created this self-portrait using the fun pixel art avatar generator on the website of the Icelandic band [Daði Freyr](https://dadifreyr.com/), but it's not *quite* right. My beard is longer, my glasses aren't aviators, my eyes are blue, not black,  and my forehead *simply isn't that bulbous*. Well, should be easy enough to fix in Photoshop, right? I immediately discovered that it wasn't *quite* as trivial as I had hoped.
 
-While it's ostensibly pixel art, it's been enlarged so that each original pixel is, in reality, hundreds of pixels. I'll call these super big pixels "faux-pixels" from now on. Or better yet, how about...*fauxels*. The issue is keeping our edits on the existing "grid" that these *fauxels* lie on.
+While it's ostensibly pixel art, it's been enlarged so that each original pixel is, in reality, hundreds of pixels. I'll call these super big pixels "faux-pixels" from now on. Or better yet, how about...*fauxels*. The issue is keeping our edits aligned with the existing "grid" that these *fauxels* lie on.
 
 For example, I want to lengthen my beard. To draw the new *fauxels*, I'd need to create a square brush in Photoshop exactly the size of the existing *fauxels*, and even then, I'd have to very carefully align each stroke with the existing *fauxel* grid.
 
@@ -30,7 +30,7 @@ For example, I want to lengthen my beard. To draw the new *fauxels*, I'd need to
 
 Luckily, there's a better way to do this, and it involves returning our art to it's "original" size where each *fauxel* is actually a single pixel.
 
-First figure out how many *fauxels* wide your art is. To do this, measure one of them. Zoom in until you can see the pixel grid (to make sure we get our measurement perfect), and measure the width of one *fauxels* using the Ruler tool (I):
+First figure out how many *fauxels* wide your art is. To do this, measure one of them. Zoom in until you can see the pixel grid (to make sure you get your measurement perfect), and measure the width of one *fauxels* using the Ruler tool (I):
 
 ![Measuring a pixel](measuring.png)
 
