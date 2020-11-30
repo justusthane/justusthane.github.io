@@ -63,6 +63,7 @@ Once you have your repo set up on Github, add it as the origin to your local rep
 Create the file `.github/workflows/build.yml` in the root of your Eleventy site (you'll have to create the `.github` and `workflows` directories) with the following contents:
 
 ``` yaml
+{% raw %}
 name: Build Eleventy
 
 on:
@@ -96,6 +97,7 @@ jobs:
         with:
           publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
+{% endraw %}
 ```
 This Action calls on [this third-party action](https://github.com/peaceiris/actions-gh-pages) by [Peace Iris](https://peaceiris.com/) to actually do the deploy. Luckily we don't need to understand exactly how it works, but basically it copies the static files from the `_site` directory where Eleventy outputs them to a new `gh-pages` branch where Github will serve them from.
 
