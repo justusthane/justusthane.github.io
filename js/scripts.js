@@ -46,6 +46,20 @@ $( ' .elsewhere a ').hover(
         $(' .tagline ').html( content );
     }
 );
+var onscreen = true;
+$( window ).scroll(function() {
+  position = $(" #sidebar ").offset();
+  height = $(" #sidebar ").height();
+  bottom = position['top'] + height;
+  scrollTop = $( window ).scrollTop();
+  if((scrollTop > bottom) && (onscreen)) {
+    onscreen = false;
+    console.log("Off screen");
+  } else if((scrollTop < bottom) && (onscreen == false)) {
+    onscreen = true;
+    console.log("On screen");
+  }
+});
 
 async function blinktimer() {
   async function blink() {
