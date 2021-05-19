@@ -1,6 +1,7 @@
 ---
 title: "justus.ws"
 bodyclasses: "home"
+eleventyExcludeFromCollections: true
 ---
 {% extends "layouts/base.njk" %}
 {% block sidebar %}
@@ -33,4 +34,14 @@ Finally, because links make the web go 'round, check out my <a href="/links">lin
 
 Thanks for visiting,<br>
 &ndash;jg</p>
+{% endblock %}
+{% block updates %}
+  <nav id="updates">
+    <h2>Recent Updates</h2>
+    <ul>
+      {% for page in collections.all | sortByUpdated %}
+        <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
+      {% endfor %}
+    </ul>
+  </nav>
 {% endblock %}
