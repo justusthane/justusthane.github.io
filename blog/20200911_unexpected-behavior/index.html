@@ -38,12 +38,122 @@
     </div>
     <div id="sidebar">
       
+
+<details id="menuMobile">
+  <summary>Menu</summary>
+        <ul>
+          <li><a href="/">home</a></li>
+          
+          <li>
+            <a href="/craft/">craft/sewing</a> projects
+          </li>
+          
+          <li>
+            <a href="/tech/">tech</a> stuff
+          </li>
+          
+          <li>
+            <a href="/misc/">misc</a>???
+          </li>
+          
+          <li>
+            <a href="/writings/">writings</a> &amp; musings
+          </li>
+          
+          <li>
+            <a href="/blog/">blog</a>
+          </li>
+          
+          <li>
+            <a href="/why/">why</a> does this site exist?
+          </li>
+          
+          <li>
+            <a href="/how/">how</a> does this site work?
+          </li>
+          
+          <li>
+            <a href="/links/">links</a> &amp; other things I like
+          </li>
+          
+          <li>
+            <a href="/now/">now</a>: what I&#39;m up to
+          </li>
+          
+          <li>
+            <a href="/todo/">todo</a> for this site
+          </li>
+          
+        </ul>
+</details>
+        <div id="menuDesktop">
+          <ul>
+          <li><a href="/">home</a></li>
+            
+            <li>
+              <a href="/craft/">craft/sewing</a> projects
+            </li>
+            
+            <li>
+              <a href="/tech/">tech</a> stuff
+            </li>
+            
+            <li>
+              <a href="/misc/">misc</a>???
+            </li>
+            
+            <li>
+              <a href="/writings/">writings</a> &amp; musings
+            </li>
+            
+            <li>
+              <a href="/blog/">blog</a>
+            </li>
+            
+            <li>
+              <a href="/why/">why</a> does this site exist?
+            </li>
+            
+            <li>
+              <a href="/how/">how</a> does this site work?
+            </li>
+            
+            <li>
+              <a href="/links/">links</a> &amp; other things I like
+            </li>
+            
+            <li>
+              <a href="/now/">now</a>: what I&#39;m up to
+            </li>
+            
+            <li>
+              <a href="/todo/">todo</a> for this site
+            </li>
+            
+          </ul>
+        </div>
+
     </div>
     </header>
 
     <main id="content">
       
-      
+
+
+<a href="/blog"><i class="fas fa-arrow-circle-left"></i>&nbsp;blog</a>
+  <h1>
+
+  Unexpected behavior
+
+  </h1>
+
+<p class="publish-date">Published 2020-09-11</p>
+<p>First I added my pixel art avatar to the top of this site. Then I decided it would be fun if the eyes moved, so I created three new versions of the image, with the eyes looking left, right, and down, and wrote some Javascript to swap the images depending on the cursor location. Then I thought I’d give it some more personality by having it blink randomly, so I created another version of the image with the eyes closed, and wrote a function that, every 0 - 15 seconds, swaps the image with the eyes-closed version, waits 150 miliseconds, and swaps it back.</p>
+<p>It works really nicely. Sometimes it will go along time between blinks and you can have a staring contest. Sometimes it blinks twice in quick succession.</p>
+<p>But through some quirk in the code that I don’t understand, if you don’t interact with the site for a while it defaults to the eyes-closed state, and the eyes stay closed until you interact again. It sleeps. I don’t understand how this happens—the function is written so after 150 miliseconds, the eyes should reopen. I don’t understand it, and I love it.</p>
+
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;up</a>
+
     </main>
     
     
