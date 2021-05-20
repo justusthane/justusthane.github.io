@@ -4,7 +4,7 @@ title: I moved to Canada!
 date: 2021-05-19
 type: post
 ---
-This is overdue, but I still remember the feelings vividly and want to write it down while I do. This is going to be long and rambling and is mostly written down for my own sake. But I guess if you're curious about my experience moving to Canada, read on!
+On October 29th, 2020, I moved to Canada and established permanent residency. This post is overdue, but I still remember the feelings vividly and want to write it down while I do. This is going to be long and rambling and is mostly written down for my own sake. But I guess if you're curious about my experience moving to Canada, read on!
 
 In early October of 2020, after months of waiting and uncertainty, my Confirmation of Permanent Residence arrived in Caroline's mail. With that, I became eligible to start my new life with my wife in Canada. But let's jump back a year.
 
@@ -55,7 +55,7 @@ And this brings us to the month of my move. There were a ton of logistics to dea
 *T-2 days. This is when the stress got real.*
 
 ![](IMG_6325.jpeg)
-*Boxes of plants. Fun facts: you're allowed to bring up to 50 houseplants across the border with you; you must personally accompany them across the border; and they must not be plants that are able to live year-round in Canada. I may have cheated slightly on the last point, but they didn't check.*
+*Boxes of plants. Fun facts: you're allowed to bring up to 50 houseplants across the border with you; you must personally accompany them across the border; and they must not be plants that are able to live year-round in Canada. I may have [cheated slightly](/misc/plant-tour/hen-and-chicks/) on the last point, but they didn't check.*
 
 ![](IMG_6330.jpeg)
 *This is a big fucking truck. Banana for scale.*
@@ -83,7 +83,3 @@ Everyone at the border was so friendly, my wife was there, they were so impresse
 In the subsequent months, I've moved twice, landed my ideal job, got my Ontario driver's license, health card, and permanet resident card. As I'm writing this five months later, the border is still closed, COVID is still not under control here (but I get my first vaccination in nine days!), Caroline is living 600 miles away until she finishes her contract in November, and I haven't crossed back into the States or seen my family or friends since moving, but I am still so excited and feel so fortunate to finally be here. 
 
 O Canada!
-
-
-
-
