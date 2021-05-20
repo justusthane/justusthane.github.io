@@ -29,5 +29,13 @@
 {% block content %}
 {{ breadcrumbs | dump | safe }}
 <a href="{{ parentUrl }}"><i class="fas fa-arrow-circle-left"></i>&nbsp;{{ parentSlug }}</a>
-  <h1>{{ title }}</h1>
+  <h1>
+{% if type == 'reply' %}
+  <i class="fas fa-reply"></i> Reply to: <a class="u-in-reply-to"  href="{{ link }}">{{ title }}</a>
+{% elif type == 'link' %}
+  <i class="fas fa-link"></i> Link: <a href="{{ link }}">{{ title }}</a>
+{% else %}
+  {{ title }}
+{% endif %}
+  </h1>
 {% endblock %}
