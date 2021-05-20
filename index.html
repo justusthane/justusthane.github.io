@@ -40,7 +40,10 @@ Thanks for visiting,<br>
     <h2>Recent Updates</h2>
     <ul>
       {% for page in collections.all | sortByUpdated %}
-        <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
+        {% set array = page.url | getParent %}
+        {% set parentUrl = array[0] %}
+        {% set parentSlug = array[1] %}
+        <li><span class="deemph">{{ parentSlug }}/</span><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
       {% endfor %}
     </ul>
   </nav>
