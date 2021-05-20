@@ -40,7 +40,7 @@ Thanks for visiting,<br>
     <h2>Recent Updates</h2>
     <ul>
       {% for page in collections.all | sortByUpdated %}
-        <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %})</span></li>
+        <li><a href="{{ page.url }}">{{ page.data.title }}</a> <span class="publish-date">(published {{ page.date | utcDate('YYYY-MM-DD') }}{% if page.data.updated %}, updated {{ page.data.updated | utcDate('YYYY-MM-DD') }}{% endif %}{{ page.url }})</span></li>
       {% endfor %}
     </ul>
   </nav>
