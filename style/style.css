@@ -314,7 +314,7 @@ blockquote {
 @media only screen and (min-width: 1000px) {
 
   #wrapper {
-    grid-template-columns: 330px 1fr 320px;
+    grid-template-columns: 330px 1fr;
     grid-template-areas:
       "sitetitle content  updates"
       "tagline   content  updates"
@@ -334,6 +334,7 @@ blockquote {
     }
 
     nav#updates {
+      max-width: 300px;
       border-top: none;
       border-left: 4px dashed var(--border-color);
     }
