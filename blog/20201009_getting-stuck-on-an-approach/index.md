@@ -55,3 +55,5 @@ Now that we have our macro built, all we have to do to make the rest of the chan
 
 Here's the magic in action:
 <script id="asciicast-xOq4vvQ1ze66wWIYgOqNsaXHP" src="https://asciinema.org/a/xOq4vvQ1ze66wWIYgOqNsaXHP.js" async></script>
+
+And the [final result](https://sundaysites.justus.ws/fitterhappier/).
