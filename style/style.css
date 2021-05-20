@@ -20,7 +20,6 @@ body {
 
 #wrapper {
     display: grid;
-    grid-template-columns: 350px 1fr;
     grid-template-rows: 120px min-content 1fr;
     gap: 10px;
     grid-template-areas:
@@ -56,7 +55,7 @@ body.home nav h5 {
 #titleContainer {
   grid-area: sitetitle;
   justify-self: center;
-  width: 350px;
+  width: 100%;
 }
 #avatar {
   grid-area: avatar;
@@ -88,7 +87,7 @@ body.home nav h5 {
 
 #sidebar {
   grid-area: sidebar;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   border-top: 5px dashed var(--border-color);
   border-bottom: 5px dashed var(--border-color);
 }
@@ -112,6 +111,7 @@ body.home nav h5 {
 }
 
 #updates {
+    border-top: 5px dashed var(--border-color);
     grid-area: updates;
 }
 
@@ -311,9 +311,10 @@ blockquote {
 }
 
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1000px) {
 
   #wrapper {
+    grid-template-columns: 330px 1fr 320px;
     grid-template-areas:
       "sitetitle content  updates"
       "tagline   content  updates"
@@ -333,8 +334,8 @@ blockquote {
     }
 
     nav#updates {
+      border-top: none;
       border-left: 4px dashed var(--border-color);
-      max-width: 300px;
     }
 
     #menuMobile {
@@ -343,6 +344,11 @@ blockquote {
 
     #menuDesktop {
       display: block;
+    }
+
+    .deemph {
+      font-size: 0.8rem;
+      color: #0000004f;
     }
 
     .blogPost {
