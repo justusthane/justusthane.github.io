@@ -412,6 +412,10 @@ a:hover {
         color: var(--accent);
     }
 
+    body.color-auto .deemph {
+      color: #393939;
+    }
+
     a img:hover {
       box-shadow: 5px 5px 0 var(--dark-mode-link-blue);
     }
