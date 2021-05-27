@@ -56,14 +56,16 @@ body.home nav h5 {
   grid-area: sitetitle;
   justify-self: center;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
 #avatar {
   grid-area: avatar;
 }
 
 .avatar {
   width: 120px;
-  float: left;
 }
 
 #header .avatar {
@@ -72,7 +74,6 @@ body.home nav h5 {
 }
 
 #sitetitle {
-  float: left;
   padding-left: 20px;
   font-size: 3em;
 }
