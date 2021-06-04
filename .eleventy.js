@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
     "jpg",
     "png",
     "GIF",
+    "webp",
     "wav",
     "mp3"
   ]);
