@@ -39,3 +39,6 @@ I decided to do the little bit of extra legwork and set up Github Actions instea
 See the [previous version of this page](https://github.com/justusthane/justusthane.github.io/blob/master/how/index.md) for a more thorough description of Grav + Git + Cloudways.
 
 <a href="https://www.11ty.dev/news/logo-homage/" class="elv-externalexempt elv-possum-anchor" data-investors-avatar=""><picture class="elv-possum-pic"><source srcset="possum-balloon-original.webp" type="image/webp"><img src="possum-balloon-original-sm.png" class="elv-possum" alt="The possum is Eleventy’s mascot" loading="lazy" width="200" height="363"></picture></a>
+
+## The adorable possum floating around this page on a balloon...
+...is the official [Eleventy](https://www.11ty.dev/) mascot. I cribbed it from there. I hope he doesn't mind.
