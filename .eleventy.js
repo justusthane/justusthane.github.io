@@ -73,6 +73,25 @@ module.exports = function(eleventyConfig) {
     return value.split(arg);
   });
 
+  eleventyConfig.addShortcode("blogIcon", function(postType) {
+    switch (postType) {
+      case 'reply':
+        return '<i class="fas fa-reply"></i>';
+        break;
+      case 'link':
+        return '<i class="fas fa-link"></i>';
+        break;
+      case 'post':
+        return '<i class="far fa-file-alt"></i>';
+        break;
+      case 'blurb':
+        return '<i class="fas fa-feather"></i>';
+        break;
+      default:
+        return "";
+    }
+  });
+
   let markdownIt = require("markdown-it");
   let markdownItDeflist = require("markdown-it-deflist");
   let markdownItFootnote = require("markdown-it-footnote");
