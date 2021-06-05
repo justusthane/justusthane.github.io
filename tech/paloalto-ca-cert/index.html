@@ -2,14 +2,14 @@
 <html style="scroll-behavior: smooth;" lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Techsmithing | justus.ws</title>
+    <title>Issuing a CA cert to a PaloAlto firewall from Active Directory Certificate Services for SSL decryption | justus.ws</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
 
     <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
-    <link rel="canonical" href="https://justus.ws/tech/" />
+    <link rel="canonical" href="https://justus.ws/tech/paloalto-ca-cert/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
     <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
@@ -48,7 +48,7 @@
             <a href="/craft/">craft/sewing</a> projects
           </li>
           
-          <li class="currentPageIndicator">
+          <li>
             <a href="/tech/">tech</a> stuff
           </li>
           
@@ -98,7 +98,7 @@
               <a href="/craft/">craft/sewing</a> projects
             </li>
             
-            <li class="currentPageIndicator">
+            <li>
               <a href="/tech/">tech</a> stuff
             </li>
             
@@ -148,33 +148,60 @@
       
 
 
-<a href="/"><i class="fas fa-arrow-circle-left"></i>&nbsp;home</a>
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
   <h1>
 
-  Techsmithing
+  Issuing a CA cert to a PaloAlto firewall from Active Directory Certificate Services for SSL decryption
 
   </h1>
 
-
+<p class="publish-date">Published 2021-06-05</p>
+<p>If you have a PaloAlto next-gen firewall and you want to perform SSL decryption on your outgoing traffic, the PaloAlto needs a CA cert so that it can issue its own certificates in order to MITM traffic, and of course your clients need to trust the PA’s CA cert so that they trust the certs that it issues.</p>
+<p>You could generate a self-signed certificate on the firewall and use Group Policy to import it into your clients’ Trusted Root Certification Authorities certificate store, but in my opinion the better option is to issue the firewall a subordinate CA cert from your Active Directory Certificate Services CA. All domain-joined machines already trust your on-prem CA, and thus will implicitly trust the subordinate CA cert.</p>
+<p>This article only covers the generation and installation of the subordinate CA certificate. The rest of the SSL decryption configuration is out-of-scope.</p>
+<ol>
+<li>
+<p>Generate a CSR on your PaloAlto by going to Device tab -&gt; Certificate Management -&gt; Certificates -&gt; Generate.</p>
+</li>
+<li>
+<p>Enter a certificate name and common name (both are only for your own reference, it doesn’t make a difference what they are). From the <strong>Signed by</strong> dropdown choose “External Authority (CSR)”, and make sure to check the <strong>Certificate Authority</strong> box:</p>
+<p><img src="PA1.png" alt=""></p>
+</li>
+<li>
+<p>Save the resulting CSR to a location accessible from your CA server.</p>
+</li>
+<li>
+<p>On your CA, run the following command as a Domain Admin:</p>
+</li>
+</ol>
+<pre class="language-bash"><code class="language-bash">certreq -submit -attrib <span class="token string">"CertificateTemplate:SubCA"</span> YOUR_CSR.csr</code></pre>
+<ol start="5">
+<li>If it worked correctly, it should spit out a .cer file (which will be in the x509 format).</li>
+<li>Now you need to convert this cert to PEM format using OpenSSL. In my opinion the easiest way to do this is by using WSL (Windows Subsystem for Linux) to run an Ubuntu machine. The command to convert the certificate is</li>
+</ol>
+<pre class="language-bash"><code class="language-bash">openssl x509 -in YOURCERT.cer -outform PEM -out YOURCERT.pem</code></pre>
+<ol start="7">
+<li>Now install the resulting PEM certificate on your firewall by choosing <strong>Import</strong> and then browsing to your PEM cert. Make sure to enter the same certificate name as when you created the CSR so that the PaloAlto links the new cert with the existing CSR:<br>
+<img src="PA2.png" alt=""></li>
+<li>If you commit your changes to the PaloAlto now, you’ll receive the warning “cannot find complete certificate chain for certificate YOURCERT”. The final step is to import your CA’s root cert so that the PaloAlto can form the complete certificate chain. Go to <a href="https://YOUR-CA/certsrv">https://YOUR-CA/certsrv</a>, and choose to install the CA certificate:<br>
+<img src="PA3.png" alt=""></li>
+<li>Again, we’ll need to convert the resulting x509 certificate to PEM:</li>
+</ol>
+<pre class="language-bash"><code class="language-bash">openssl x509 -in CAcert.cer -outform PEM -out CAcert.pem</code></pre>
+<ol start="10">
+<li>And import it into your PaloAlto. If everything worked correctly, you should see the two certificates linked in a chain as such:<br>
+<img src="PA4.png" alt=""></li>
+<li>Commit your changes, and you’re done! All your ActiveDirectory devices should now trust any certificates issued by your PaloAlto, and you can proceed with configuring SSL decryption.</li>
+</ol>
+<h2 id="references">References</h2>
 <ul>
-
-  <li> <a href="/tech/fix-outlook-view/">How to fix your broken Outlook inbox view</a> <span class="publish-date">(published 2021-06-05)</span></li>
-
-  <li> <a href="/tech/paloalto-ca-cert/">Issuing a CA cert to a PaloAlto firewall from Active Directory Certificate Services for SSL decryption</a> <span class="publish-date">(published 2021-06-05)</span></li>
-
-  <li> <a href="/tech/deploying-eleventy-to-github-pages/">How To Deploy an Eleventy Site to Github Pages with a Custom Domain</a> <span class="publish-date">(published 2020-09-05)</span></li>
-
-  <li> <a href="/tech/editing-pixel-art-in-photoshop/">Editing Pixel Art in Photoshop</a> <span class="publish-date">(published 2020-09-02)</span></li>
-
-  <li> <a href="/tech/sdr-adventures-in-shortwave/">SDR: Digital Adventures in Shortwave Radio</a> <span class="publish-date">(published 2020-08-30)</span></li>
-
-  <li> <a href="/tech/open-with-vim/">&#39;Open With&#39; Vim from MacOS Finder</a> <span class="publish-date">(published 2020-05-08)</span></li>
-
-  <li> <a href="/tech/eleventy-utc-dates/">Eleventy static-site generator: Making Liquid play nice with dates</a> <span class="publish-date">(published 2020-04-16)</span></li>
-
-  <li> <a href="/tech/how-to-ditch-gmail/">How to ditch Gmail</a> <span class="publish-date">(published 2020-04-16)</span></li>
-
+<li><a href="https://docs.paloaltonetworks.com/pan-os/8-1/pan-os-admin/certificate-management/obtain-certificates/obtain-a-certificate-from-an-external-ca.html">https://docs.paloaltonetworks.com/pan-os/8-1/pan-os-admin/certificate-management/obtain-certificates/obtain-a-certificate-from-an-external-ca.html</a></li>
+<li><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClWOCA0">https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClWOCA0</a></li>
 </ul>
+<h2 id="questions%3F-comments%3F">Questions? Comments?</h2>
+<p><a href="mailto:jg@justus.ws">Email me!</a></p>
+
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
     </main>
     
