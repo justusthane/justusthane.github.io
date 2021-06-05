@@ -12,8 +12,7 @@ eleventyNavigation:
 ---
 
 ## Site
-- [ ] Fix images on blog!
-- [ ] Fix disappearing taglines on small site
+- [x] Fix images on blog!
 - [x] On listing pages show date published/date updated
 - [ ] [Semantic elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 - [x] Favicon
@@ -30,17 +29,18 @@ eleventyNavigation:
     - button to load all images in page/post
 - [x] Add default layout for all pages
   - Done, thanks to [this](https://github.com/11ty/eleventy/issues/380#issuecomment-568033456) handy tip for accomplishing this in Eleventy
-- [ ] Sort pages by date updated rather than date created
+- [x] Sort pages by date updated rather than date created
+  - Done. [Commit](https://github.com/justusthane/justusthane.github.io/commit/0e68643daeaef6b5a6b2dd00463eb30f33b33ee8)
 - [ ] Implement [MailGo](https://mailgo.dev/) for mailto: links?
 - [ ] Change my [utcDate filter](/tech/eleventy-utc-dates/) to use Luxon instead of MomentJS, since Eleventy already includes Luxon.
 
 ## Content
 - [ ] Worm composting article?
 - [x] [Cast iron pan care](https://justus.ws/food/care-of-cast-iron-pans)
-- [ ] In appreciation of the bamboo spatula
+- [x] In appreciation of the bamboo spatula
 - [ ] Glove darning blog post
 - [ ] FZF article
-- [ ] Add /now page
+- [x] Add /now page
 - [x] Add "How does this site work?" page
 - [ ] Self-composting page?
    - Define the entire page (save maybe nav and a brief message?) in a single template
@@ -50,4 +50,4 @@ eleventyNavigation:
     - I definitely don't know how to do this, but I like the idea and it might be fun to figure out?
 - [ ] Cybersecurity for regular folks
 - [x] Switching off gmail
-- [ ] Update How page
+- [x] Update How page
