@@ -171,7 +171,7 @@
 <p>Save the resulting CSR to a location accessible from your CA server.</p>
 </li>
 <li>
-<p>On your CA, run the following command as a Domain Admin:</p>
+<p>On your CA, run the following command as a Domain Admin<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>:</p>
 </li>
 </ol>
 <pre class="language-bash"><code class="language-bash">certreq -submit -attrib <span class="token string">"CertificateTemplate:SubCA"</span> YOUR_CSR.csr</code></pre>
@@ -200,6 +200,13 @@
 </ul>
 <h2 id="questions%3F-comments%3F">Questions? Comments?</h2>
 <p><a href="mailto:jg@justus.ws">Email me!</a></p>
+<h2>Footnotes</h2>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>If this doesn’t work, make sure your user account has permissions on the Subordinate CA certificate template. Open mmc.exe on the CA, go to File -&gt; Add/Remove Snapins, and choose the Certificate Templates snap-in. Check the permissions on the <em>Subordinate CA</em> template. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
 <a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
