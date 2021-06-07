@@ -14,7 +14,7 @@ This article only covers the generation and installation of the subordinate CA c
     ![](PA1.png)
 
 3. Save the resulting CSR to a location accessible from your CA server.
-4. On your CA, run the following command as a Domain Admin: 
+4. On your CA, run the following command as a Domain Admin[^1]:
   ```bash
   certreq -submit -attrib "CertificateTemplate:SubCA" YOUR_CSR.csr
   ```
@@ -41,3 +41,5 @@ openssl x509 -in CAcert.cer -outform PEM -out CAcert.pem
 
 ## Questions? Comments?
 [Email me!](mailto:jg@justus.ws)
+
+[^1]: If this doesn't work, make sure your user account has permissions on the Subordinate CA certificate template. Open mmc.exe on the CA, go to File -> Add/Remove Snapins, and choose the Certificate Templates snap-in. Check the permissions on the *Subordinate CA* template.
