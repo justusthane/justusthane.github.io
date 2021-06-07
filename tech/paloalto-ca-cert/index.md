@@ -42,4 +42,4 @@ openssl x509 -in CAcert.cer -outform PEM -out CAcert.pem
 ## Questions? Comments?
 [Email me!](mailto:jg@justus.ws)
 
-[^1]: If this doesn't work, make sure your user account has permissions on the Subordinate CA certificate template. Open mmc.exe on the CA, go to File -> Add/Remove Snapins, and choose the Certificate Templates snap-in. Check the permissions on the *Subordinate CA* template.
+[^1]: If this doesn't work, make sure your user account has permissions on the Subordinate CA certificate template. Open mmc.exe on the CA, go to File -> Add/Remove Snap-in, and choose the Certificate Templates snap-in. Check the permissions on the *Subordinate Certification Authority* template.
