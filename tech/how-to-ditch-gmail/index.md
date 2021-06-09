@@ -24,6 +24,9 @@ This will *not*, however, restore your old emails, which is why you need to down
 
 Enjoy the peace-of-mind of knowing that you now control of your online identity!
 
+# Comments
+Questions? Comments? Did you find this helpful? [Shoot me an email](mailto:jg@justus.ws) and let me know!
+
 
 [^1]: I switched to [Fastmail](https://ref.fm/u13916757) and I heartily recommend them. The service and interface is on par with Gmail, they value your privacy and security, customer service is great, and they are actively striving to make email better for everyone. That said, there are other great providers out there&mdash;do your own research.
 
