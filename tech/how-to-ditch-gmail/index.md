@@ -2,9 +2,9 @@
 title: "How to ditch Gmail"
 date: 2020-04-16
 ---
-I switched away from Gmail a few years ago after almost a decade on Gmail. In a lot of ways, your email is your digital identity. You communicate with friends, family, and business contacts through your email. If you need to reset your password to another account, you do so through your email. Email is one of the few remaining decentralized services that you can still control yourself, so why hand over control of your digital identity to a giant like Google?
+I switched away from Gmail in early 2015 after almost a decade on Gmail. In a lot of ways, your email is your digital identity. You communicate with friends, family, and business contacts through your email. If you need to reset your password to another account, you do so through your email. Email is one of the few remaining decentralized services that you can still control yourself, so why hand over control of your digital identity to a giant like Google?
 
-I've heard too many horror stories about people losing access to their Google/Gmail accounts, sometimes without explanation nor recourse. Take a second to imagine right now what it would mean to you if that happened to you. What about the email history you'd lose? What about your contacts? What about other services that are connected to your Google account?
+I've heard too many horror stories about people losing access to their Google/Gmail accounts, often without explanation nor recourse. Take a second to imagine the impact if that happened to you. What about the email history you'd lose? What about your contacts? What about other services that are connected to your Google account?
 
 ## How?
 The switch isn't as bad as you would think. Here are the steps I took:
