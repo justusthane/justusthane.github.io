@@ -365,6 +365,7 @@ blockquote {
       padding-left: 20px;
       padding-right: 20px;
       border-left: 4px dashed var(--border-color);
+      max-width: 850px;
     }
 
     nav#updates {
