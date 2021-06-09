@@ -112,7 +112,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownLib);
 
   markdownLib.renderer.rules.footnote_block_open = () => (
-    '<h2>Footnotes</h2>\n' +
+    '<h1>Footnotes</h1>\n' +
     '<section class="footnotes">\n' +
     '<ol class="footnotes-list">\n'
   );
