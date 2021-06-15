@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>How to migrate an Office365 mailbox to on-premises in an Exchange hybrid environment | justus.ws</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
+
+    <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
+    <link rel="canonical" href="https://justus.ws/tech/migrate-o365-mailbox-to-onprem/" />
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+    <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
+    <link rel="webmention" href="https://webmention.io/justus.ws/webmention" />
+
+</head>
+<body id="top" class="color-auto ">
+  <div id="toggle-color">
+  </div>
+  <div id="wrapper">
+    <div id="titleContainer">
+      <div id="avatar">
+        <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" class="avatar"></a>
+      </div>
+      <div id="sitetitle">
+        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus<br>grunow</a></div> 
+      </div>
+    </div>
+    <div id="tagline">home, home on the web<br />where the links and the hypertexts play
+        <div id="elsewhere">
+                      <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws" aria-label="Email"><i class="far fa-envelope-open" aria-hidden="true"></i></a>
+                                <a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug" aria-label="Photography"><i class="fas fa-camera-retro" aria-hidden="true"></i></a>
+                                          <a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github" aria-label="Github"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                                  </div>
+    </div>
+    <div id="sidebar">
+      
+
+<details id="menuMobile">
+  <summary>Menu</summary>
+        <ul>
+          <li><a href="/">home</a></li>
+          
+          <li>
+            <a href="/craft/">craft/sewing</a> projects
+          </li>
+          
+          <li>
+            <a href="/tech/">tech</a> stuff
+          </li>
+          
+          <li>
+            <a href="/food/">food</a> &amp; kitchen
+          </li>
+          
+          <li>
+            <a href="/misc/">misc</a>???
+          </li>
+          
+          <li>
+            <a href="/writings/">writings</a> &amp; musings
+          </li>
+          
+          <li>
+            <a href="/blog/">blog</a>
+          </li>
+          
+          <li>
+            <a href="/why/">why</a> does this site exist?
+          </li>
+          
+          <li>
+            <a href="/how/">how</a> does this site work?
+          </li>
+          
+          <li>
+            <a href="/links/">links</a> &amp; other things I like
+          </li>
+          
+          <li>
+            <a href="/now/">now</a>: what I&#39;m up to
+          </li>
+          
+          <li>
+            <a href="/todo/">todo</a> for this site
+          </li>
+          
+        </ul>
+</details>
+        <div id="menuDesktop">
+          <ul>
+          <li><a href="/">home</a></li>
+            
+            <li>
+              <a href="/craft/">craft/sewing</a> projects
+            </li>
+            
+            <li>
+              <a href="/tech/">tech</a> stuff
+            </li>
+            
+            <li>
+              <a href="/food/">food</a> &amp; kitchen
+            </li>
+            
+            <li>
+              <a href="/misc/">misc</a>???
+            </li>
+            
+            <li>
+              <a href="/writings/">writings</a> &amp; musings
+            </li>
+            
+            <li>
+              <a href="/blog/">blog</a>
+            </li>
+            
+            <li>
+              <a href="/why/">why</a> does this site exist?
+            </li>
+            
+            <li>
+              <a href="/how/">how</a> does this site work?
+            </li>
+            
+            <li>
+              <a href="/links/">links</a> &amp; other things I like
+            </li>
+            
+            <li>
+              <a href="/now/">now</a>: what I&#39;m up to
+            </li>
+            
+            <li>
+              <a href="/todo/">todo</a> for this site
+            </li>
+            
+          </ul>
+        </div>
+
+    </div>
+    </header>
+
+    <main id="content">
+      
+
+
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
+  <h1>
+
+  How to migrate an Office365 mailbox to on-premises in an Exchange hybrid environment
+
+  </h1>
+
+<p class="publish-date">Published 2021-06-15</p>
+<h1 id="the-issue">The issue</h1>
+<p>If you’re running a hybrid Exchange environment, you might have the need to migrate a mailbox from Office365 to on-prem. If the mailbox previously existed on-prem and was at some point migrated to O365 and now you need to migrate it back, it will work as you expected. However, if the mailbox never existed on-prem, your migration will fail with the error</p>
+<p><code>Cannot find a recipient that has mailbox GUID '70ce6b6f-8c28-4ebe-a92e-4f4dc85efa94'</code></p>
+<p>This is because Office365 matches Exchange Online mailboxes with their corresponding AD users by using the <code>msExchMailboxGuid</code> attribute in Active Directory and the <code>ExchangeGuid</code> attribute in Exchange Online/Office365/AzureAD/whatever you want to call it. AD Connect replicates this attribute <em>from</em> AD <em>to</em> Exchange Online, but not the other way around. Thus, if the mailbox has never existed on-prem, the corresponding AD account will have no msExchMailboxGuid attribute, and the migration will fail.</p>
+<p>Verifying that our user in question has no msExchMailboxGuid:</p>
+<pre class="language-powershell"><code class="language-powershell"> <span class="token function">get-aduser</span> jim<span class="token punctuation">.</span>bob <span class="token operator">-</span>Properties <span class="token operator">*</span> <span class="token punctuation">|</span> <span class="token function">ft</span> name<span class="token punctuation">,</span>msexchmailboxguid<br><br> name    msexchmailboxguid<br> <span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">-</span> <span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span><br> jim<span class="token punctuation">.</span>bob</code></pre>
+<h1 id="the-solution">The solution</h1>
+<p>The solution is to manually set the mxExchMailboxGuid attribute on the user in AD to match their ExchangeGuid attribute from Exchange Online.</p>
+<p><strong>If you want a one-liner to do this quick and easily, use the following:</strong></p>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">Import-Module</span> ActiveDirectory<br><span class="token function">Import-Module</span> ExchangeOnlineManagement<br><span class="token function">Connect-ExchangeOnline</span><br><span class="token function">set-aduser</span> jim<span class="token punctuation">.</span>bob <span class="token operator">-Replace</span> @<span class="token punctuation">{</span>msExchMailboxGuid=$<span class="token punctuation">(</span><span class="token namespace">[System.Guid]</span>$<span class="token punctuation">(</span><span class="token function">get-mailbox</span> jim<span class="token punctuation">.</span>bob<span class="token punctuation">)</span><span class="token punctuation">.</span>ExchangeGuid<span class="token punctuation">)</span><span class="token punctuation">.</span>ToByteArray<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></code></pre>
+<p>After running the above, you should be able to rerun your migration successfully.</p>
+<p><strong>If you want to understand how it works and follow along step-by-step, carry on.</strong></p>
+<p>First we’ll get the correct GUID for the mailbox from ExchangeOnline:</p>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">import-module</span> ExchangeOnlineManagement<br><span class="token function">connect-exchangeonline</span><br><span class="token function">get-mailbox</span> jim<span class="token punctuation">.</span>bob <span class="token punctuation">|</span> <span class="token function">fl</span> identity<span class="token punctuation">,</span>exchangeguid<br><br><br>Identity     : jim<span class="token punctuation">.</span>bob<br>ExchangeGuid : 70ce6b6f<span class="token operator">-</span>8c28<span class="token operator">-</span>4ebe<span class="token operator">-</span>a92e<span class="token operator">-</span>4f4dc85efa94<br><br></code></pre>
+<p>Now we know what our GUID needs to be, we have to apply it to our Active Directory user. However, AD stores the GUID as a byte array rather than a string. We can see this if we look at the msExchMailboxGuid attribute for another AD user who is either on-prem or used to be on-prem:</p>
+<pre class="language-powershell"><code class="language-powershell"> <span class="token function">get-aduser</span> jim<span class="token punctuation">.</span>bob <span class="token operator">-</span>Properties <span class="token operator">*</span> <span class="token punctuation">|</span> <span class="token function">ft</span> name<span class="token punctuation">,</span>msexchmailboxguid<br><br> name        msexchmailboxguid<br> <span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">-</span>     <span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span><br> jim<span class="token punctuation">.</span>bob     <span class="token punctuation">{</span>90<span class="token punctuation">,</span> 184<span class="token punctuation">,</span> 80<span class="token punctuation">,</span> 247<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre>
+<p>If we were to try applying the GUID to the AD user as a string, we’d get the following error:</p>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">set-aduser</span> jim<span class="token punctuation">.</span>bob <span class="token operator">-Replace</span> @<span class="token punctuation">{</span>msExchMailboxGuid=<span class="token string">"f750b85a-ebae-48ec-9add-2224df22000a"</span><span class="token punctuation">}</span><br><span class="token function">set-aduser</span> : A value <span class="token keyword">for</span> the attribute was not in the acceptable range of values<br>At line:1 char:1<br><span class="token operator">+</span> <span class="token function">set-aduser</span> jim<span class="token punctuation">.</span>bob <span class="token operator">-Replace</span> @<span class="token punctuation">{</span>msExchMailboxGuid="f750b85a<span class="token operator">-</span>ebae<span class="token operator">-</span>48ec<span class="token operator">-</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><br><span class="token operator">+</span> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>    <span class="token operator">+</span> CategoryInfo          : NotSpecified: <span class="token punctuation">(</span>jim<span class="token punctuation">.</span>bob:ADUser<span class="token punctuation">)</span> <span class="token namespace">[Set-ADUser]</span><span class="token punctuation">,</span> ADException<br>        <span class="token operator">+</span> FullyQualifiedErrorId : ActiveDirectoryServer:8322<span class="token punctuation">,</span>Microsoft<span class="token punctuation">.</span>ActiveDirectory<span class="token punctuation">.</span>Management<span class="token punctuation">.</span>Commands<span class="token punctuation">.</span>SetADUser</code></pre>
+<p>So, we need to convert the GUID that we got from our ExchangeOnline mailbox to a byte array before we can apply it to our AD user:</p>
+<pre class="language-powershell"><code class="language-powershell"><span class="token comment"># This creates a new GUID object. Of course change the GUID below to your GUID.</span><br><span class="token variable">$guid</span> = <span class="token namespace">[System.Guid]</span><span class="token string">"70ce6b6f-8c28-4ebe-a92e-4f4dc85efa94"</span><br><br><span class="token comment"># And now we'll use a built-in method of the GUID object to convert it to a byte array</span><br><span class="token variable">$guid</span> = <span class="token variable">$guid</span><span class="token punctuation">.</span>ToByteArray<span class="token punctuation">(</span><span class="token punctuation">)</span><br><br><span class="token comment"># If we look at the $guid variable now, we'll see that it's been converted:</span><br><span class="token variable">$guid</span><br>111<br>107<br>206<br>112<br>40<br>140<br>190<br>78<br>169<br>46<br>79<br>77<br>200<br>94<br>250<br>148</code></pre>
+<p>Finally, all we have to do is save that byte array to the msExchMailboxGuid attribute of your AD user:</p>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">set-aduser</span> jim<span class="token punctuation">.</span>bob <span class="token operator">-Replace</span> @<span class="token punctuation">{</span>msExchMailboxGuid=<span class="token variable">$guid</span><span class="token punctuation">}</span></code></pre>
+<p>If you look at the attribute now, you should see that it’s been set:</p>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">get-aduser</span> jim<span class="token punctuation">.</span>bob <span class="token operator">-</span>Properties <span class="token operator">*</span> <span class="token punctuation">|</span> <span class="token function">ft</span> name<span class="token punctuation">,</span>msexchmailboxguid<br><br>name     msexchmailboxguid<br><span class="token operator">--</span>-<span class="token operator">-</span>     <span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span>-<span class="token operator">--</span><br>jim<span class="token punctuation">.</span>bob <span class="token punctuation">{</span>111<span class="token punctuation">,</span> 107<span class="token punctuation">,</span> 206<span class="token punctuation">,</span> 112<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre>
+<p>And if we convert the attribute back to a string, it should return the same string that you got from the Exchange Online mailbox:</p>
+<pre class="language-powershell"><code class="language-powershell">$<span class="token punctuation">(</span><span class="token namespace">[System.Guid]</span>$<span class="token punctuation">(</span><span class="token function">get-aduser</span> jim<span class="token punctuation">.</span>bob <span class="token operator">-</span>prop <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">.</span>msExchMailboxGuid<span class="token punctuation">)</span><span class="token punctuation">.</span>ToString<span class="token punctuation">(</span><span class="token punctuation">)</span><br>70ce6b6f<span class="token operator">-</span>8c28<span class="token operator">-</span>4ebe<span class="token operator">-</span>a92e<span class="token operator">-</span>4f4dc85efa94</code></pre>
+<p>Now you should be able to re-run your migration successfully!</p>
+<h1 id="comments">Comments</h1>
+<p>Questions? Comments? Was this helpful to you? <a href="mailto:jg@justus.ws">Let me know</a>!</p>
+
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
+
+    </main>
+    
+    
+  </div>
+
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  <script src="/js/scripts.js"></script>
+
+</body>
+</html>
