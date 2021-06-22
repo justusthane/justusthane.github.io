@@ -2,14 +2,14 @@
 <html style="scroll-behavior: smooth;" lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Techsmithing | justus.ws</title>
+    <title>How to create a local AD user for an existing Office365 mailbox | justus.ws</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
 
     <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
-    <link rel="canonical" href="https://justus.ws/tech/" />
+    <link rel="canonical" href="https://justus.ws/tech/create-onprem-ad-user-for-o365-mailbox/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
     <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
@@ -48,7 +48,7 @@
             <a href="/craft/">craft/sewing</a> projects
           </li>
           
-          <li class="currentPageIndicator">
+          <li>
             <a href="/tech/">tech</a> stuff
           </li>
           
@@ -98,7 +98,7 @@
               <a href="/craft/">craft/sewing</a> projects
             </li>
             
-            <li class="currentPageIndicator">
+            <li>
               <a href="/tech/">tech</a> stuff
             </li>
             
@@ -148,37 +148,35 @@
       
 
 
-<a href="/"><i class="fas fa-arrow-circle-left"></i>&nbsp;home</a>
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
   <h1>
 
-  Techsmithing
+  How to create a local AD user for an existing Office365 mailbox
 
   </h1>
 
+<p class="publish-date">Published 2021-06-22</p>
+<h2 id="the-issue">The Issue</h2>
+<p>If you have a hybrid Exchange/O365 environment, and you create an Office365 mailbox without first creating an on-prem Active Directory account, the mailbox will not be able to receive mail from external or on-prem senders (although it will be able to receive mail from other O365 mailboxes!).</p>
+<p>This is because all inbound mail goes to the on-prem Exchange server first, and then if the user is on O365 the Exchange server forwards the mail on to O365. If a local AD account doesn’t exist for the O365 mailbox, then the Exchange server has no way of knowing about the O365 mailbox and will reject the message.</p>
+<p>Additionally, if you search for the user in the Azure AD portal, you will see that the user is <strong>not</strong> directory synced:<br>
+<img src="ss1.png" alt=""></p>
+<h2 id="the-resolution">The Resolution</h2>
+<ol>
+<li>Create an on-prem AD user with the same User Principal Name as the Azure user.</li>
+<li>Run the following command in the on-prem Exchange Management Shell to link the new AD user to the existing O365 mailbox:</li>
+</ol>
+<pre class="language-powershell"><code class="language-powershell"><span class="token comment"># Replace the mailbox name and tenant domain with your own</span><br><span class="token function">Enable-RemoteMailbox</span> <span class="token string">"jim.bob"</span> <span class="token operator">-</span>RemoteRoutingAddress <span class="token string">"jim.bob@contoso.mail.onmicrosoft.com"</span></code></pre>
+<ol start="3">
+<li><strong>IF</strong> the O365 mailbox is a shared mailbox and not a regular user, also do the following two steps. Otherwise, the O365 mailbox will be converted to a regular mailbox (and will need to be licensed):</li>
+<li><code>set-aduser smsace -Replace @{msExchRemoteRecipientType=100;msExchRecipientTypeDetails=34359738368}</code></li>
+<li>Disable the local AD account (optional, but typically shared mailboxes are attached to a disabled AD account).</li>
+<li>Finally, trigger an AD Connect sync or wait for one to occur. If you search for the user again in Azure AD, it should now say “Directory synced: Yes”:<br>
+<img src="ss2.png" alt=""></li>
+</ol>
+<p>Good to go!</p>
 
-<ul>
-
-  <li> <a href="/tech/create-onprem-ad-user-for-o365-mailbox/">How to create a local AD user for an existing Office365 mailbox</a> <span class="publish-date">(published 2021-06-22)</span></li>
-
-  <li> <a href="/tech/migrate-o365-mailbox-to-onprem/">How to migrate an Office365 mailbox to on-premises in an Exchange hybrid environment</a> <span class="publish-date">(published 2021-06-15)</span></li>
-
-  <li> <a href="/tech/fix-outlook-view/">How to fix your broken Outlook inbox view</a> <span class="publish-date">(published 2021-06-05)</span></li>
-
-  <li> <a href="/tech/paloalto-ca-cert/">Issuing a CA cert to a PaloAlto firewall from Active Directory Certificate Services for SSL decryption</a> <span class="publish-date">(published 2021-06-05)</span></li>
-
-  <li> <a href="/tech/deploying-eleventy-to-github-pages/">How To Deploy an Eleventy Site to Github Pages with a Custom Domain</a> <span class="publish-date">(published 2020-09-05)</span></li>
-
-  <li> <a href="/tech/editing-pixel-art-in-photoshop/">Editing Pixel Art in Photoshop</a> <span class="publish-date">(published 2020-09-02)</span></li>
-
-  <li> <a href="/tech/sdr-adventures-in-shortwave/">SDR: Digital Adventures in Shortwave Radio</a> <span class="publish-date">(published 2020-08-30)</span></li>
-
-  <li> <a href="/tech/open-with-vim/">&#39;Open With&#39; Vim from MacOS Finder</a> <span class="publish-date">(published 2020-05-08)</span></li>
-
-  <li> <a href="/tech/eleventy-utc-dates/">Eleventy static-site generator: Making Liquid play nice with dates</a> <span class="publish-date">(published 2020-04-16)</span></li>
-
-  <li> <a href="/tech/how-to-ditch-gmail/">How to ditch Gmail</a> <span class="publish-date">(published 2020-04-16)</span></li>
-
-</ul>
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
     </main>
     
