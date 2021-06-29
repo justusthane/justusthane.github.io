@@ -1,6 +1,6 @@
 ---
 title: Birthday!
-date: 2021-06-20
+date: 2021-06-29
 type: post
 ---
 Today's my birthday! I turned 32. A few neat things that happened today, completely unrelated to it being my birthday:
