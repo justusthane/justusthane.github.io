@@ -98,6 +98,7 @@ This project is very forgiving---you can make do with almost any materials, or w
 ![](garbage9.jpeg)
 
 Without the PVC fill pipe, you just add water by pouring it on the dirt at the top. The only real disadvantage is it's more difficult to determine when exactly it's full---because the water is running down to fill up the reservoir, it might run out of the drain hole before the reservoir is full. You'll want to add water until it comes out of the drain hole, wait for it to finish draining, and then add more water until it again comes out of the drain hole. It works fine though, and my garbage tomato seems to be just as happy as the rest:
+
 ![](garbage10.jpeg)
 
 
