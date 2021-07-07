@@ -25,7 +25,7 @@ Enjoy my professionally produced illustration:
 
 For each planter you'll need:
 - A 5 gallon bucket
-- Some sort of smaller container(s) to go inside it, totalling around two gallons. I used [these](IMG_8142.jpeg) perferated two gallon buckets that I found at a garden centre, but almost anything will work: two liter pop bottles, several beer cans, etc. If they're solid, drill a bunch of holes in them.
+- Some sort of smaller container(s) to go inside it, totalling around two gallons. I used [these](IMG_8142.jpeg) perforated two gallon buckets that I found at a garden centre, but almost anything will work: two liter pop bottles, several beer cans, etc. If they're solid, drill a bunch of holes in them.
 - 16" or so of 1-2" PVC (optional, but recommended)
 - A drill or some other way to make holes roughly 5/16" or so
 
@@ -47,7 +47,7 @@ The fertilizers are crucial because unlike potting soil, potting mix doensn't co
   The purpose of the angle is to prevent the bottom of the pipe from sitting flush at the bottom of the bucket. If you don't have the ability to cut it, you could also just drill holes in the bottom of the pipe.
 2. Place your inner container upside down at the bottom of your 5 gallon bucket, and add the PVC pipe next to it:
   ![](innerbucket.jpeg)
-  If you're using an inner container that's not already perferated, such as 2-liter pop bottles, make sure to drill some holes in it, at least at the very top and bottom. See my [trash planter](#making-a-planter-out-of-garbage) for an example.
+  If you're using an inner container that's not already perforated, such as 2-liter pop bottles, make sure to drill some holes in it, at least at the very top and bottom. See my [trash planter](#making-a-planter-out-of-garbage) for an example.
 3. Drill a hole in the side of the 5 gallon bucket an inch or two *below* where the top of the inner bucket will be. This will function as an overflow hole---when water your planter, you'll fill it until water comes out through this hole. Placing it below the top of the inner reservoir provides some air space for the roots, which your plant also needs. You'll want to drill the hole near where your PVC pipe is located so that when you're watering you can easily keep an eye on the drain hole.
   ![](overflow-hole.jpeg)
   In the picture above, I've placed the inner bucket next to the 5 gallon bucket to place the drain hole.
