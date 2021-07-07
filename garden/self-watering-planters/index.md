@@ -6,7 +6,7 @@ If you have limited outdoor space (a patio? a rented yard you can't dig up?) buc
 
 ![](collage.jpeg)
 
-Most of the information here is based on [this video](https://www.youtube.com/watch?v=mRhLZM-cJZ0) from Internet Shaquille, and the delightful videos from [Gardening With Leon](https://www.youtube.com/channel/UCSDYs9sd2_BlLuWSiEr7TJQ)[^1] that *his* video is based on, with my own tweaks added.
+Most of the information here is based on [this video](https://www.youtube.com/watch?v=mRhLZM-cJZ0) from Internet Shaquille, and the delightful videos from [Gardening With Leon](https://www.youtube.com/channel/UCSDYs9sd2_BlLuWSiEr7TJQ)[^1] which Shaq's video is based on, with my own tweaks added.
 
 ## Contents
 [[toc]]
