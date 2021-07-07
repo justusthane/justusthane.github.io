@@ -111,6 +111,10 @@ body.home nav h5 {
     font-feature-settings: "ss02", "cv02", "frac";
 }
 
+#content li {
+  padding-bottom: 0.5em;
+}
+
 #updates {
     border-top: 5px dashed var(--border-color);
     grid-area: updates;
