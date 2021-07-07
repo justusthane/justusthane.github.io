@@ -13,7 +13,11 @@ Most of the information here is based on [this video](https://www.youtube.com/wa
 
 ## The theory
 
-The basic idea is to create a reservoir of water in the bottom half of your planter, which will be wicked up as needed by the potting mix. This is done by placing a smaller container inside the planter. The smaller container has to be perforated (or at least have holes at the top and bottom) which will allow water to flow in and out, while keeping the dirt (mostly) out.
+The basic idea is to create a reservoir of water in the bottom half of your planter, which will be wicked up as needed by the potting mix. This is done by placing a smaller container inside the planter. The smaller container has to be perforated (or at least have holes at the top and bottom) which will allow water to flow in and out, while keeping the dirt (mostly) out. Water is added via a PVC fill pipe.
+
+Enjoy my professionally produced illustration:
+
+![](diagram.png)
 
 ## Supplies
 
