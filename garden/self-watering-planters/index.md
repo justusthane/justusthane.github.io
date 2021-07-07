@@ -106,6 +106,11 @@ Without the PVC fill pipe, you just add water by pouring it on the dirt at the t
 ![](garbage10.jpeg)
 
 
+## Comments
+
+Questions? Comments? Suggestions? Pictures of how yours turned out? [Email me](mailto:jg@justus.ws)!
+
+
 [^1]: I love these videos so much. Leon even includes his phone number at the bottom of each video in case you have any questions: 580-564-5909. Give him a call! I did.
 
 [^2]: A very quick primer on fertilizers, since this was all new to me. You'll see fertilizers labeled with something like "5-5-5" or "2-3-1". In general, fertilizers contain three crucial nutrients: nitrogen, phosphate, and potassium. The amounts of each of these that the fertilizer contains is indicated by those three numbers in order: nitrogen, phosphate, and potassium (or "NPK"). So, a fertilizer labeled "2-3-1" contains 2% nitrogen, 3% phosphate, and 1% potassium.
