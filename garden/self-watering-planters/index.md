@@ -1,11 +1,6 @@
 ---
 title: Sub-irrigated self-watering 5 gallon bucket planters
 date: 2021-07-06
-eleventyNavigation:
-  key: garden
-  parent: home
-  tagline: ''
-  order: 35 
 ---
 If you have limited outdoor space (a patio? a rented yard you can't dig up?) bucket gardening is an excellent option. They're also convenient to move around if you have limited sun, they're cheap to make, and the self-watering ones that we're making here only require watering once per week or so. They save time, money, and water!
 
