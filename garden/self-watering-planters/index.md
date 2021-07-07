@@ -51,7 +51,7 @@ The fertilizers are crucial because unlike potting soil, potting mix doensn't co
 3. Drill a hole in the side of the 5 gallon bucket an inch or two *below* where the top of the inner bucket will be. This will function as an overflow hole---when water your planter, you'll fill it until water comes out through this hole. Placing it below the top of the inner reservoir provides some air space for the roots, which your plant also needs. You'll want to drill the hole near where your PVC pipe is located so that when you're watering you can easily keep an eye on the drain hole.
   ![](overflow-hole.jpeg)
   In the picture above, I've placed the inner bucket next to the 5 gallon bucket to place the drain hole.
-4. If you have perilte, add it to the top of the inner reservoir. If not, just use potting mix instead. The benefits of using perlite in this step are that it helps keep water out of your inner reservoir, it allows more space for water in the bottom of your planter, and it's a bit cheaper than potting mix. It doesn't matter a whole lot though.
+4. If you have perilte, add it to the top of the inner reservoir. If not, just use potting mix instead. The benefits of using perlite in this step are that it helps keep dirt out of your inner reservoir, it allows more space for water in the bottom of your planter, and it's a bit cheaper than potting mix. It doesn't matter a whole lot though.
   ![](perlite.jpeg)
 5. Add just enough potting mix to cover the inner reservoir by another inch or two, and moisten it with water.
   ![](moisten.jpeg)
