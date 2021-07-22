@@ -33,7 +33,7 @@ Note that all of these supplies can be hugely improvised: as an example, I made 
 
 Additionally, you'll need:
 - Potting mix (must be potting *mix*, *not* potting soil! Potting mix consists mostly of peat moss and vermiculite, and is very absorbant. Soil/dirt will not wick the water properly. May also be called growing mix or growing medium).
-- Perlite (optional)
+- Perlite (optional, but recommended)
 - 5-5-5 fertilizer or thereabouts, *not* water soluable. The exact numbers aren't too important. 5-6-5 is fine. 5-10-10 is fine. Whatever you can find with similar numbers[^2].
 - Water soluable fertizer high in nitrogen, which is the *first* number in the sequence. *20*-20-20 is fine.
 - Water soluable fertilizer high in phosphate (the second number), such as 10-*55*-10 (needed for fruits and veggies, but not needed for leafy greens or herbs).
@@ -51,7 +51,7 @@ The fertilizers are crucial because unlike potting soil, potting mix doensn't co
 3. Drill a hole in the side of the 5 gallon bucket an inch or two *below* where the top of the inner bucket will be. This will function as an overflow hole---when water your planter, you'll fill it until water comes out through this hole. Placing it below the top of the inner reservoir provides some air space for the roots, which your plant also needs. You'll want to drill the hole near where your PVC pipe is located so that when you're watering you can easily keep an eye on the drain hole.
   ![](overflow-hole.jpeg)
   In the picture above, I've placed the inner bucket next to the 5 gallon bucket to place the drain hole.
-4. If you have perilte, add it to the top of the inner reservoir. If not, just use potting mix instead. The benefits of using perlite in this step are that it helps keep dirt out of your inner reservoir, it allows more space for water in the bottom of your planter, and it's a bit cheaper than potting mix. It doesn't matter a whole lot though.
+4. If you have perilte, add it to the top of the inner reservoir. If not, just use potting mix instead. The benefits of using perlite in this step are that it helps keep dirt out of your inner reservoir, it allows more space for water in the bottom of your planter, it's a bit cheaper than potting soil, but most of all, it allows the water to flow from the fill pipe into the reservoir much faster. You can omit the perlite and use all potting mix, but when watering, you'll have to add water, let it drain into the reservoir, add more water, let it drain again, repeating until the reservoir is full. 
   ![](perlite.jpeg)
 5. Add just enough potting mix to cover the inner reservoir by another inch or two, and moisten it with water.
   ![](moisten.jpeg)
@@ -83,6 +83,8 @@ Once your veggies flower and start growing fruit, switch from your high-nitrogen
 ## Making a planter out of garbage
 
 This project is very forgiving---you can make do with almost any materials, or without most of them. As an experiment, I made one using an old 5 gallon bucket that had a bunch of holes in the bottom (leftover from a worm composting project) and used some garbage for the inner reservoir. I ommitted the PVC and the perlite, and as an experiment I also left out the initial fertilizer---although I'm still adding fertilizer to the water.
+
+**Note**: If you have to use a liner because your bucket is holey, the PVC fill-pipe becomes more important. Without it, the water is more likely to run around the side of the liner and drain out when watering.
 
 ![](garbage.jpeg)
 
