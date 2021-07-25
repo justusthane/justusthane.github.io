@@ -1,5 +1,5 @@
 ---
-title: Writing a PowerShell module with separate files for each cmdlet
+title: Writing a PowerShell module with separate .ps1 files for each cmdlet
 date: 2021-07-24
 ---
 Writing a PowerShell module is very easy. Basically, just create a directory under `~\Documents\WindowsPowerShell\modules` and create a .psm1 file with the same name inside that directory. Any functions that you put in that .psm1 file become cmdlets that you can call in any PowerShell session.
