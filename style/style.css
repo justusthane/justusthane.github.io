@@ -120,6 +120,10 @@ body.home nav h5 {
     grid-area: updates;
 }
 
+#updates li {
+  padding-bottom: 0.4rem
+}
+
 #header .look {
   height: 150px;
   width: 50%;
