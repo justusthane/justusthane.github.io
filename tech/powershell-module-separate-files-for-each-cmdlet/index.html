@@ -2,14 +2,14 @@
 <html style="scroll-behavior: smooth;" lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Doh! That&#39;s a 404! | justus.ws</title>
+    <title>Writing a PowerShell module with separate files for each cmdlet | justus.ws</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
 
     <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
-    <link rel="canonical" href="https://justus.ws/404.html" />
+    <link rel="canonical" href="https://justus.ws/tech/powershell-module-separate-files-for-each-cmdlet/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
     <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
@@ -156,15 +156,40 @@
       
 
 
-<a href="/"><i class="fas fa-arrow-circle-left"></i>&nbsp;</a>
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
   <h1>
 
-  Doh! That&#39;s a 404!
+  Writing a PowerShell module with separate files for each cmdlet
 
   </h1>
 
-<p class="publish-date">Published 2021-07-25</p>
-<p>That’s a webserver’s way of saying this page couldn’t be found. Sorry about that! The <a href="/">home page</a> is a good place to go to find what you’re looking for.</p>
+<p class="publish-date">Published 2021-07-24</p>
+<p>Writing a PowerShell module is very easy. Basically, just create a directory under <code>~\Documents\WindowsPowerShell\modules</code> and create a .psm1 file with the same name inside that directory. Any functions that you put in that .psm1 file become cmdlets that you can call in any PowerShell session.</p>
+<p>However, you may prefer to split your functions up into different files rather than putting them all into one giant .psm1 file.</p>
+<p>If you Google around, there are various solutions. One way to do it is to be to create additional .ps1 files for each cmdlet, and then loop through and dot-source them from within your .psm1 file. This works, but it is the wrong way to do it. The main disadvantage is that your cmdlets are no longer automatically discoverable by PowerShell.</p>
+<p>Beginning in PowerShell 3.0, you don’t have to <code>Import-Module</code> a module before using the cmdlets in it. You can just enter the cmdlet, and PowerShell is smart enough to import the module belongs to on its own. This doesn’t work if you use the dot-sourcing method above.</p>
+<p>The correct solution is to create a separate .ps1 file for each cmdlet in your module directory (as above), but then use a manifest file to list them rather than dot-sourcing.</p>
+<h3 id="how-to">How-to</h3>
+<p>This is easiest to demonstrate by creating a new module, but you can adapt an existing module just as easily.</p>
+<ol>
+<li>Create a new directory for your module in ~\Documents\WindowsPowerShell\modules. We’ll call ours “My-Module”.</li>
+<li>Create a file called “My-Module.psm1” in the “My-Module” directory. This file must exist, but it can be empty. I like to put smaller “helper” functions that my other cmdlets depend on inside it.</li>
+<li>Create as many new .ps1 files inside the “My-Module” directory as you need. Any functions inside any of these .ps1 files will become cmdlets. You may prefer to create a .ps1 file for each cmdlet, or create a .ps1 file for a related group of cmdlets. It’s up to you.</li>
+<li>Generate a manifest file for your module by running the following PowerShell command (ensure that you give the manifest file the same name as your module):</li>
+</ol>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">New-ModuleManifest</span> <span class="token operator">-</span>Path ~\Documents\WindowsPowerShell\modules\My<span class="token operator">-</span>Module<span class="token punctuation">.</span>psd1 <span class="token operator">-</span>ModuleVersion <span class="token string">"2.0"</span> <span class="token operator">-</span>Author <span class="token string">"Brad Pitt"</span></code></pre>
+<ol start="5">
+<li>Edit the resulting .psd1 file and make the following changes:</li>
+</ol>
+<ul>
+<li>Uncomment the “NestedModules” line and list each of your .ps1 files as an array. E.g.:<pre class="language-powershell"><code class="language-powershell"><span class="token comment"># Modules to import as nested modules of the module specified in RootModule/ModuleToProcess</span><br>NestedModules = @<span class="token punctuation">(</span><span class="token string">"Get-IPInfo.ps1"</span><span class="token punctuation">,</span><span class="token string">"Remove-Emails.ps1"</span><span class="token punctuation">,</span><span class="token string">"Build-VMRDPConnections.ps1"</span><span class="token punctuation">,</span><span class="token string">"Find-ADUser.ps1"</span><span class="token punctuation">,</span><span class="token string">"O365Migration.ps1"</span><span class="token punctuation">)</span></code></pre>
+</li>
+<li>Change the “FunctionsToExport” line to <code>FunctionsToExport = '*'</code> Alternatively, if you prefer, you can specify each function (cmdlet) here individually, which Microsoft recommends for performance.</li>
+</ul>
+<ol start="6">
+<li>Done! Open a new PowerShell session, and you should be able to call any of your new cmdlets.</li>
+</ol>
+<p><em>Note</em>: Any changes you make to your .ps1 files will not take effect until you either open a new PowerShell, or run <code>Import-Module My-Module -Force</code></p>
 
 <a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
