@@ -443,8 +443,8 @@ a:hover {
       --accent: pink;
       --link-blue: #024def;
       --dark-mode-link-blue: #02c4ef;
-      /*--background-color: #fff6ed;*/
-      --background-color: #faf7f7;
+      /*--background-color: #faf7f7;*/
+      --background-color: #fff;
       --border-color: #202020;
     }
     body.color-auto {
