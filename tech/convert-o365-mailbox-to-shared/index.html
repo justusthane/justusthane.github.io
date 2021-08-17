@@ -2,14 +2,14 @@
 <html style="scroll-behavior: smooth;" lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Doh! That&#39;s a 404! | justus.ws</title>
+    <title>How to convert an Office365 mailbox to Shared in a hybrid Exchange environment | justus.ws</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
 
     <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
-    <link rel="canonical" href="https://justus.ws/404.html" />
+    <link rel="canonical" href="https://justus.ws/tech/convert-o365-mailbox-to-shared/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
     <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
@@ -156,15 +156,22 @@
       
 
 
-<a href="/"><i class="fas fa-arrow-circle-left"></i>&nbsp;</a>
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
   <h1>
 
-  Doh! That&#39;s a 404!
+  How to convert an Office365 mailbox to Shared in a hybrid Exchange environment
 
   </h1>
 
 <p class="publish-date">Published 2021-08-17</p>
-<p>That’s a webserver’s way of saying this page couldn’t be found. Sorry about that! The <a href="/">home page</a> is a good place to go to find what you’re looking for.</p>
+<p>In a hybrid Exchange environment, if you convert a mailbox to shared using the Exchange Online Admin Center, the AD attributes that designate the account as shared won’t be replicated back to local AD. Because of this, the next time a sync occurs the Office365 mailbox will be converted back to a regular mailbox.</p>
+<p>The solution is to manually update the local AD attributes after converting the mailbox to shared.</p>
+<ol>
+<li>Log into <a href="https://outlook.office365.com/ecp">Exchange Online Admin Center</a>, go to <strong>recipients</strong>, and select the mailbox to be converted.</li>
+<li>In the menu on the right, under “Convert to Shared Mailbox”, click <strong>Convert</strong></li>
+<li>Run the following PowerShell command on a domain controller (or on a workstation with Active Directory Users and Computers installed):</li>
+</ol>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">Set-ADUser</span> &lt;USERNAME> <span class="token operator">-Replace</span> @<span class="token punctuation">{</span>msExchRemoteRecipientType=100<span class="token punctuation">;</span>msExchRecipientTypeDetails=34359738368<span class="token punctuation">}</span></code></pre>
 
 <a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
