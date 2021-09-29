@@ -51,6 +51,7 @@ We're going to create a macro to execute a list of substitutions all at once. An
   Note that the empty line at the end is important, otherwise the macro won't execute the last substitution because there's no linebreak at the end.
   
   To explain each line: the `try` is necessary to prevent the macro from erroring out if it doesn't encounter one of the patterns. `\V` sets no-magic mode, meaning that each special character ($,{,}, etc) will be taken literally rather than having to be escaped.
+
 4. Now we'll yank that buffer into the `q` register with the following: `gg"qyG`
 5. Now switch back to the split containing the HTML, and execute register `q` as a macro: `@q`
 6. Each of the variables in the HTML should have been replaced with the updated variable. Now for each additional alert, we just have to paste it into the same Vim split and execute the macro again using `@q`. If you find an additional variable you need to add to the list to replace, you can simply add it to the list in the split containing the macro, and then yank the whole thing to the register again as in Step 4.
