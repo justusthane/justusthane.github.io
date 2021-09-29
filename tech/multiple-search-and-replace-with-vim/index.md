@@ -13,6 +13,7 @@ In other words, for each alert, we have something that looks like this:
 
 ...and we need to replace each of those variables with the new variable:
 
+```
 - ${NodeName} -> ${N=SwisEntity;M=DisplayName}
 - ${IP} -> ${N=SwisEntity;M=IP_Address}
 - ${IP_Address} -> ${N=SwisEntity;M=IP_Address}
@@ -24,6 +25,7 @@ In other words, for each alert, we have something that looks like this:
 - ${N=SwisEntity;M=NodeDescription} -> ${N=SwisEntity;M=NodeDescription}
 - ${AlertName} -> ${N=Alerting;M=AlertName}
 - ${Node.Caption} -> ${N=SwisEntity;M=Node.Caption}
+```
 
 Sure, we could go through each alert manually and update them. Or we could copy/paste the alerts into a Word Processor and search and replace each variable individually. Vim can do us one better though, and at least update all the variables in each alert at once.
 
