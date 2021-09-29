@@ -1,5 +1,5 @@
 ---
-title: Draft: Multiple Search & Replace with Vim
+title: Draft - Multiple Search & Replace with Vim
 date: 2021-09-21
 ---
 **Work-in-progress**: This is a rough draft, currently being updated.
@@ -55,3 +55,7 @@ We're going to create a macro to execute a list of substitutions all at once. An
 4. Now we'll yank that buffer into the `q` register with the following: `gg"qyG`
 5. Now switch back to the split containing the HTML, and execute register `q` as a macro: `@q`
 6. Each of the variables in the HTML should have been replaced with the updated variable. Now for each additional alert, we just have to paste it into the same Vim split and execute the macro again using `@q`. If you find an additional variable you need to add to the list to replace, you can simply add it to the list in the split containing the macro, and then yank the whole thing to the register again as in Step 4.
+
+Here's an asciicast of the whole process (recommend viewing full screen):
+
+<script id="asciicast-6klAFaK454KkmvS7UqSFbc7Fz" src="https://asciinema.org/a/6klAFaK454KkmvS7UqSFbc7Fz.js" async></script>
