@@ -118,6 +118,7 @@ body.home nav h5 {
 #updates {
     border-top: 5px dashed var(--border-color);
     grid-area: updates;
+    font-size: 0.9rem;
 }
 
 #updates li {
