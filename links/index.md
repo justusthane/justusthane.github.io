@@ -30,9 +30,9 @@ Kicks Condor
 
 :    Another tiny whimsical social network by the [same amazing community builder](http://bellkiosk.site/) as Gossip's Cafe. You get to choose a username and a color, you get to choose a community to reside in (represented by a little symbol), you get to post lists of things, you get to be a fan of 9 other users, and...that's it! 
 
-[Blueskunk Club](http://blueskunk.club)
+[Fee.Cool](http://fee.cool) (Formerly blueskunk.club)
 
-:    A really neat little handbuilt personal site. I especially like the interactive blog posts and the collision of craft and technology. Check out the [loom simulator](http://blueskunk.club/0013.html)!
+:    A really neat handbuilt personal site by my friend Jake. I especially like the interactive blog posts and the collision of craft and technology. Check out the [loom simulator](http://blueskunk.club/0013.html)!
 
 ## Apps & Services
 
