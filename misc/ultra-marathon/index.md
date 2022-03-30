@@ -45,7 +45,7 @@ Had some snow overnight, and my [easy run](https://www.strava.com/activities/686
 
 I did loops of Chapples again for my [Tempo Intervals](https://www.strava.com/activities/6877517523) --- these speed workouts are starting to actually feel like workouts. Beautiful day, lots of other runners out.
 
-We headed down to Duluth for the weekend to meet my new niece Juniper(!) and I got in a short run with Biagio. I was really nice to just run with him and chat, and not gonna lie, also nice to run with someone slower. Went for a longer run with Caroline the next day which was also really nice. She wasn't feeling great, but it was nice to be out in the sun with her.
+We headed down to Duluth for the weekend to meet my new niece Juniper(!) and I got in a [short run](https://www.strava.com/activities/6885770345) with Biagio. I was really nice to just run with him and chat, and not gonna lie, also nice to run with someone slower. Went for a [longer run](https://www.strava.com/activities/6891966937) with Caroline the next day which was also really nice. She wasn't feeling great, but it was nice to be out in the sun with her.
 
 ### Week 3: March 28, 2022
 [Tuesday called for a Progression Run](https://www.strava.com/activities/6903980502), and it kicked my butt! It wanted 60 minutes at an easy pace followed by 20 minutes at my half-marathon target pace of 4:30, and I pulled it off! Those 20 final minutes were the hardest I've ever pushed though. It's hugely beneficial seeing my pace in realtime on my wrist. I ended up with a distance of 17km, almost as long as my long run. I also ended up with a 22:43 5k in there, which is a PR!
