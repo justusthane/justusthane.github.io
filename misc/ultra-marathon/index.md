@@ -56,4 +56,6 @@ Finally bit the bullet and upgraded from my Apple Watch 3 to a Coros Apex. I sta
 
 <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/6903980502/embed/8e2b7f37c193017950dfcc16cf50b2b3d3b42786'></iframe>
 
+Thursday was supposed to be a speed workout, but I was feeling really beat up from Tuesday. No knee pain, which is great, but now I'm having some new pain in my right Achilles (as well as an odd pain the top of my left foot). Anyway, I scrapped the speed workout and [ran easy for 8k](https://www.strava.com/activities/6913805704) instead. Hoping I can get my long run in still this week. Good thing next week is an easy week.
+
 [^1]: Strava's integration (or lack-thereof) of these training plans is a little disappointing. I'd expect it to at least show today's workout in the app, and maybe even do fancier stuff like link the planned workout with its corresponding activity in Strava. Instead, you just get access to the training plan via strava.com only (and even then you can only see the coming two weeks in detail), and it emails you your next planned workout every day. It works, but it's clunky. I'd expect that they'll improve this in the future. 
