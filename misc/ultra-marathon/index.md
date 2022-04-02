@@ -3,6 +3,7 @@ title: My journey towards an ultramarathon
 date: 2022-03-22
 updated: 2022-03-29
 ---
+<iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/9982320/activity-summary/6519d94a09860d5899d1764ca86f4f759e0fa788'></iframe>
 <h3>Table of Contents</h3>
 
 [[toc]]
@@ -47,7 +48,12 @@ I did loops of Chapples again for my [Tempo Intervals](https://www.strava.com/ac
 
 We headed down to Duluth for the weekend to meet my new niece Juniper(!) and I got in a [short run](https://www.strava.com/activities/6885770345) with Biagio. I was really nice to just run with him and chat, and not gonna lie, also nice to run with someone slower. Went for a [longer run](https://www.strava.com/activities/6891966937) with Caroline the next day which was also really nice. She wasn't feeling great, but it was nice to be out in the sun with her.
 
+#### New watch!
+Finally bit the bullet and upgraded from my Apple Watch 3 to a Coros Apex. I started planning to switch in earnest after my battery drained from 100% to 34% during a 17k run, and the final straw was when it started screwing up my heart rate.
+
 ### Week 3: March 28, 2022
-[Tuesday called for a Progression Run](https://www.strava.com/activities/6903980502), and it kicked my butt! It wanted 60 minutes at an easy pace followed by 20 minutes at my half-marathon target pace of 4:30, and I pulled it off! Those 20 final minutes were the hardest I've ever pushed though. It's hugely beneficial seeing my pace in realtime on my wrist. I ended up with a distance of 17km, almost as long as my long run. I also ended up with a 22:43 5k in there, which is a PR!
+[Tuesday called for a Progression Run](https://www.strava.com/activities/6903980502), and it kicked my butt! It wanted 60 minutes at an easy pace followed by 20 minutes at my half-marathon target pace of 4:30, and I pulled it off! Those 20 final minutes were the hardest I've ever pushed though. The difficulty of that pace felt a little intimidating, but I simutaneously started to see how it might be possible. I guess that's what training is for. It's hugely beneficial seeing my pace in realtime on my wrist. I ended up with a distance of 17km, almost as long as my long run. I also ended up with a 22:43 5k in there, which is a PR!
+
+<iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/6903980502/embed/8e2b7f37c193017950dfcc16cf50b2b3d3b42786'></iframe>
 
 [^1]: Strava's integration (or lack-thereof) of these training plans is a little disappointing. I'd expect it to at least show today's workout in the app, and maybe even do fancier stuff like link the planned workout with its corresponding activity in Strava. Instead, you just get access to the training plan via strava.com only (and even then you can only see the coming two weeks in detail), and it emails you your next planned workout every day. It works, but it's clunky. I'd expect that they'll improve this in the future. 
