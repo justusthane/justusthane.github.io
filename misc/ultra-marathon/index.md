@@ -51,11 +51,23 @@ We headed down to Duluth for the weekend to meet my new niece Juniper(!) and I g
 #### New watch!
 Finally bit the bullet and upgraded from my Apple Watch 3 to a Coros Apex. I started planning to switch in earnest after my battery drained from 100% to 34% during a 17k run, and the final straw was when it started screwing up my heart rate.
 
+See my review/comparison of the Coros [here](/misc/coros-apex).
+
+
 ### Week 3: March 28, 2022
 [Tuesday called for a Progression Run](https://www.strava.com/activities/6903980502), and it kicked my butt! It wanted 60 minutes at an easy pace followed by 20 minutes at my half-marathon target pace of 4:30, and I pulled it off! Those 20 final minutes were the hardest I've ever pushed though. The difficulty of that pace felt a little intimidating, but I simutaneously started to see how it might be possible. I guess that's what training is for. It's hugely beneficial seeing my pace in realtime on my wrist. I ended up with a distance of 17km, almost as long as my long run. I also ended up with a 22:43 5k in there, which is a PR!
 
 <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/6903980502/embed/8e2b7f37c193017950dfcc16cf50b2b3d3b42786'></iframe>
 
 Thursday was supposed to be a speed workout, but I was feeling really beat up from Tuesday. No knee pain, which is great, but now I'm having some new pain in my right Achilles (as well as an odd pain the top of my left foot). Anyway, I scrapped the speed workout and [ran easy for 8k](https://www.strava.com/activities/6913805704) instead. Hoping I can get my long run in still this week. Good thing next week is an easy week.
+
+I decided to skip Saturday's easy run altogether for an extra day of recovery and so I could get in a good long run on Sunday, which I think was a good call. Sunday's run was excellent---no Achilles pain, no knee pain, just a bit of a sore left hip. [Ran out to Mission Island Marsh and back](https://www.strava.com/activities/6926791721) which I had been wanting to do for a while, and at my fastest long run pace yet. Did some yoga in the evening, but no physio.
+
+### Week 4: April 4, 2022
+A bit of a disappointing week. I haven't been having any tibfib pain lately, which is great. However, my right achilles and my left hip joint started hurting a bit on my long run last Sunday. I did eight easy kilometers (first with [Caroline and Charlee](https://www.strava.com/activities/6937403094) and then [by myself](https://www.strava.com/activities/6937577712), which aggravated them further.
+
+I had a physio appointment the next day, and she gave me some stretches for both. I then did a [tempo run](https://www.strava.com/activities/6947049997) on Thursday, and while my pace was good, it felt harder than it should have, and my achilles *really* didn't like it--I was limping the next day.
+
+I think I'm skipping the rest of my running this week, and I'll have to take it really easy next week.
 
 [^1]: Strava's integration (or lack-thereof) of these training plans is a little disappointing. I'd expect it to at least show today's workout in the app, and maybe even do fancier stuff like link the planned workout with its corresponding activity in Strava. Instead, you just get access to the training plan via strava.com only (and even then you can only see the coming two weeks in detail), and it emails you your next planned workout every day. It works, but it's clunky. I'd expect that they'll improve this in the future. 
