@@ -1,11 +1,11 @@
 ---
-title: Draft - Multiple Search & Replace with Vim
+title: How to search and replace multiple strings with Vim
 date: 2021-09-21
 ---
-**Work-in-progress**: This is a rough draft, currently being updated.
 
 ## Intro
-All of our Solarwinds Orion email alerts decided to stop working last week---rather than containing the alert variables, such as the IP address of the node, they just contained the variables themselves, e.g. "${IP_Address}". [Turns out](https://support.solarwinds.com/SuccessCenter/s/article/Alert-email-shows-the-variable-instead-of-the-variable-information?language=en_US) that Solarwinds replaced all the old variables with new ones. Cool. So now it's a matter of going through each one of our dozens of alerts and updating the variables.
+All of our Solarwinds Orion email alerts decided to stop working last week---rather than containing the alert variables, such as the IP address of the node, they just contained the variables themselves, e.g. `${IP_Address}`. [Turns out](https://support.solarwinds.com/SuccessCenter/s/article/Alert-email-shows-the-variable-instead-of-the-variable-information?language=en_US) Solarwinds replaced all the old variables with new ones. Cool. So now it's a matter of going through each one of our dozens of alerts and updating the variables.
+
 
 In other words, for each alert, we have something that looks like this (some of the HTML has been trimmed out for "brevity"):
 ```html
@@ -60,7 +60,7 @@ In other words, for each alert, we have something that looks like this (some of 
 ```
 ...and we need to replace each of those variables with the new variable:
 
-```
+```md
 - ${NodeName} -> ${N=SwisEntity;M=DisplayName}
 - ${IP} -> ${N=SwisEntity;M=IP_Address}
 - ${IP_Address} -> ${N=SwisEntity;M=IP_Address}
@@ -81,24 +81,22 @@ We're going to create a macro to execute a list of substitutions all at once. An
 1. Paste the above alert HTML into a new Vim buffer.
 2. Open a new empty buffer in a split with `:vnew`
 3. Into the empty buffer, put the following:
-  ```
-  :try|%s/\V${NodeName}/${N=SwisEntity;M=DisplayName}/|catch||endtry
-  :try|%s/\V${IP}/${N=SwisEntity;M=IP_Address}/|catch||endtry
-  :try|%s/\V${IP_Address}/${N=SwisEntity;M=IP_Address}/|catch||endtry
-  :try|%s/\V${Status}/${N=SwisEntity;M=Status;F=Status}/|catch||endtry
-  :try|%s/\V${location}/${N=SwisEntity;M=Location}/|catch||endtry
-  :try|%s/\V${DNS}/${N=SwisEntity;M=DNS}/|catch||endtry
-  :try|%s/\V${NodeDetailsURL}/${N=SwisEntity;M=DetailsUrl}/|catch||endtry
-  :try|%s/\V${Time}/${N=Alerting;M=AlertTriggerTime;F=DateTime}/ |catch||endtry
-  :try|%s/\V${N=SwisEntity;M=NodeDescription}/${N=SwisEntity;M=NodeDescription}/|catch||endtry
-  :try|%s/\V${AlertName}/${N=Alerting;M=AlertName}/|catch||endtry
-  :try|%s/\V${Node.Caption}/${N=SwisEntity;M=Node.Caption}/|catch||endtry
+  ```text
+  :%s/\V${NodeName}/${N=SwisEntity;M=DisplayName}/e
+  :%s/\V${IP}/${N=SwisEntity;M=IP_Address}/e
+  :%s/\V${IP_Address}/${N=SwisEntity;M=IP_Address}/e
+  :%s/\V${Status}/${N=SwisEntity;M=Status;F=Status}/e
+  :%s/\V${location}/${N=SwisEntity;M=Location}/e
+  :%s/\V${DNS}/${N=SwisEntity;M=DNS}/e
+  :%s/\V${NodeDetailsURL}/${N=SwisEntity;M=DetailsUrl}/e
+  :%s/\V${Time}/${N=Alerting;M=AlertTriggerTime;F=DateTime}/ e
+  :%s/\V${N=SwisEntity;M=NodeDescription}/${N=SwisEntity;M=NodeDescription}/e
+  :%s/\V${AlertName}/${N=Alerting;M=AlertName}/e
+  :%s/\V${Node.Caption}/${N=SwisEntity;M=Node.Caption}/e
   
   ```
-  Note that the empty line at the end is important, otherwise the macro won't execute the last substitution because there's no linebreak at the end.
+  Note that the empty line at the end is important, otherwise the macro won't execute the last substitution because there's no linebreak (enter) after the last substitution.
   
-  To explain each line: the `try` is necessary to prevent the macro from erroring out if it doesn't encounter one of the patterns. `\V` sets no-magic mode, meaning that each special character ($,{,}, etc) will be taken literally rather than having to be escaped.
-
 4. Now we'll yank that buffer into the `q` register with the following: `gg"qyG`
 5. Now switch back to the split containing the HTML, and execute register `q` as a macro: `@q`
 6. Each of the variables in the HTML should have been replaced with the updated variable. Now for each additional alert, we just have to paste it into the same Vim split and execute the macro again using `@q`. If you find an additional variable you need to add to the list to replace, you can simply add it to the list in the split containing the macro, and then yank the whole thing to the register again as in Step 4.
