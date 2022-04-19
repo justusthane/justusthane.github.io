@@ -86,6 +86,11 @@ body.home nav h5 {
     text-align: center;
 }
 
+#elsewhere {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
 #sidebar {
   grid-area: sidebar;
   font-size: 1.4rem;
