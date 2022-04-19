@@ -2,14 +2,14 @@
 <html style="scroll-behavior: smooth;" lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Techsmithing | justus.ws</title>
+    <title>VisiData for Windows extra lines | justus.ws</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
 
     <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
-    <link rel="canonical" href="https://justus.ws/tech/" />
+    <link rel="canonical" href="https://justus.ws/tech/visidata-line-endings/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
     <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
@@ -48,7 +48,7 @@
             <a href="/craft/">craft/sewing</a> projects
           </li>
           
-          <li class="currentPageIndicator">
+          <li>
             <a href="/tech/">tech</a> stuff
           </li>
           
@@ -102,7 +102,7 @@
               <a href="/craft/">craft/sewing</a> projects
             </li>
             
-            <li class="currentPageIndicator">
+            <li>
               <a href="/tech/">tech</a> stuff
             </li>
             
@@ -156,45 +156,23 @@
       
 
 
-<a href="/"><i class="fas fa-arrow-circle-left"></i>&nbsp;home</a>
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
   <h1>
 
-  Techsmithing
+  VisiData for Windows extra lines
 
   </h1>
 
+<p class="publish-date">Published 2022-04-19, updated 2022-04-19</p>
+<p>If you’re using the excellent VisiData on Windows, like I am, you may have noticed that that if you save a CSV from VisiData and open it in Excel, you’ll end up with annoying blank lines between each line:</p>
+<p><img src="visidata_csv_1.png" alt=""></p>
+<p>If you open the file in Vim, you’ll notice there’s a “^M” (Ctrl-M) character at the end of every line:</p>
+<p><img src="visidata_csv_2.png" alt=""></p>
+<p>This is because VisiData outputs a carriage return character in addition to the line break, which Excel doesn’t like.</p>
+<p>To prevent VisiData from doing this, create a new empty text file at ~.visidatarc (That’s in your profile folder, e.g. <code>C:\Users\justus\.visidata</code>) and add the following line:</p>
+<pre class="language-md"><code class="language-md">options.csv_lineterminator = '\n'</code></pre>
 
-<ul>
-
-  <li> <a href="/tech/visidata-line-endings/">VisiData for Windows extra lines</a> <span class="publish-date">(published 2022-04-19, updated 2022-04-19)</span></li>
-
-  <li> <a href="/tech/multiple-search-and-replace-with-vim/">How to search and replace multiple strings with Vim</a> <span class="publish-date">(published 2021-09-21)</span></li>
-
-  <li> <a href="/tech/convert-o365-mailbox-to-shared/">How to convert an Office365 mailbox to Shared in a hybrid Exchange environment</a> <span class="publish-date">(published 2021-08-17)</span></li>
-
-  <li> <a href="/tech/powershell-module-separate-files-for-each-cmdlet/">Writing a PowerShell module with separate .ps1 files for each cmdlet</a> <span class="publish-date">(published 2021-07-24)</span></li>
-
-  <li> <a href="/tech/create-onprem-ad-user-for-o365-mailbox/">How to create a local AD user for an existing Office365 mailbox</a> <span class="publish-date">(published 2021-06-22)</span></li>
-
-  <li> <a href="/tech/migrate-o365-mailbox-to-onprem/">How to migrate an Office365 mailbox to on-premises in an Exchange hybrid environment</a> <span class="publish-date">(published 2021-06-15)</span></li>
-
-  <li> <a href="/tech/fix-outlook-view/">How to fix your broken Outlook inbox view</a> <span class="publish-date">(published 2021-06-05)</span></li>
-
-  <li> <a href="/tech/paloalto-ca-cert/">Issuing a CA cert to a PaloAlto firewall from Active Directory Certificate Services for SSL decryption</a> <span class="publish-date">(published 2021-06-05)</span></li>
-
-  <li> <a href="/tech/deploying-eleventy-to-github-pages/">How To Deploy an Eleventy Site to Github Pages with a Custom Domain</a> <span class="publish-date">(published 2020-09-05)</span></li>
-
-  <li> <a href="/tech/editing-pixel-art-in-photoshop/">Editing Pixel Art in Photoshop</a> <span class="publish-date">(published 2020-09-02)</span></li>
-
-  <li> <a href="/tech/sdr-adventures-in-shortwave/">SDR: Digital Adventures in Shortwave Radio</a> <span class="publish-date">(published 2020-08-30)</span></li>
-
-  <li> <a href="/tech/open-with-vim/">&#39;Open With&#39; Vim from MacOS Finder</a> <span class="publish-date">(published 2020-05-08)</span></li>
-
-  <li> <a href="/tech/eleventy-utc-dates/">Eleventy static-site generator: Making Liquid play nice with dates</a> <span class="publish-date">(published 2020-04-16)</span></li>
-
-  <li> <a href="/tech/how-to-ditch-gmail/">How to ditch Gmail</a> <span class="publish-date">(published 2020-04-16)</span></li>
-
-</ul>
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
     </main>
     
