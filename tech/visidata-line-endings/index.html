@@ -2,7 +2,7 @@
 <html style="scroll-behavior: smooth;" lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>VisiData for Windows extra lines | justus.ws</title>
+    <title>VisiData for Windows: extra lines in CSV | justus.ws</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -159,7 +159,7 @@
 <a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
   <h1>
 
-  VisiData for Windows extra lines
+  VisiData for Windows: extra lines in CSV
 
   </h1>
 
@@ -169,7 +169,7 @@
 <p>If you open the file in Vim, you’ll notice there’s a “^M” (Ctrl-M) character at the end of every line:</p>
 <p><img src="visidata_csv_2.png" alt=""></p>
 <p>This is because VisiData outputs a carriage return character in addition to the line break, which Excel doesn’t like.</p>
-<p>To prevent VisiData from doing this, create a new empty text file at ~.visidatarc (That’s in your profile folder, e.g. <code>C:\Users\justus\.visidata</code>) and add the following line:</p>
+<p>To prevent VisiData from doing this, create a new empty text file at <code>~\.visidatarc</code> (That’s in your profile folder, e.g. <code>C:\Users\justus\.visidata</code>) and add the following line:</p>
 <pre class="language-md"><code class="language-md">options.csv_lineterminator = '\n'</code></pre>
 
 <a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
