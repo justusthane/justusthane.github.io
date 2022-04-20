@@ -1,5 +1,5 @@
 ---
-title: VisiData for Windows extra lines
+title: "VisiData for Windows: extra lines in CSV"
 date: 2022-04-19
 updated: 2022-04-19
 ---
@@ -13,7 +13,7 @@ If you open the file in Vim, you'll notice there's a "^M" (Ctrl-M) character at 
 
 This is because VisiData outputs a carriage return character in addition to the line break, which Excel doesn't like.
 
-To prevent VisiData from doing this, create a new empty text file at ~\.visidatarc (That's in your profile folder, e.g. `C:\Users\justus\.visidata`) and add the following line:
+To prevent VisiData from doing this, create a new empty text file at `~\.visidatarc` (That's in your profile folder, e.g. `C:\Users\justus\.visidata`) and add the following line:
 
 ```md
 options.csv_lineterminator = '\n'
