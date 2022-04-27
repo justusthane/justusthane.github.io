@@ -3,7 +3,7 @@ title: The unreasonable annoyance of moving emails in Outlook for Windows
 date: 2022-04-27
 updated: 2022-04-27
 ---
-Unfortunately, this is not a solution, only a complaint about a very annoying thing: moving emails to different folders in Outlook for Windows is a PITA. If you're quickly moving through your inbox triaging and organization emails, for efficiency's sake you don't want to use the mouse. No clicking and dragging emails to folders (and if you have dozens of folders you can't do that anyway without scrolling to find the folder you want).
+Unfortunately, this is not a solution, only a complaint about a very annoying thing: moving emails to different folders in Outlook for Windows is a PITA. If you're quickly moving through your inbox triaging and organizing emails, of course you don't want to use the mouse to click and drag emails to folders (and if you have dozens of folders you can't do that anyway without scrolling to find the folder you want).
 
 For moving emails using the keyboard, you have three options:
 
