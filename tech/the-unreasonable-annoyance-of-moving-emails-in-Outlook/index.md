@@ -9,7 +9,7 @@ For moving emails using the keyboard, you have three options:
 
 1. Use Quick Steps to assign keyboard shorcuts to move emails to a *specific* folder. E.g. you assign the keyboard shortcut "Ctrl-Shift-1" to move the selected email to your "Projects" folder, "Ctrl-Shift-2" to move the email to your "Completed" folder, and so on. This is by far the fastest method, *but you can only use the keyboard shortcuts Ctrl-Shift-1 through Ctrl-Shift-9,* meaning that if you have more than nine folders you're out of luck. Also you have to remember the shortcut for each folder.
 ![](outlook1.png)
-2.  The key sequence Alt -> H -> MV will open the "Move" dropdown, which shows you the 10 most recently used folders, which you can then use the arrow keys to select. This can be useful for recently used folders, but if the folder you're looking for isn't there you're out of luck.
+2.  The key sequence Alt -> H -> MV will open the "Move" dropdown, which shows you the 10 most recently used folders, which you can then use the arrow keys to select. This can be useful for recently used folders, but if the folder you're looking for isn't there you're out of luck (you can select "Other Folder" which will then open the same dialog as in the next option, but at this point you might as well have just used your mouse).
 ![](outlook2.png)
 3.  "Ctrl-Shift-V" opens the "Move Items" dialog box. Theoretically you can start typing the first few letters of the folder's name to jump to it, but this will not work if the folder is inside another folder which is collapsed.
 ![](outlook3.png)
