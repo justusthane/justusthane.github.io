@@ -174,20 +174,20 @@
 <li>Find the executable name by cross-referencing the Wireshark capture with the ProcMon capture based on the source port of the connection.</li>
 </ol>
 <p>First we’ll start our Wireshark and ProcMon captures. We’re specifying a simple Wireshark display filter of “ip.proto == TCP” for two reasons: 1) It will reduce the size of our .pcap, but more importantly, 2) If we don’t exclude DNS traffic from the export, the exported .pcap will contain hostnames rather than IP addresses, which we don’t want. (The other way to avoid this is Edit -&gt; Preferences -&gt; Name Resolution -&gt; uncheck “Use captured DNS packet data for address resolution”.</p>
-<p><img src="%221.png%22" alt=""></p>
+<p><img src="1.png" alt=""></p>
 <p>Once those are running, we’ll sign in to OneDrive:</p>
-<p>![](“Screenshot 2022-08-05 085036.png”)</p>
+<p><img src="Screenshot%202022-08-05%20085036.png" alt=""></p>
 <p>As mentioned, that will redirect to our SSO provider login form, opened inside an integrated browser window:</p>
-<p>![](“Screenshot 2022-08-05 085212.png”)</p>
+<p><img src="Screenshot%202022-08-05%20085212.png" alt=""></p>
 <p>And then finally our MFA provider:</p>
-<p>![](“Screenshot 2022-08-05 085301.png”)</p>
+<p><img src="Screenshot%202022-08-05%20085301.png" alt=""></p>
 <p>At this point, we know we’ve captured the network traffic to load the MFA login form, so we can go ahead and stop both captures.</p>
 <p>We’ll save the Wireshark capture as “Duo-Wireshark.pcap”, using File -&gt; Export Speficified Packets, choosing to export only the Displayed packets and also making sure to save it as a .pcap file (not the default .pcapng) so that we can open it in VisiData:</p>
-<p>![](“Screenshot 2022-08-05 104557.png”)</p>
+<p><img src="Screenshot%202022-08-05%20104557.png" alt=""></p>
 <p>Then we’ll save the ProcMon capture as “Duo-ProcMon.csv” (not the default .pml), again so that we can open it in VisiData.</p>
 <p>Now we have two of our pieces of data. The last thing we need is a list of Duo’s IP addresses so we can pull that traffic out from our Wireshark capture.</p>
 <p>We’ll just copy that list from Duo’s website. The only problem is that Duo provides them as a list of subnets, and we need the individual IP addresses, so we’ll convert them in PowerShell.</p>
-<p>![](“Screenshot 2022-08-05 090418.png”)</p>
+<p><img src="Screenshot%202022-08-05%20090418.png" alt=""></p>
 <p>First we’ll paste it into Vim to clean it up a bit. We need to do two things in Vim: remove the leading whitespace from the beginning of each line, and surround each line in quotes.</p>
 <script id="asciicast-FNNOKZCyICDB1k1UsdROY845Z" src="https://asciinema.org/a/FNNOKZCyICDB1k1UsdROY845Z.js" async></script>
 <p>The substitute command we’re using to accomplish that is <code>:%s/\v\s*(.*)/&quot;\1&quot;/</code>. Broken down:</p>
@@ -244,48 +244,48 @@
 <script id="asciicast-1UoFArtuJ76ph61cr7pTcSlxY" src="https://asciinema.org/a/1UoFArtuJ76ph61cr7pTcSlxY.js" async></script>
 <p>Okay, now we’ve finally got our three CSVs: Wireshark and ProcMon captures, and Duo IP addresses. Now the fun part: VisiData.</p>
 <p>First we’ll open “Duo-Wireshark.pcap” in VisiData: <code>visidata .\Duo-Wireshark.pcap</code>:</p>
-<p>![](“Screenshot 2022-08-05 104714.png”)</p>
+<p><img src="Screenshot%202022-08-05%20104714.png" alt=""></p>
 <p>Then we’ll move over to the <em>dsthost</em> column and mark it as a key column with <code>!</code>:</p>
-<p>![](“Screenshot 2022-08-05 104923.png”)</p>
+<p><img src="Screenshot%202022-08-05%20104923.png" alt=""></p>
 <p>Next we’ll open our list of Duo IP addresses as a separate sheet using <code>o DuoIPs.csv</code>:</p>
-<p>![](“Screenshot 2022-08-05 110005.png”)</p>
+<p><img src="Screenshot%202022-08-05%20110005.png" alt=""></p>
 <p>Rename the column to “dsthost” so that it matches the key column name in the Wireshark sheet with <code>^dsthost&lt;enter&gt;</code>, change the column type to text with <code>~</code>, and then designate it as a key column with <code>!</code>:</p>
-<p>![](“Screenshot 2022-08-05 110253.png”)<br>
+<p><img src="Screenshot%202022-08-05%20110253.png" alt=""><br>
 <em>Notice the little squigly to the right of the column name indicating that it’s a text column</em></p>
 <p>Now that we have two sheets, both containing a key column of the same type, we’ll perform an “inner join” on these two sheets in order to filter the Wireshark sheet to only packets sent to a Duo IP address. Go to the “sheets sheet” with <code>Shift-S</code>. This displays all the sheets we currently have open in VisiData:</p>
-<p>![](“Screenshot 2022-08-05 110525.png”)</p>
+<p><img src="Screenshot%202022-08-05%20110525.png" alt=""></p>
 <p>Select both the “DuoIPs” sheet and the “Duo_Wireshark” sheet with <code>t</code> (toggle) or <code>s</code> (select):</p>
-<p>![](“Screenshot 2022-08-05 110623.png”)</p>
+<p><img src="Screenshot%202022-08-05%20110623.png" alt=""></p>
 <p>Join them with <code>&amp;</code>, and at the prompt, choose “inner”:</p>
-<p>![](“Screenshot 2022-08-05 110812.png”)</p>
+<p><img src="Screenshot%202022-08-05%20110812.png" alt=""></p>
 <p>Success! We’re now looking at a sheet containing only packets destined for Duo IP addresses:</p>
-<p>![](“Screenshot 2022-08-05 110921.png”)</p>
+<p><img src="Screenshot%202022-08-05%20110921.png" alt=""></p>
 <p>It’s really easy to get lost once we have a bunch of sheets open in VisiData, so we’re going to go ahead and rename this new sheet to “wireshark-duo traffic” by pressing <code>&lt;space&gt;</code> to raise the VisiData command prompt, and then entering <code>rename-sheet&lt;enter&gt;</code>, and at the prompt, type “wireshark-duo traffic”.</p>
 <p>Next we’re going to join this new sheet with our ProcMon sheet on the srcport column to find the executable responsible for making these connections. First we’ll “un-key” the dsthost column with <code>!</code>, and then key the <strong>srcport</strong> column:</p>
-<p>![](“Screenshot 2022-08-05 111428.png”)</p>
+<p><img src="Screenshot%202022-08-05%20111428.png" alt=""></p>
 <p>Now we’ll open our ProcMon capture with <code>o Duo-ProcMon.csv</code>:</p>
-<p>![](“Screenshot 2022-08-05 111553.png”)</p>
+<p><img src="Screenshot%202022-08-05%20111553.png" alt=""></p>
 <p>ProcMon captures a <em>lot</em> of stuff. We only care about network connections, so we’re going to make things easier on ourselves by displaying only those rows. Navigate to the <strong>Operation</strong> column, press <code>|</code> (select by RegEx), and at the prompt enter “TCP”. Probably nothing will have changed on your screen, but the lower-right corner of VisiData will show that we’ve selected a very small subset of our rows—in this case, 961 rows selected out of 309,730 total:</p>
-<p>![](“Screenshot 2022-08-05 111855.png”)</p>
+<p><img src="Screenshot%202022-08-05%20111855.png" alt=""></p>
 <p>If you were to scroll down, you would also begin to see some selected rows highlighted in orange:</p>
-<p>![](“Screenshot 2022-08-05 112002.png”)</p>
+<p><img src="Screenshot%202022-08-05%20112002.png" alt=""></p>
 <p>Now we’ll press <code>&quot;</code> to create a new sheet containing <em>only</em> the selected rows. And again, we’ll rename this sheet using <code>&lt;space&gt;rename-sheet</code> to “procmon-TCP connections”:</p>
-<p>![](“Screenshot 2022-08-05 112158.png”)</p>
+<p><img src="Screenshot%202022-08-05%20112158.png" alt=""></p>
 <p>If we move over to the <strong>Path</strong> column and expand it using <code>_</code>, and we’ll see the source ports information:</p>
-<p>![](“Screenshot 2022-08-05 112558.png”)</p>
+<p><img src="Screenshot%202022-08-05%20112558.png" alt=""></p>
 <p>(We’ll also see that ProcMon displays hostnames rather than IP addresses when the process accessing the resource using the hostname, which is why we needed the Wireshark capture as well).</p>
 <p>We need to get the source ports in their own column, so to do this we’ll split the <strong>Path</strong> column using <code>:</code>. When prompted for the RegEx to split on, enter “[ :]”. This will split on <em>either</em> a colon or a space, which is what we want since the source port has a colon before it and a space after.</p>
 <p>This will create a few new columns since there are multiple spaces and colons in the <strong>Path</strong> column, but the new column containing the source port is the only one we care about:</p>
-<p>![](“Screenshot 2022-08-05 114344.png”)</p>
+<p><img src="Screenshot%202022-08-05%20114344.png" alt=""></p>
 <p>We’ll rename this column to “srcport” using <code>^</code>, change it to an integer type using <code>#</code>, and key it with <code>!</code>:</p>
-<p>![](“Screenshot 2022-08-05 114525.png”)</p>
+<p><img src="Screenshot%202022-08-05%20114525.png" alt=""></p>
 <p>Now we’ll return to our Sheets sheet (<code>Shift-S</code>), unselect our previously selected sheets using <code>t</code> (toggle) or <code>u</code> (unselect), and then select our new “procmon TCP connections” and “wireshark duo traffic” sheets using <code>t</code> (toggle) or <code>s</code> (select):</p>
-<p>![](“Screenshot 2022-08-05 114725.png”)</p>
+<p><img src="Screenshot%202022-08-05%20114725.png" alt=""></p>
 <p>Now we’ll again join these two sheets with an inner join: <code>&amp;</code>, and in the resulting joined sheet we finally see that the executable name responsbile for the Duo connections is “Microsoft.AAD.BrokerPlugin.exe”:</p>
-<p>![](“Screenshot 2022-08-05 115657.png”)</p>
+<p><img src="Screenshot%202022-08-05%20115657.png" alt=""></p>
 <p>We can quickly confirm that this is the <em>only</em> executable name that appears by selecting the <strong>Process Name</strong> column and creating a frequency sheet with <code>Shift-F</code>:</p>
 <p>And indeed it is:</p>
-<p>![](“Screenshot 2022-08-05 115807.png”)</p>
+<p><img src="Screenshot%202022-08-05%20115807.png" alt=""></p>
 
 <a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
