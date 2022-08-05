@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Analyzing ProcMon output with VisiData | justus.ws</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
+
+    <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
+    <link rel="canonical" href="https://justus.ws/tech/analyizing-procmon-output-with-visidata/" />
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+    <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
+    <link rel="webmention" href="https://webmention.io/justus.ws/webmention" />
+
+</head>
+<body id="top" class="color-auto ">
+  <div id="toggle-color">
+  </div>
+  <div id="wrapper">
+    <div id="titleContainer">
+      <div id="avatar">
+        <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" class="avatar"></a>
+      </div>
+      <div id="sitetitle">
+        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus<br>grunow</a></div> 
+      </div>
+    </div>
+    <div id="tagline">home, home on the web<br />where the links and the hypertexts play
+        <div id="elsewhere">
+                      <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws" aria-label="Email"><i class="far fa-envelope-open" aria-hidden="true"></i></a>
+                                <a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug" aria-label="Photography"><i class="fas fa-camera-retro" aria-hidden="true"></i></a>
+                                          <a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github" aria-label="Github"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                                  </div>
+    </div>
+    <div id="sidebar">
+      
+
+<details id="menuMobile">
+  <summary>Menu</summary>
+        <ul>
+          <li><a href="/">home</a></li>
+          
+          <li>
+            <a href="/craft/">craft/sewing</a> projects
+          </li>
+          
+          <li>
+            <a href="/tech/">tech</a> stuff
+          </li>
+          
+          <li>
+            <a href="/food/">food</a> &amp; kitchen
+          </li>
+          
+          <li>
+            <a href="/garden/">garden</a>ing
+          </li>
+          
+          <li>
+            <a href="/misc/">misc</a>???
+          </li>
+          
+          <li>
+            <a href="/writings/">writings</a> &amp; musings
+          </li>
+          
+          <li>
+            <a href="/blog/">blog</a>
+          </li>
+          
+          <li>
+            <a href="/why/">why</a> does this site exist?
+          </li>
+          
+          <li>
+            <a href="/how/">how</a> does this site work?
+          </li>
+          
+          <li>
+            <a href="/links/">links</a> &amp; other things I like
+          </li>
+          
+          <li>
+            <a href="/now/">now</a>: what I&#39;m up to
+          </li>
+          
+          <li>
+            <a href="/todo/">todo</a> for this site
+          </li>
+          
+        </ul>
+</details>
+        <div id="menuDesktop">
+          <ul>
+          <li><a href="/">home</a></li>
+            
+            <li>
+              <a href="/craft/">craft/sewing</a> projects
+            </li>
+            
+            <li>
+              <a href="/tech/">tech</a> stuff
+            </li>
+            
+            <li>
+              <a href="/food/">food</a> &amp; kitchen
+            </li>
+            
+            <li>
+              <a href="/garden/">garden</a>ing
+            </li>
+            
+            <li>
+              <a href="/misc/">misc</a>???
+            </li>
+            
+            <li>
+              <a href="/writings/">writings</a> &amp; musings
+            </li>
+            
+            <li>
+              <a href="/blog/">blog</a>
+            </li>
+            
+            <li>
+              <a href="/why/">why</a> does this site exist?
+            </li>
+            
+            <li>
+              <a href="/how/">how</a> does this site work?
+            </li>
+            
+            <li>
+              <a href="/links/">links</a> &amp; other things I like
+            </li>
+            
+            <li>
+              <a href="/now/">now</a>: what I&#39;m up to
+            </li>
+            
+            <li>
+              <a href="/todo/">todo</a> for this site
+            </li>
+            
+          </ul>
+        </div>
+
+    </div>
+    </header>
+
+    <main id="content">
+      
+
+
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
+  <h1>
+
+  Analyzing ProcMon output with VisiData
+
+  </h1>
+
+<p class="publish-date">Published 2022-08-05</p>
+<p>Given a destination IP address, can you find the name of the executable responsible for establishing that connection?</p>
+<p>I had a scenario at work that involved the above. To provide context, when you authenticate to OneDrive using enterprise credentials, if your enterprise uses SSO OneDrive will open a small integrated browser window to display your organization’s SSO and MFA pages—in our case, QuickLaunch and Duo. For reasons that are easier left unsaid, I needed to know the exact name of the executable responsible for making that network connection to our MFA provider—trial and error indicated that it’s <em>not</em> OneDrive.exe.</p>
+<p>Although I’m sure there are numerous (and possibly easier) ways to solve this, I chose to use ProcMon, Wireshark, and—my new favorite tool—VisiData.</p>
+<p>The basic plan is:</p>
+<ol>
+<li>Run Wireshark and ProcMon captures simutaneously while signing in to OneDrive.</li>
+<li>Filter the Wireshark capture for connections to the IP addresses of our MFA provider.</li>
+<li>Find the executable name by cross-referencing the Wireshark capture with the ProcMon capture based on the source port of the connection.</li>
+</ol>
+<p>First we’ll start our Wireshark and ProcMon captures. We’re specifying a simple Wireshark display filter of “ip.proto == TCP” for two reasons: 1) It will reduce the size of our .pcap, but more importantly, 2) If we don’t exclude DNS traffic from the export, the exported .pcap will contain hostnames rather than IP addresses, which we don’t want. (The other way to avoid this is Edit -&gt; Preferences -&gt; Name Resolution -&gt; uncheck “Use captured DNS packet data for address resolution”.</p>
+<p><img src="1.png" alt=""></p>
+<p>Once those are running, we’ll sign in to OneDrive:</p>
+<p>![](Screenshot 2022-08-05 085036.png)</p>
+<p>As mentioned, that will redirect to our SSO provider login form, opened inside an integrated browser window:</p>
+<p>![](Screenshot 2022-08-05 085212.png)</p>
+<p>And then finally our MFA provider:</p>
+<p>![](Screenshot 2022-08-05 085301.png)</p>
+<p>At this point, we know we’ve captured the network traffic to load the MFA login form, so we can go ahead and stop both captures.</p>
+<p>We’ll save the Wireshark capture as “Duo-Wireshark.pcap”, using File -&gt; Export Speficified Packets, choosing to export only the Displayed packets and also making sure to save it as a .pcap file (not the default .pcapng) so that we can open it in VisiData:</p>
+<p>![](Screenshot 2022-08-05 104557.png)</p>
+<p>Then we’ll save the ProcMon capture as “Duo-ProcMon.csv” (not the default .pml), again so that we can open it in VisiData.</p>
+<p>Now we have two of our pieces of data. The last thing we need is a list of Duo’s IP addresses so we can pull that traffic out from our Wireshark capture.</p>
+<p>We’ll just copy that list from Duo’s website. The only problem is that Duo provides them as a list of subnets, and we need the individual IP addresses, so we’ll convert them in PowerShell.</p>
+<p>![](Screenshot 2022-08-05 090418.png)</p>
+<p>First we’ll paste it into Vim to clean it up a bit. We need to do two things in Vim: remove the leading whitespace from the beginning of each line, and surround each line in quotes.</p>
+<script id="asciicast-FNNOKZCyICDB1k1UsdROY845Z" src="https://asciinema.org/a/FNNOKZCyICDB1k1UsdROY845Z.js" async></script>
+<p>The substitute command we’re using to accomplish that is <code>:%s/\v\s*(.*)/&quot;\1&quot;/</code>. Broken down:</p>
+<ul>
+<li>:%s
+<ul>
+<li>Begin the substution command (<code>s</code>) operating on the entire buffer (<code>%</code>)</li>
+</ul>
+</li>
+<li>/
+<ul>
+<li>Begin the matching pattern</li>
+</ul>
+</li>
+<li>\v
+<ul>
+<li>Enable “very magic mode” - makes it so special characters, such as “()” are treated as special by default. In other words, we don’t need to escape them to make them special. Good idea to include this flag in any Vim RegEx, since this is how other RegEx implementations behave by defualt.</li>
+</ul>
+</li>
+<li>\s*
+<ul>
+<li>Match any whitespace at the beginning of a line</li>
+</ul>
+</li>
+<li><code>(.*)</code>
+<ul>
+<li>Create a capture group to match the rest of the line</li>
+</ul>
+</li>
+<li>/
+<ul>
+<li>Begin the substutition pattern</li>
+</ul>
+</li>
+<li>“\1”
+<ul>
+<li>Insert the first capture group, surrouned by quotes.</li>
+</ul>
+</li>
+<li>/
+<ul>
+<li>End the capture group</li>
+</ul>
+</li>
+</ul>
+<p>We’re also using a very neat trick above to get the contents of the current Vim buffer back into the Windows clipboard (since we’re running Vim in WSL):</p>
+<p><code>:w !clip.exe</code></p>
+<p>This “writes” the contents of the buffer (the same as saving a file), except it writes it to another command (clip.exe, which accesses the Windows clipbaord) rather than to a file.</p>
+<p>Next we need to convert this list of subnets to a list of invidual IP addresses. First we’ll just create a PowerShell array from the list of subnets. We’ll do this by creating a new array with <code>$duoSubnets = @(</code>, and then simply pasting the list in from our clipboard, and ending it with a closing <code>)</code>:</p>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">PS</span> <span class="token operator">/</span>home<span class="token operator">/</span>justus> <span class="token variable">$duoSubnets</span> = @<span class="token punctuation">(</span><br>>> <span class="token string">"54.241.191.128/26"</span><br>>> <span class="token string">"54.236.251.192/26"</span><br>>> <span class="token string">"52.19.127.192/26"</span><br>>> <span class="token string">"52.32.63.128/26"</span><br>>> <span class="token string">"52.59.243.192/26"</span><br>>> <span class="token string">"35.182.14.128/26"</span><br>>> <span class="token string">"3.25.48.128/26"</span><br>>> <span class="token string">"35.74.77.64/26"</span><br>>> <span class="token string">"13.213.75.128/26"</span><br>>> <span class="token string">"3.110.73.128/26"</span><br>>> <span class="token string">"13.40.93.64/26"</span><br>>> <span class="token punctuation">)</span></code></pre>
+<p>Next we’ll use a neat PowerShell module called “Intended.Net.IP” (available from the PowerShell Gallery) to convert the list of subnets to a list of individual IP addresses, and then save that list as a CSV. Specifically, the command we’ll use for this is <code>Get-NetworkRange</code>:</p>
+<pre class="language-powershell"><code class="language-powershell"><span class="token variable">$duoSubnets</span> <span class="token punctuation">|</span> <span class="token function">Get-NetworkRange</span> <span class="token punctuation">|</span> <span class="token function">select</span> IPAddressToString <span class="token punctuation">|</span> <span class="token function">export-csv</span> <span class="token operator">-</span>NoTypeInformation DuoIPs<span class="token punctuation">.</span>csv</code></pre>
+<p>Here’s an asciicast of the whole process:</p>
+<script id="asciicast-1UoFArtuJ76ph61cr7pTcSlxY" src="https://asciinema.org/a/1UoFArtuJ76ph61cr7pTcSlxY.js" async></script>
+<p>Okay, now we’ve finally got our three CSVs: Wireshark and ProcMon captures, and Duo IP addresses. Now the fun part: VisiData.</p>
+<p>First we’ll open “Duo-Wireshark.pcap” in VisiData: <code>visidata .\Duo-Wireshark.pcap</code>:</p>
+<p>![](Screenshot 2022-08-05 104714.png)</p>
+<p>Then we’ll move over to the <em>dsthost</em> column and mark it as a key column with <code>!</code>:</p>
+<p>![](Screenshot 2022-08-05 104923.png)</p>
+<p>Next we’ll open our list of Duo IP addresses as a separate sheet using <code>o DuoIPs.csv</code>:</p>
+<p>![](Screenshot 2022-08-05 110005.png)</p>
+<p>Rename the column to “dsthost” so that it matches the key column name in the Wireshark sheet with <code>^dsthost&lt;enter&gt;</code>, change the column type to text with <code>~</code>, and then designate it as a key column with <code>!</code>:</p>
+<p>![](Screenshot 2022-08-05 110253.png)<br>
+<em>Notice the little squigly to the right of the column name indicating that it’s a text column</em></p>
+<p>Now that we have two sheets, both containing a key column of the same type, we’ll perform an “inner join” on these two sheets in order to filter the Wireshark sheet to only packets sent to a Duo IP address. Go to the “sheets sheet” with <code>Shift-S</code>. This displays all the sheets we currently have open in VisiData:</p>
+<p>![](Screenshot 2022-08-05 110525.png)</p>
+<p>Select both the “DuoIPs” sheet and the “Duo_Wireshark” sheet with <code>t</code> (toggle) or <code>s</code> (select):</p>
+<p>![](Screenshot 2022-08-05 110623.png)</p>
+<p>Join them with <code>&amp;</code>, and at the prompt, choose “inner”:</p>
+<p>![](Screenshot 2022-08-05 110812.png)</p>
+<p>Success! We’re now looking at a sheet containing only packets destined for Duo IP addresses:</p>
+<p>![](Screenshot 2022-08-05 110921.png)</p>
+<p>It’s really easy to get lost once we have a bunch of sheets open in VisiData, so we’re going to go ahead and rename this new sheet to “wireshark-duo traffic” by pressing <code>&lt;space&gt;</code> to raise the VisiData command prompt, and then entering <code>rename-sheet&lt;enter&gt;</code>, and at the prompt, type “wireshark-duo traffic”.</p>
+<p>Next we’re going to join this new sheet with our ProcMon sheet on the srcport column to find the executable responsible for making these connections. First we’ll “un-key” the dsthost column with <code>!</code>, and then key the <strong>srcport</strong> column:</p>
+<p>![](Screenshot 2022-08-05 111428.png)</p>
+<p>Now we’ll open our ProcMon capture with <code>o Duo-ProcMon.csv</code>:</p>
+<p>![](Screenshot 2022-08-05 111553.png)</p>
+<p>ProcMon captures a <em>lot</em> of stuff. We only care about network connections, so we’re going to make things easier on ourselves by displaying only those rows. Navigate to the <strong>Operation</strong> column, press <code>|</code> (select by RegEx), and at the prompt enter “TCP”. Probably nothing will have changed on your screen, but the lower-right corner of VisiData will show that we’ve selected a very small subset of our rows—in this case, 961 rows selected out of 309,730 total:</p>
+<p>![](Screenshot 2022-08-05 111855.png)</p>
+<p>If you were to scroll down, you would also begin to see some selected rows highlighted in orange:</p>
+<p>![](Screenshot 2022-08-05 112002.png)</p>
+<p>Now we’ll press <code>&quot;</code> to create a new sheet containing <em>only</em> the selected rows. And again, we’ll rename this sheet using <code>&lt;space&gt;rename-sheet</code> to “procmon-TCP connections”:</p>
+<p>![](Screenshot 2022-08-05 112158.png)</p>
+<p>If we move over to the <strong>Path</strong> column and expand it using <code>_</code>, and we’ll see the source ports information:</p>
+<p>![](Screenshot 2022-08-05 112558.png)</p>
+<p>(We’ll also see that ProcMon displays hostnames rather than IP addresses when the process accessing the resource using the hostname, which is why we needed the Wireshark capture as well).</p>
+<p>We need to get the source ports in their own column, so to do this we’ll split the <strong>Path</strong> column using <code>:</code>. When prompted for the RegEx to split on, enter “[ :]”. This will split on <em>either</em> a colon or a space, which is what we want since the source port has a colon before it and a space after.</p>
+<p>This will create a few new columns since there are multiple spaces and colons in the <strong>Path</strong> column, but the new column containing the source port is the only one we care about:</p>
+<p>![](Screenshot 2022-08-05 114344.png)</p>
+<p>We’ll rename this column to “srcport” using <code>^</code>, change it to an integer type using <code>#</code>, and key it with <code>!</code>:</p>
+<p>![](Screenshot 2022-08-05 114525.png)</p>
+<p>Now we’ll return to our Sheets sheet (<code>Shift-S</code>), unselect our previously selected sheets using <code>t</code> (toggle) or <code>u</code> (unselect), and then select our new “procmon TCP connections” and “wireshark duo traffic” sheets using <code>t</code> (toggle) or <code>s</code> (select):</p>
+<p>![](Screenshot 2022-08-05 114725.png)</p>
+<p>Now we’ll again join these two sheets with an inner join: <code>&amp;</code>, and in the resulting joined sheet we finally see that the executable name responsbile for the Duo connections is “Microsoft.AAD.BrokerPlugin.exe”:</p>
+<p>![](Screenshot 2022-08-05 115657.png)</p>
+<p>We can quickly confirm that this is the <em>only</em> executable name that appears by selecting the <strong>Process Name</strong> column and creating a frequency sheet with <code>Shift-F</code>:</p>
+<p>And indeed it is:</p>
+<p>![](Screenshot 2022-08-05 115807.png)</p>
+
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
+
+    </main>
+    
+    
+  </div>
+
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  <script src="/js/scripts.js"></script>
+
+</body>
+</html>
