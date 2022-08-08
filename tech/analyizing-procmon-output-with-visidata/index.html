@@ -173,7 +173,7 @@
 <li>Use VisiData to filter the ProcMon capture for only connections to the IP addresses belonging to our MFA provider.</li>
 </ol>
 <p>First we’ll start our ProcMon capture.</p>
-<p><img src="Screenshot%202022-08-05%20135218.png" alt=""></p>
+<p><img src="Screenshot_2022-08-08_081412.png" alt=""></p>
 <p>We need to tell ProcMon <em>not</em> to resolve IP addresses to hostnames, since we’re going to be comparing the output against Duo’s IP addresses:</p>
 <p><img src="Screenshot%202022-08-05%20114014.png" alt=""></p>
 <p>Once that’s running, we’ll sign in to OneDrive:</p>
@@ -181,7 +181,7 @@
 <p>As mentioned, that will redirect to our SSO provider login form, opened inside an integrated browser window:</p>
 <p><img src="Screenshot%202022-08-05%20085212.png" alt=""></p>
 <p>And then finally our MFA provider:</p>
-<p><img src="Screenshot%202022-08-05%20085301.png" alt=""></p>
+<p><img src="Screenshot_2022-08-05_125205.png" alt=""></p>
 <p>At this point, we know we’ve captured the network traffic to load the MFA login form, so we can go ahead and stop the capture.</p>
 <p>Then we’ll save the ProcMon capture as “Duo-ProcMon.csv” (not the default .pml), so that we can open it in VisiData.</p>
 <p>The last thing we need is a list of Duo’s IP addresses so we can pull that traffic out from our ProcMon capture.</p>
@@ -256,16 +256,16 @@
 <p>This will create a few new columns since there are multiple spaces and colons in the <strong>Path</strong> column, but the new column containing the destinion IP is the only one we care about:</p>
 <p><img src="Screenshot_2022-08-05_140308.png" alt=""></p>
 <p>We’ll rename this column to “dstip” using <code>^</code>, change the type of column to text by pressing <code>~</code>, and turn it into a “key” it with <code>!</code>. Once we’ve made it a key column, it will jump over to the left of our sheet and turn purple—this is what allows us to join it with our list of Duo IPs.</p>
-<p><img src="Screenshot_2022-08-05_140601.png" alt=""></p>
+<p><img src="Screenshot_2022-08-05_142010.png" alt=""></p>
 <p>Next we’ll open our list of Duo IP addresses as a separate sheet using <code>o DuoIPs.csv</code>:</p>
-<p><img src="Screenshot%202022-08-05%20110005.png" alt=""></p>
+<p><img src="Screenshot_2022-08-08_082533.png" alt=""></p>
 <p>Rename the column to “dstip” so that it matches the key column name in the ProcMon sheet with <code>^dstip&lt;enter&gt;</code>, change the column type to text with <code>~</code>, and then designate it as a key column with <code>!</code>:</p>
-<p><img src="Screenshot_2022-08-05_141247.png" alt=""><br>
+<p><img src="Screenshot_2022-08-08_082848.png" alt=""><br>
 <em>Notice the little squigly to the right of the column name indicating that it’s a text column</em></p>
 <p>Now we’ll go to our Sheets sheet with <code>Shift-S</code> which shows all our open sheets. Then we’ll select both our “DuoIPs” sheet and our “procmon TCP connections” sheet by highlighting them and then pressing either <code>s</code> (select) or <code>t</code> (toggle). They’ll turn orange when they’re selected:</p>
-<p><img src="Screenshot_2022-08-05_141427.png" alt=""></p>
+<p><img src="Screenshot_2022-08-05_114725.png" alt=""></p>
 <p>Once we have them both selected, we’ll join them by pressing <code>&amp;</code>. When prompted for the join type, we’ll use “inner”, because we want to select only rows where the key column (“dstip”) matches in both sheets:</p>
-<p><img src="Screenshot%202022-08-05%20110812.png" alt=""></p>
+<p><img src="Screenshot_2022-08-05_110812.png" alt=""></p>
 <p>In the resulting joined sheet we finally see that the executable name responsbile for the Duo connections is “Microsoft.AAD.BrokerPlugin.exe”:</p>
 <p><img src="Screenshot_2022-08-05_142010.png" alt=""></p>
 <p>We can quickly confirm that this is the <em>only</em> executable name that appears by selecting the <strong>Process Name</strong> column and creating a frequency sheet with <code>Shift-F</code>:</p>
