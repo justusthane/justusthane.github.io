@@ -14,7 +14,7 @@ The basic plan is:
 
 First we'll start our ProcMon capture. 
 
-![](Screenshot%202022-08-05%20135218.png)
+![](Screenshot_2022-08-08_081412.png)
 
 We need to tell ProcMon *not* to resolve IP addresses to hostnames, since we're going to be comparing the output against Duo's IP addresses:
 
@@ -30,7 +30,7 @@ As mentioned, that will redirect to our SSO provider login form, opened inside a
 
 And then finally our MFA provider:
 
-![](Screenshot%202022-08-05%20085301.png)
+![](Screenshot_2022-08-05_125205.png)
 
 At this point, we know we've captured the network traffic to load the MFA login form, so we can go ahead and stop the capture.
 
@@ -128,24 +128,24 @@ This will create a few new columns since there are multiple spaces and colons in
 
 We'll rename this column to "dstip" using `^`, change the type of column to text by pressing `~`, and turn it into a "key" it with `!`. Once we've made it a key column, it will jump over to the left of our sheet and turn purple---this is what allows us to join it with our list of Duo IPs.
 
-![](Screenshot_2022-08-05_140601.png)
+![](Screenshot_2022-08-05_142010.png)
 
 Next we'll open our list of Duo IP addresses as a separate sheet using `o DuoIPs.csv`:
 
-![](Screenshot%202022-08-05%20110005.png)
+![](Screenshot_2022-08-08_082533.png)
 
 Rename the column to "dstip" so that it matches the key column name in the ProcMon sheet with `^dstip<enter>`, change the column type to text with `~`, and then designate it as a key column with `!`:
 
-![](Screenshot_2022-08-05_141247.png)
+![](Screenshot_2022-08-08_082848.png)
 *Notice the little squigly to the right of the column name indicating that it's a text column*
 
 Now we'll go to our Sheets sheet with `Shift-S` which shows all our open sheets. Then we'll select both our "DuoIPs" sheet and our "procmon TCP connections" sheet by highlighting them and then pressing either `s` (select) or `t` (toggle). They'll turn orange when they're selected:
 
-![](Screenshot_2022-08-05_141427.png)
+![](Screenshot_2022-08-05_114725.png)
 
 Once we have them both selected, we'll join them by pressing `&`. When prompted for the join type, we'll use "inner", because we want to select only rows where the key column ("dstip") matches in both sheets:
 
-![](Screenshot%202022-08-05%20110812.png)
+![](Screenshot_2022-08-05_110812.png)
 
 In the resulting joined sheet we finally see that the executable name responsbile for the Duo connections is "Microsoft.AAD.BrokerPlugin.exe":
 
