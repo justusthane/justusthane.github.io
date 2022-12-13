@@ -36,7 +36,7 @@ I decided to do the little bit of extra legwork and set up Github Actions instea
 
 ## Previously...
 
-See the [previous version of this page](https://github.com/justusthane/justusthane.github.io/blob/master/how/index.md) for a more thorough description of Grav + Git + Cloudways.
+See the [previous version of this page](https://github.com/justusthane/justusthane.github.io/blob/13d866b4a3c53d58f96544db777b41930e946170/how/index.md) for a more thorough description of Grav + Git + Cloudways.
 
 <a href="https://www.11ty.dev/news/logo-homage/" class="elv-externalexempt elv-possum-anchor" data-investors-avatar=""><picture class="elv-possum-pic"><source srcset="possum-balloon-original.webp" type="image/webp"><img src="possum-balloon-original-sm.png" class="elv-possum" alt="The possum is Eleventy’s mascot" loading="lazy" width="200" height="363"></picture></a>
 
