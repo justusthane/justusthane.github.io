@@ -163,7 +163,7 @@
 
   </h1>
 
-<p class="publish-date">Published 2023-09-15</p>
+<p class="publish-date">Published 2023-12-14</p>
 <p>Given a destination IP address, can you find the name of the executable responsible for establishing that connection?</p>
 <p>I had a scenario at work that involved the above. To provide context, when you authenticate to OneDrive using enterprise credentials, if your enterprise uses SSO OneDrive will open a small integrated browser window to display your organization’s SSO and MFA pages—in our case, QuickLaunch and Duo. For reasons that are easier left unsaid, I needed to know the exact name of the executable responsible for making that network connection to our MFA provider—trial and error indicated that it’s <em>not</em> OneDrive.exe.</p>
 <p>Although I’m sure there are numerous (and possibly easier) ways to solve this, I chose to use ProcMon, Wireshark, and—my new favorite tool—VisiData.</p>
