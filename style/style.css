@@ -113,7 +113,7 @@ body.home nav h5 {
     font-size: 1.1rem;
     line-height: 1.6;
     font-family: 'Inter', sans-serif;
-    font-feature-settings: "ss02", "cv02", "frac";
+    font-feature-settings: "ss02", "cv02";
 }
 
 #content li {
