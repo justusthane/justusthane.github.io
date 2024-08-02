@@ -34,7 +34,6 @@
     "markdown-it-container": "^3.0.0",
     "markdown-it-emoji": "^2.0.0",
     "markdown-it-footnote": "^3.0.2",
-    "node-fetch": "^2.6.1",
-    "eleventy-plugin-mathjax": "^2.0.4"
+    "node-fetch": "^2.6.1"
   }
 }
