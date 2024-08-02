@@ -30,6 +30,7 @@
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
     "dotenv": "^9.0.2",
+    "eleventy-plugin-mathjax": "^2.0.4",
     "lodash": "^4.17.21",
     "markdown-it-container": "^3.0.0",
     "markdown-it-emoji": "^2.0.0",
