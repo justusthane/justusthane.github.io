@@ -12,7 +12,9 @@ I had recently gotten an Apple Watch and was using the "Vapor" watchface --- an 
 
 ![](apple-watch-watchos-5-face-motion-vapor.jpg)
 
-For some reason, my most visceral memory of this time is waking up in the night to that captivating, soothing animation. It evokes a strange nostalgia for a time that was both turbulent and calm, complicated and simple.
+For some reason, my most visceral memory of this time is waking up in the night to that captivating, soothing animation[^2]. It evokes a strange nostalgia for a time that was both turbulent and calm, complicated and simple.
 
----
+## Footnotes
 [^1]: I was always slightly disappointed that it was a static animation and not dynamic and random, but I just learned the reason for that: the effects are [physically created and recorded](https://youtu.be/aK7KPw9bLfI?si=1MjmqjG-asBjtufu&t=28).
+
+[^2]: The stunning [Dlp 1.1](https://www.youtube.com/watch?v=DXU3_PgX8qQ) from William Basinski's *Disintegration Loops* is a near-perfect analog of the feeling this watch face evokes for me.
