@@ -6,6 +6,6 @@ date: 2020-11-09
 eleventyNavigation:
   key: misc
   parent: home
-  tagline: '???'
+  tagline: ''
   order: 40
 ---
