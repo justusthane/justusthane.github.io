@@ -145,7 +145,7 @@ body.home nav h5 {
 }
 
 img {
-  box-shadow: 5px 5px 0 red;
+  box-shadow: 5px 5px 0 #dbdbdb;
 }
 
 a img:hover {
