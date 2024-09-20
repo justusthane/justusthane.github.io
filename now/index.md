@@ -8,13 +8,18 @@ eleventyNavigation:
   tagline: ": what I'm up to"
   order: 75
 ---
+## 2024
+- Traveled to Belgium and Spain
+- Hosted our first exchange student: Otto, from China
+- Became a Canadian citizen!
+
 ## 2023
 - Took most of the year off on parental leave
 - Caroline started work at NOSM
 
 ## 2022
 - Bought our first house
-- Made a baby
+- Made our first baby, Iris!
 
 ## 2021
 - Moved back to Thunder Bay
