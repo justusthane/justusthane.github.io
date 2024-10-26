@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.2.0",
     "eleventy": "^1.0.6",
     "markdown-it-anchor": "^7.1.0",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
-    "@11ty/eleventy-upgrade-help": "^1.0.1",
+    "@11ty/eleventy-upgrade-help": "^2.0.5",
     "dotenv": "^9.0.2",
     "lodash": "^4.17.21",
     "markdown-it-container": "^3.0.0",
