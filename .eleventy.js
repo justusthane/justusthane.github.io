@@ -1,14 +1,18 @@
 var moment = require('moment');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(UpgradeHelper);
 
   eleventyConfig.setTemplateFormats([
     "md",
     "html",
+    "css",
     "txt",
     "jpeg",
     "jpg",
@@ -16,12 +20,20 @@ module.exports = function(eleventyConfig) {
     "GIF",
     "webp",
     "wav",
-    "mp3"
+    "mp3",
+    "woff",
+    "woff2",
+    "css",
+    "eot",
+    "svg",
+    "ttf",
+    "json"
   ]);
-  eleventyConfig.addPassthroughCopy("style");
-  eleventyConfig.addPassthroughCopy("webfonts");
+  //eleventyConfig.addPassthroughCopy("style");
+  //eleventyConfig.addPassthroughCopy("webfonts");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy(".well-known");
 
   eleventyConfig.addLiquidFilter("customDate", function(value, arg) { 
     return moment(value).utc().format(arg);
