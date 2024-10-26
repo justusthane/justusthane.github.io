@@ -6,8 +6,8 @@ date: 2020-11-09
 eleventyNavigation:
   key: craft
   parent: home
-  title: craft/sewing
-  tagline: ' projects'
+  title: craft
+  tagline: '/sewing projects'
   order: 1
 customProperty: hi
 ---
