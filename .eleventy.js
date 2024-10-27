@@ -6,6 +6,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.setDataDeepMerge(false);
 
   eleventyConfig.setTemplateFormats([
     "md",
