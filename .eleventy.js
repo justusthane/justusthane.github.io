@@ -1,13 +1,11 @@
 var moment = require('moment');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(UpgradeHelper);
 
   eleventyConfig.setTemplateFormats([
     "md",

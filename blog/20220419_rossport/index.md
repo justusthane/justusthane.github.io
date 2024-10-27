@@ -67,3 +67,21 @@ On the road to the beach we also discovered this really wild and rundown old bui
 ![](2204_untitled_1159.jpg)
 
 I'd love to know what this building was. Terrace Bay was established as a company town in the 40s for a paper mill so there would have been lots of worker housing, but I can't imagine the company would put that much effort and creativity into a building like this just for housing workers. Perhaps some enterprising entrepreneur thought Terrace Bay would be a hot tourist destination and built it as a hotel?
+
+We picked up dinner from Filane's Restaurant in Schreiber---Caroline has been telling me that Schreiber (pop. 1,059) is known for its Italian food. That may be a bit of an exaggeration, but it was decent. While we waited for our food, we drove around town. There's a stark beauty to these run-down north shore towns.
+
+![](2204_untitled_1179.jpg)
+
+![](2204_untitled_1187.jpg)
+
+We also noticed that about half the businesses in town carry the last name "Filane". Seriously. Here's a list from Wikipedia of the Schreiber businesses owned by the Filanes: "Cosiana Inn, the Fallen Rock Resort, Hollywood Filane Sportswear & Boxing Gym, Filane's Can-op & Variety, Filane's Dollar 'n' More, Filane's Food Market and Filane's Natural Spring Water." Plus Filane's Restaurant, which isn't on the list.
+
+Back at the restaurant to pick up our food, I noticed this little shrine behind the counter to a musician called Cosimo Filane:
+
+![](IMG_1214.jpeg)
+
+And here's a bit of interesting trivia about Cosimo and the rest of the Filanes: 
+
+> Cosimo Figliomeni chose the stage name "Filane" by using the first syllable of his last name and the last name of his favorite singer, Frankie Laine.
+
+-- [Wikipedia](https://en.wikipedia.org/wiki/Cosimo_Filane)
