@@ -1,0 +1,41 @@
+{
+  "name": "11ty-justus.ws",
+  "version": "1.0.0",
+  "description": "Justus' Eleventy site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justusthane/justusthane.github.io.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "NODE_ENV=production eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.2.0",
+    "eleventy": "^1.0.6",
+    "markdown-it-anchor": "^7.1.0",
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-deflist": "^2.1.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "markdown-it-toc-done-right": "^4.2.0",
+    "moment": "^2.29.1",
+    "sass": "^1.32.13"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+    "dotenv": "^9.0.2",
+    "lodash": "^4.17.21",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-emoji": "^2.0.0",
+    "markdown-it-footnote": "^3.0.2",
+    "n": "^10.0.0",
+    "node-fetch": "^2.6.1",
+    "stable": "^0.1.8"
+  }
+}

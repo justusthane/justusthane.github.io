@@ -182,12 +182,12 @@
 <p>On your CA, run the following command as a Domain Admin<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>:</p>
 </li>
 </ol>
-<pre class="language-bash"><code class="language-bash">certreq -submit -attrib <span class="token string">"CertificateTemplate:SubCA"</span> YOUR_CSR.csr</code></pre>
+<pre class="language-bash"><code class="language-bash">certreq <span class="token parameter variable">-submit</span> <span class="token parameter variable">-attrib</span> <span class="token string">"CertificateTemplate:SubCA"</span> YOUR_CSR.csr</code></pre>
 <ol start="5">
 <li>If it worked correctly, it should spit out a .cer file (which will be in the x509 format).</li>
 <li>Now you need to convert this cert to PEM format using OpenSSL. In my opinion the easiest way to do this is by using WSL (Windows Subsystem for Linux) to run an Ubuntu machine. The command to convert the certificate is</li>
 </ol>
-<pre class="language-bash"><code class="language-bash">openssl x509 -in YOURCERT.cer -outform PEM -out YOURCERT.pem</code></pre>
+<pre class="language-bash"><code class="language-bash">openssl x509 <span class="token parameter variable">-in</span> YOURCERT.cer <span class="token parameter variable">-outform</span> PEM <span class="token parameter variable">-out</span> YOURCERT.pem</code></pre>
 <ol start="7">
 <li>Now install the resulting PEM certificate on your firewall by choosing <strong>Import</strong> and then browsing to your PEM cert. Make sure to enter the same certificate name as when you created the CSR so that the PaloAlto links the new cert with the existing CSR:<br>
 <img src="PA2.png" alt=""></li>
@@ -195,7 +195,7 @@
 <img src="PA3.png" alt=""></li>
 <li>Again, we’ll need to convert the resulting x509 certificate to PEM:</li>
 </ol>
-<pre class="language-bash"><code class="language-bash">openssl x509 -in CAcert.cer -outform PEM -out CAcert.pem</code></pre>
+<pre class="language-bash"><code class="language-bash">openssl x509 <span class="token parameter variable">-in</span> CAcert.cer <span class="token parameter variable">-outform</span> PEM <span class="token parameter variable">-out</span> CAcert.pem</code></pre>
 <ol start="10">
 <li>And import it into your PaloAlto. If everything worked correctly, you should see the two certificates linked in a chain as such:<br>
 <img src="PA4.png" alt=""></li>

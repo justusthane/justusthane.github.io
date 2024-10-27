@@ -177,7 +177,7 @@
 <li>Create as many new .ps1 files inside the “My-Module” directory as you need. Any functions inside any of these .ps1 files will become cmdlets. You may prefer to create a .ps1 file for each cmdlet, or create a .ps1 file for a related group of cmdlets. It’s up to you.</li>
 <li>Generate a manifest file for your module by running the following PowerShell command (ensure that you give the manifest file the same name as your module):</li>
 </ol>
-<pre class="language-powershell"><code class="language-powershell"><span class="token function">New-ModuleManifest</span> <span class="token operator">-</span>Path ~\Documents\WindowsPowerShell\modules\My<span class="token operator">-</span>Module<span class="token punctuation">.</span>psd1 <span class="token operator">-</span>ModuleVersion <span class="token string">"2.0"</span> <span class="token operator">-</span>Author <span class="token string">"Brad Pitt"</span></code></pre>
+<pre class="language-powershell"><code class="language-powershell"><span class="token function">New-ModuleManifest</span> <span class="token operator">-</span>Path ~\Documents\WindowsPowerShell\modules\My-Module<span class="token punctuation">.</span>psd1 <span class="token operator">-</span>ModuleVersion <span class="token string">"2.0"</span> <span class="token operator">-</span>Author <span class="token string">"Brad Pitt"</span></code></pre>
 <ol start="5">
 <li>Edit the resulting .psd1 file and make the following changes:</li>
 </ol>
