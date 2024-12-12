@@ -1,5 +1,5 @@
 ---
-title:
+title: Intro to Zero-Based Budgeting (aka "Envelope Budgeting")
 date: 2024-12-12
 ---
 Zero-based budgeting is the same as envelope budgeting, so here it is in a nutshell. You have a stack of paper envelopes and a pile of dollar bills, representing *all* of the money you currently have (excluding investments - see below).
