@@ -3,6 +3,7 @@ title: Books I've read
 date: 2020-09-13
 tags: misc
 ---
+### An incomplete list
 <div class="booklist">
 {% for currentPage in collections['books'] | reverse %}
   <div class="bookdetails">

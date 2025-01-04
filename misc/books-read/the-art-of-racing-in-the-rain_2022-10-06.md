@@ -1,10 +1,8 @@
 ---
-title: Tumbled Graves
-author: Brenda Chapman
-cover: tumbled-graves.jpg
+title: The Art of Racing in the Rain
+author: Garth Stein
+cover: the-art-of-racing-in-the-rain.jpg
 ---
-Detective Kala Stonechild is at it again, this time on the case of a disappeared mother and child. Everyone thinks the husband did it…but did he?
+A family drama told through the eyes of the dog — although not in the predictable, schmaltzy way you might expect. 
 
-I listened to the first two books in this series as audiobooks, and really enjoyed them. Good mysteries, with an indigenous female protagonist (although I don’t think the author is indigenous). However, reading this one rather than listening to it made me notice that the writing is pretty sloppy. Also, leans too heavily on some farfetched narrative devices that don’t really makes sense with the plot. Why on earth would the bad guy take the kidnappee to his family’s cottage (which, of course, the police already know about) and tell the kidnapper’s husband to meet them there? 
-
-Still entertaining though, and will probably read more.
+This book has been haunting me for years. I initially picked it up at a friend's house and read the first couple pages and was immediately caught, but didn't make a huge effort to seek it out later. When I finally did, I couldn't put it down until I was done. Just beautful. Perfectly captures the human condition.
