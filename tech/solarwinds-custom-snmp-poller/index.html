@@ -164,8 +164,8 @@
   </h1>
 
 <p class="publish-date">Published 2025-05-02</p>
+<p><em>This guide is written using a CyberPower UPS as an example, but it applies to any device with SNMP attributes that you would like to monitor in Solarwinds.</em></p>
 <p>Say you’re me and you’ve got some fancy new CyberPower UPSs and you want to monitor them with Solarwinds NPM.</p>
-<p>This guide is written using a CyberPower UPS as an example, but it applies to any device with SNMP attributes that you would like to monitor in Solarwinds.</p>
 <p>You go ahead and add them to Solarwinds, and you see…not much:</p>
 <p><img src="firefox_kopnZDLcBj.png" alt="firefox_kopnZDLcBj"></p>
 <p>Where’s the battery runtime? Where’s the input status? How do I send an alert if it goes on battery or when the battery needs to be replaced?</p>
@@ -177,11 +177,11 @@
 </ol>
 <p>Once you’ve got this, go ahead and load the MIB file into your MIB browser, plug in your device’s SNMP info, and then expand the MIB tree:</p>
 <p><img src="image-20250502153854099.png" alt="image-20250502153854099"></p>
-<p>How the tree is structured will vary depending on the MIB browser that you’re using, but ultimately you’re looking for a node called “enterprises”, under which you should find your device vendor. In the case of iReasoning’s MIB Browser, it’s MIB Tree -&gt; iso.org.dod.internet -&gt; private -&gt; enterprises, and “cps” stands for “Cyber Power System”, in my case. To provide a different example, in ManageEngine’s MibBrowser, each loaded MIB file shows up as a separate top level node, and in this case it’s “CPS-MIB” (again, for Cyber Power System) -&gt; enterprises -&gt; cps:</p>
+<p>How the tree is structured will vary depending on the MIB browser that you’re using, but ultimately you’re looking for a node called “enterprises”, under which you should find your device vendor. In the case of iReasoning’s MIB Browser, it’s <code>MIB Tree -&gt; iso.org.dod.internet -&gt; private -&gt; enterprises -&gt; cps</code>, where “cps” stands for “Cyber Power System”, in my case. To provide a different example, in ManageEngine’s MibBrowser, each loaded MIB file shows up as a separate top level node, and in this case it’s <code>&quot;CPS-MIB&quot; (again, for Cyber Power System) -&gt; enterprises -&gt; cps</code>:</p>
 <p><img src="image-20250502154438255.png" alt="image-20250502154438255"></p>
-<p>Under the vendor’s node, the structure and content will vary significantly, but from this point on its just a matter of poking through the children nodes to find the value’s you’re looking for. Back to my Cyber Power UPS, we find the remaining runtime under cps -&gt; products -&gt; hardware -&gt; ups -&gt; upsBattery -&gt; upsAdvanceBattery -&gt; upsAdvanceBatteryRunTimeRemaining:</p>
+<p>Under the vendor’s node, the structure and content will vary significantly, but from this point on its just a matter of poking through the children nodes to find the value’s you’re looking for. Back to my Cyber Power UPS, we find the remaining runtime under <code>cps -&gt; products -&gt; hardware -&gt; ups -&gt; upsBattery -&gt; upsAdvanceBattery -&gt; upsAdvanceBatteryRunTimeRemaining</code>:</p>
 <p><img src="image-20250502154907618.png" alt="image-20250502154907618"></p>
-<p>And the current line input status under cps -&gt; products -&gt; hardware -&gt; ups -&gt; upsInput -&gt; upsAdvanceInput -&gt; upsAdvanceInputStatus:</p>
+<p>And the current line input status under <code>cps -&gt; products -&gt; hardware -&gt; ups -&gt; upsInput -&gt; upsAdvanceInput -&gt; upsAdvanceInputStatus</code>:</p>
 <p><img src="image-20250502155356696.png" alt="image-20250502155356696"></p>
 <p>When you select the item, in addition to seeing the current value on the right, you’ll also see some very important information at the bottom. This is what we need for Solarwinds — particularly the OID (although the Syntax field will also come in handy):</p>
 <p><img src="image-20250502160727766.png" alt="image-20250502160727766"></p>
