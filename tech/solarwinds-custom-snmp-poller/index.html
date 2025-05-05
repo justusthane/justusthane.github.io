@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>How to poll custom SNMP objects in Solarwinds NPM | justus.ws</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
+
+    <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
+    <link rel="canonical" href="https://justus.ws/tech/solarwinds-custom-snmp-poller/" />
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+    <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
+    <link rel="webmention" href="https://webmention.io/justus.ws/webmention" />
+
+</head>
+<body id="top" class="color-auto ">
+  <div id="toggle-color">
+  </div>
+  <div id="wrapper">
+    <div id="titleContainer">
+      <div id="avatar">
+        <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" class="avatar"></a>
+      </div>
+      <div id="sitetitle">
+        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus<br>grunow</a></div> 
+      </div>
+    </div>
+    <div id="tagline">home, home on the web<br />where the links and the hypertexts play
+        <div id="elsewhere">
+                      <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws" aria-label="Email"><i class="far fa-envelope-open" aria-hidden="true"></i></a>
+                                <a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug" aria-label="Photography"><i class="fas fa-camera-retro" aria-hidden="true"></i></a>
+                                          <a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github" aria-label="Github"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                                  </div>
+    </div>
+    <div id="sidebar">
+      
+
+<details id="menuMobile">
+  <summary>Menu</summary>
+        <ul>
+          <li><a href="/">home</a></li>
+          
+          <li>
+            <a href="/craft/">craft</a>/sewing projects
+          </li>
+          
+          <li>
+            <a href="/tech/">tech</a> stuff
+          </li>
+          
+          <li>
+            <a href="/food/">food</a> &amp; kitchen
+          </li>
+          
+          <li>
+            <a href="/garden/">garden</a>ing
+          </li>
+          
+          <li>
+            <a href="/misc/">misc</a>
+          </li>
+          
+          <li>
+            <a href="/writings/">writings</a> &amp; musings
+          </li>
+          
+          <li>
+            <a href="/blog/">blog</a>
+          </li>
+          
+          <li>
+            <a href="/why/">why</a> does this site exist?
+          </li>
+          
+          <li>
+            <a href="/how/">how</a> does this site work?
+          </li>
+          
+          <li>
+            <a href="/links/">links</a> &amp; other things I like
+          </li>
+          
+          <li>
+            <a href="/now/">now</a>: what I&#39;m up to
+          </li>
+          
+          <li>
+            <a href="/todo/">todo</a> for this site
+          </li>
+          
+        </ul>
+</details>
+        <div id="menuDesktop">
+          <ul>
+          <li><a href="/">home</a></li>
+            
+            <li>
+              <a href="/craft/">craft</a>/sewing projects
+            </li>
+            
+            <li>
+              <a href="/tech/">tech</a> stuff
+            </li>
+            
+            <li>
+              <a href="/food/">food</a> &amp; kitchen
+            </li>
+            
+            <li>
+              <a href="/garden/">garden</a>ing
+            </li>
+            
+            <li>
+              <a href="/misc/">misc</a>
+            </li>
+            
+            <li>
+              <a href="/writings/">writings</a> &amp; musings
+            </li>
+            
+            <li>
+              <a href="/blog/">blog</a>
+            </li>
+            
+            <li>
+              <a href="/why/">why</a> does this site exist?
+            </li>
+            
+            <li>
+              <a href="/how/">how</a> does this site work?
+            </li>
+            
+            <li>
+              <a href="/links/">links</a> &amp; other things I like
+            </li>
+            
+            <li>
+              <a href="/now/">now</a>: what I&#39;m up to
+            </li>
+            
+            <li>
+              <a href="/todo/">todo</a> for this site
+            </li>
+            
+          </ul>
+        </div>
+
+    </div>
+    </header>
+
+    <main id="content">
+      
+
+
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
+  <h1>
+
+  How to poll custom SNMP objects in Solarwinds NPM
+
+  </h1>
+
+<p class="publish-date">Published 2025-05-02</p>
+<p>Say you’re me and you’ve got some fancy new CyberPower UPSs and you want to monitor them with Solarwinds NPM.</p>
+<p>This guide is written using a CyberPower UPS as an example, but it applies to any device with SNMP attributes that you would like to monitor in Solarwinds.</p>
+<p>You go ahead and add them to Solarwinds, and you see…not much:</p>
+<p><img src="firefox_kopnZDLcBj.png" alt="firefox_kopnZDLcBj"></p>
+<p>Where’s the battery runtime? Where’s the input status? How do I send an alert if it goes on battery or when the battery needs to be replaced?</p>
+<p>Each one of these values is identified by an SNMP OID, which is a string that looks like <code> 1.3.6.1.4.1.3808.1.1.1.2.2.4</code>, and can be fetched by creating a “Universal Device Poller” in Solarwinds.</p>
+<p>The first step is to find the OID that represents the value we’re looking for. This requires two things:</p>
+<ol>
+<li>A MIB file, usually provided by the device vendor<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>, which is a database containing all the OIDs that the device supports</li>
+<li>A MIB browser, which can load the MIB file, connect to the device, and fetch the corresponding values via SNMP. I’m currently using <a href="https://www.ireasoning.com/mibbrowser.shtml">MIB Browser from iReasoning</a>. It’s not perfect (it doesn’t support SNMPv3, and the interface is a little odd), but it works.</li>
+</ol>
+<p>Once you’ve got this, go ahead and load the MIB file into your MIB browser, plug in your device’s SNMP info, and then expand the MIB tree:</p>
+<p><img src="image-20250502153854099.png" alt="image-20250502153854099"></p>
+<p>How the tree is structured will vary depending on the MIB browser that you’re using, but ultimately you’re looking for a node called “enterprises”, under which you should find your device vendor. In the case of iReasoning’s MIB Browser, it’s MIB Tree -&gt; iso.org.dod.internet -&gt; private -&gt; enterprises, and “cps” stands for “Cyber Power System”, in my case. To provide a different example, in ManageEngine’s MibBrowser, each loaded MIB file shows up as a separate top level node, and in this case it’s “CPS-MIB” (again, for Cyber Power System) -&gt; enterprises -&gt; cps:</p>
+<p><img src="image-20250502154438255.png" alt="image-20250502154438255"></p>
+<p>Under the vendor’s node, the structure and content will vary significantly, but from this point on its just a matter of poking through the children nodes to find the value’s you’re looking for. Back to my Cyber Power UPS, we find the remaining runtime under cps -&gt; products -&gt; hardware -&gt; ups -&gt; upsBattery -&gt; upsAdvanceBattery -&gt; upsAdvanceBatteryRunTimeRemaining:</p>
+<p><img src="image-20250502154907618.png" alt="image-20250502154907618"></p>
+<p>And the current line input status under cps -&gt; products -&gt; hardware -&gt; ups -&gt; upsInput -&gt; upsAdvanceInput -&gt; upsAdvanceInputStatus:</p>
+<p><img src="image-20250502155356696.png" alt="image-20250502155356696"></p>
+<p>When you select the item, in addition to seeing the current value on the right, you’ll also see some very important information at the bottom. This is what we need for Solarwinds — particularly the OID (although the Syntax field will also come in handy):</p>
+<p><img src="image-20250502160727766.png" alt="image-20250502160727766"></p>
+<p>Now we need to log into our Solarwinds server (via RDP), and launch the local program “Universal Device Poller”:</p>
+<p><img src="image-20250502161147966.png" alt="image-20250502161147966"></p>
+<p>It should be in your Start Menu under the “SolarWinds Platform” folder, but otherwise you can find it at “C:\Program Files (x86)\SolarWinds\Orion\UniversalDevicePoller.exe”.</p>
+<p>Click <strong>New Universal Device Poller</strong> at the top, and then paste in the OID from your MIB browser<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. You’ll need to remove the prepending <code>.</code>, if there is one, and optionally add a <code>.0</code> to the end of the OID if it doesn’t already end in <code>.0</code>. This is not always required, but sometimes without it Solarwinds will return a “No such name” error when polling the OID, and adding it never seems to hurt.<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
+<p>Enter a <strong>Name</strong> and <strong>Description</strong>; you can choose your own, or copy the values from your MIB browser.</p>
+<p>Next we set the object type, format, and polling type:</p>
+<p><img src="image-20250505085853526.png" alt="image-20250505085853526"></p>
+<p>Most of the time, you’ll be fine with a <strong>MIB Value Type</strong> of “Raw Value” and a <strong>Format</strong> of “Text”. In the case of upsAdvanceInputStatus, it returns an integer representing a value, and choosing “Text” would just return the integer. Instead, we can choose “Enumeration” which allows us to map a value to each integer, which will then be displayed in Solarwinds. Your MIB browser should be able to show you what each integer represents (this information is present in the MIB file):</p>
+<p><img src="image-20250505090418028.png" alt="image-20250505090418028"></p>
+<p>We’ll hit the <strong>Map Values</strong> button, and copy them in (press <code>Enter</code> to create new rows):</p>
+<p><img src="image-20250505090652604.png" alt="image-20250505090652604"></p>
+<p>Next we’ll set <strong>SNMP Get Type</strong> to “GET” (unless you know you need “GET NEXT” or “GET TABLE”), and the <strong>Polling Type</strong> to “Node” or “Interface” depending on whether the value is specific to the node as a whole or to a particular interface on the node. You can also set <strong>Polling Interval</strong> (if left empty, the default value set in your NPM settings will be used):</p>
+<p><img src="image-20250505091223213.png" alt="image-20250505091223213"></p>
+<p>Finally, you’ll probably want to set a custom group to organize this poller into. If the group you want doesn’t already exist, the dropdown menu is also a textbox that you can just type into:</p>
+<p><img src="image-20250505091351241.png" alt="image-20250505091351241"></p>
+<p>On the next page, if desired you can assign the new poller to existing nodes, and also test the poller against real nodes to verify it returns the expected data:</p>
+<p><img src="image-20250505091918107.png" alt="image-20250505091918107"></p>
+<p>Note that if even if you’ve set an Enumeration value table, the raw integer value will be displayed here, <em>not</em> the translated value.</p>
+<p><img src="image-20250505092309108.png" alt="image-20250505092309108"></p>
+<p>If you receive the error “The UID is not supported”, double-check the OID that you’ve entered—often, I inadvertently have a space before the OID. Also make sure you’ve selected “GET” and not “GET NEXT” for the <strong>SNMP Get Type</strong>.</p>
+<p><img src="image-20250505092338138.png" alt="image-20250505092338138"></p>
+<p>If you receive the error “No Such Name”, try adding a <code>.0</code> to the end of the OID.</p>
+<p>Once you’ve added the custom poller, if you assigned it to any existing nodes during the creation, you should now see the values in Solarwinds NPM if you browse to the node’s details:</p>
+<p><img src="image-20250505092606700.png" alt="image-20250505092606700"></p>
+<p>Note that the translated value from the Enumeration Map Values table is displayed—this is the value that you’ll need to use for any other actions (Alerts, SWQL, etc) within NPM.</p>
+<p>When adding a new node or editing an existing node in NPM, you’ll be able to choose your new custom poller:</p>
+<p><img src="image-20250505093332458.png" alt="image-20250505093332458"></p>
+<h1 id="commends%2C-questions%2C-or-corrections%3F">Commends, Questions, or Corrections?</h1>
+<p>Email me! <a href="mailto:jg@justus.ws">jg@justus.ws</a></p>
+<p>Additionally, I usually find it easier to just use a third-party MIB browser anyway. Because the Solarwinds MIB database contains thousands of vendors, it can be difficult finding the correct one for the device you’re adding.</p>
+<h1>Footnotes</h1>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>If you can’t get a MIB file for your device, I believe it is also possible to gather all of the OIDs directly from the device itself through an “SNMP walk”. That is beyond the scope of this article. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>You may notice the “Browse MIB Tree” button. This is where I spill the beans that you might not actually need to use a third-party MIB browser as instructed previously, because Solarwinds has this functionality built in. <em>However</em>, it only works if the MIB data for the device you’re polling already exists in Solarwinds MIB database. Even if you have the MIB file from the vendor, there’s no way to add it to the Solarwinds MIB database (although Solarwinds Support can add it for you). <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>If you know SNMP and can explain this to me, email me at <a href="mailto:jg@justus.ws">jg@justus.ws</a>. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
+
+    </main>
+    
+    
+  </div>
+
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  <script src="/js/scripts.js"></script>
+
+</body>
+</html>
