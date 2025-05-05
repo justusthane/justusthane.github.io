@@ -46,7 +46,7 @@ Now we need to log into our Solarwinds server (via RDP), and launch the local pr
 
 It should be in your Start Menu under the "SolarWinds Platform" folder, but otherwise you can find it at "C:\Program Files (x86)\SolarWinds\Orion\UniversalDevicePoller.exe".
 
-Click **New Universal Device Poller** at the top, and then paste in the OID from your MIB browser[^2]. You'll need to remove the prepending `.`, if there is one, and optionally add a `.0` to the end of the OID if it doesn't already end in `.0`. This is not always required, but sometimes without it Solarwinds will return a "No such name" error when polling the OID, and adding it never seems to hurt.[^3]
+Click **New Universal Device Poller** at the top, and then paste in the OID from your MIB browser[^2]. You'll need to remove the prepending `.`, if there is one. Also ensure that there's no space before the OID --- that will result in a "The UID is not supported" error later. Optionally, if the OID does not already end in `.0`, add it. This is not always required, but sometimes without it Solarwinds will return a "No such name" error when polling the OID, and adding it never seems to hurt.[^3]
 
 Enter a **Name** and **Description**; you can choose your own, or copy the values from your MIB browser.
 
@@ -101,7 +101,7 @@ Email me! jg@justus.ws
 [^1]: If you can't get a MIB file for your device, I believe it is also possible to gather all of the OIDs directly from the device itself through an "SNMP walk". That is beyond the scope of this article.
 [^2]: You may notice the "Browse MIB Tree" button. This is where I spill the beans that you might not actually need to use a third-party MIB browser as instructed previously, because Solarwinds has this functionality built in. *However*, it only works if the MIB data for the device you're polling already exists in Solarwinds MIB database. Even if you have the MIB file from the vendor, there's no way to add it to the Solarwinds MIB database (although Solarwinds Support can add it for you).
 
-Additionally, I usually find it easier to just use a third-party MIB browser anyway. Because the Solarwinds MIB database contains thousands of vendors, it can be difficult finding the correct one for the device you're adding.
+    Additionally, I usually find it easier to just use a third-party MIB browser anyway. Because the Solarwinds MIB database contains thousands of vendors, it can be difficult finding the correct one for the device you're adding.
 
 [^3]: If you know SNMP and can explain this to me, email me at jg@justus.ws.
 
