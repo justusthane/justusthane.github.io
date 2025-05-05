@@ -2,10 +2,9 @@
 title: "How to poll custom SNMP objects in Solarwinds NPM"
 date: 2025-05-02
 ---
+*This guide is written using a CyberPower UPS as an example, but it applies to any device with SNMP attributes that you would like to monitor in Solarwinds.*
 
 Say you're me and you've got some fancy new CyberPower UPSs and you want to monitor them with Solarwinds NPM. 
-
-This guide is written using a CyberPower UPS as an example, but it applies to any device with SNMP attributes that you would like to monitor in Solarwinds.
 
 You go ahead and add them to Solarwinds, and you see...not much:
 
@@ -24,15 +23,15 @@ Once you've got this, go ahead and load the MIB file into your MIB browser, plug
 
 ![image-20250502153854099](image-20250502153854099.png)
 
-How the tree is structured will vary depending on the MIB browser that you're using, but ultimately you're looking for a node called "enterprises", under which you should find your device vendor. In the case of iReasoning's MIB Browser, it's MIB Tree -> iso.org.dod.internet -> private -> enterprises, and "cps" stands for "Cyber Power System", in my case. To provide a different example, in ManageEngine's MibBrowser, each loaded MIB file shows up as a separate top level node, and in this case it's "CPS-MIB" (again, for Cyber Power System) -> enterprises -> cps:
+How the tree is structured will vary depending on the MIB browser that you're using, but ultimately you're looking for a node called "enterprises", under which you should find your device vendor. In the case of iReasoning's MIB Browser, it's `MIB Tree -> iso.org.dod.internet -> private -> enterprises -> cps`, where "cps" stands for "Cyber Power System", in my case. To provide a different example, in ManageEngine's MibBrowser, each loaded MIB file shows up as a separate top level node, and in this case it's `"CPS-MIB" (again, for Cyber Power System) -> enterprises -> cps`:
 
 ![image-20250502154438255](image-20250502154438255.png)
 
-Under the vendor's node, the structure and content will vary significantly, but from this point on its just a matter of poking through the children nodes to find the value's you're looking for. Back to my Cyber Power UPS, we find the remaining runtime under cps -> products -> hardware -> ups -> upsBattery -> upsAdvanceBattery -> upsAdvanceBatteryRunTimeRemaining:
+Under the vendor's node, the structure and content will vary significantly, but from this point on its just a matter of poking through the children nodes to find the value's you're looking for. Back to my Cyber Power UPS, we find the remaining runtime under `cps -> products -> hardware -> ups -> upsBattery -> upsAdvanceBattery -> upsAdvanceBatteryRunTimeRemaining`:
 
 ![image-20250502154907618](image-20250502154907618.png)
 
-And the current line input status under cps -> products -> hardware -> ups -> upsInput -> upsAdvanceInput -> upsAdvanceInputStatus:
+And the current line input status under `cps -> products -> hardware -> ups -> upsInput -> upsAdvanceInput -> upsAdvanceInputStatus`:
 
 ![image-20250502155356696](image-20250502155356696.png)
 
