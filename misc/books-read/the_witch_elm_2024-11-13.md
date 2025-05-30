@@ -1,6 +1,6 @@
 ---
-title: Shroud for a Nightingale
-author: P.D. James
-cover: shroud_for_a_nightingale.jpg
+title: The Witch Elm
+author: Tana French
+cover: the_witch_elm.jpg
 ---
-This was fine, but I didn't love it --- not entirely sure why. I think I found the conclusion too far out of left field, with not enough clues to indicate what might be coming.
+Didn't love this one quite as much as Tana French's *In the Woods* (not quite as emotionally destructive), but still very good. Good writing, good mood, good plot.
