@@ -8,4 +8,4 @@ Regulation is geographic, but all-in-all, the regulation is still effective for 
 
 If it were somehow proven that AI would have a significant negative net impact on society, would it be possible to ban or control it in any meaningful way---one that makes a difference on a global scale? Can any digital entity truly be banned?
 
-I'm not asserting that AI is or will be a net negative---that's beyond my pay grade---but what if it was?
+I'm not asserting that AI is or will be a net negative---that's beyond my pay grade---but what if?
