@@ -330,8 +330,10 @@ dd {
 }
 
 blockquote {
-  border: 2px dashed;
-  padding: 0 10px 0 10px;
+  border-left: 2px dashed;
+  background-color: #ececec;
+  padding: 1pt 10pt 1pt 10pt;
+
 }
 
 .elv-possum-anchor {
