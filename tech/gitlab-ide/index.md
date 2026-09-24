@@ -21,7 +21,7 @@ index.js:5:11
 
 In the network requests, you'll see a blocked request to `<internal Gitlab host>/api/graphql` with an origin similar to `https://workbench-2432e4c3da32cb6e6c581678692f92.cdn.web-ide.gitlab-static.net`.
 
-This happens because beginning with version 153, Firefox blocks public websites from accessing local resources. Because the workbench script is located at `cdn.web-ide.gitlab-static.net`, and it's telling your browser to make a request to `https://<internal Gitlab host>/api/graphql`, which resolves to a private IP address, that request is blocked by Firefox.
+This happens because beginning with version 153, Firefox blocks public websites from accessing local resources[^1]. Because the workbench script is located at `cdn.web-ide.gitlab-static.net`, and it's telling your browser to make a request to `https://<internal Gitlab host>/api/graphql`, which resolves to a private IP address, that request is blocked by Firefox.
 
 Normally this would trigger Firefox to prompt you to allow or block local network access, but because the web IDE is loaded in an iframe, it does not.
 
@@ -41,3 +41,11 @@ This can also be managed via Group Policy, using the "Local Network Access" poli
 
 ## Configure a custom extension host domain
 Rather than running the Web IDE from the default Gitlab domain (*.cdn.web-ide.gitlab-static.net), you can configure it to run from your local Gitalb server: https://docs.gitlab.com/administration/settings/web_ide/
+
+# Resources
+- https://gitlab.com/gitlab-org/gitlab/-/work_items/606551
+- https://gitlab.com/gitlab-org/gitlab-web-ide/-/work_items/541
+- https://bugzilla.mozilla.org/show_bug.cgi?id=2058449
+
+
+[^1]: https://support.mozilla.org/en-US/kb/control-personal-device-local-network-permissions-firefox
