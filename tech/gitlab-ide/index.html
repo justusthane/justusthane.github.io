@@ -181,7 +181,7 @@ Webpack 6<br>
 index.js:5:11</p>
 </blockquote>
 <p>In the network requests, you’ll see a blocked request to <code>&lt;internal Gitlab host&gt;/api/graphql</code> with an origin similar to <code>https://workbench-2432e4c3da32cb6e6c581678692f92.cdn.web-ide.gitlab-static.net</code>.</p>
-<p>This happens because beginning with version 153, Firefox blocks public websites from accessing local resources. Because the workbench script is located at <code>cdn.web-ide.gitlab-static.net</code>, and it’s telling your browser to make a request to <code>https://&lt;internal Gitlab host&gt;/api/graphql</code>, which resolves to a private IP address, that request is blocked by Firefox.</p>
+<p>This happens because beginning with version 153, Firefox blocks public websites from accessing local resources<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. Because the workbench script is located at <code>cdn.web-ide.gitlab-static.net</code>, and it’s telling your browser to make a request to <code>https://&lt;internal Gitlab host&gt;/api/graphql</code>, which resolves to a private IP address, that request is blocked by Firefox.</p>
 <p>Normally this would trigger Firefox to prompt you to allow or block local network access, but because the web IDE is loaded in an iframe, it does not.</p>
 <p>You can quickly confirm that this is the issue by opening the <code>about:config</code> page in Firefox and setting <code>network.lna.blocking</code> to <strong>false</strong>:<br>
 <img src="image-1.png" alt="alt text"></p>
@@ -194,6 +194,19 @@ index.js:5:11</p>
 <img src="image-3.png" alt=""></p>
 <h2 id="configure-a-custom-extension-host-domain">Configure a custom extension host domain</h2>
 <p>Rather than running the Web IDE from the default Gitlab domain (*.cdn.web-ide.gitlab-static.net), you can configure it to run from your local Gitalb server: <a href="https://docs.gitlab.com/administration/settings/web_ide/">https://docs.gitlab.com/administration/settings/web_ide/</a></p>
+<h1 id="resources">Resources</h1>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/work_items/606551">https://gitlab.com/gitlab-org/gitlab/-/work_items/606551</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-web-ide/-/work_items/541">https://gitlab.com/gitlab-org/gitlab-web-ide/-/work_items/541</a></li>
+<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=2058449">https://bugzilla.mozilla.org/show_bug.cgi?id=2058449</a></li>
+</ul>
+<h1>Footnotes</h1>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://support.mozilla.org/en-US/kb/control-personal-device-local-network-permissions-firefox">https://support.mozilla.org/en-US/kb/control-personal-device-local-network-permissions-firefox</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
 <a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
