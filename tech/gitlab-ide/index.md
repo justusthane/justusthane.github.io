@@ -42,6 +42,8 @@ This can also be managed via Group Policy, using the "Local Network Access" poli
 ## Configure a custom extension host domain
 Rather than running the Web IDE from the default Gitlab domain (*.cdn.web-ide.gitlab-static.net), you can configure it to run from your local Gitalb server: https://docs.gitlab.com/administration/settings/web_ide/
 
+This avoids the Local Network Access issue completely, as there's no longer a script on a public site making a request to a local resource.
+
 # Resources
 - https://gitlab.com/gitlab-org/gitlab/-/work_items/606551
 - https://gitlab.com/gitlab-org/gitlab-web-ide/-/work_items/541
