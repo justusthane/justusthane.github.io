@@ -2,14 +2,14 @@
 <html style="scroll-behavior: smooth;" lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Techsmithing | justus.ws</title>
+    <title>Gitlab Web IDE does not work on self-hosted Gitlab with a private IP using Firefox | justus.ws</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
 
     <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
-    <link rel="canonical" href="https://justus.ws/tech/" />
+    <link rel="canonical" href="https://justus.ws/tech/gitlab-ide/" />
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
     <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
@@ -48,7 +48,7 @@
             <a href="/craft/">craft</a>/sewing projects
           </li>
           
-          <li class="currentPageIndicator">
+          <li>
             <a href="/tech/">tech</a> stuff
           </li>
           
@@ -102,7 +102,7 @@
               <a href="/craft/">craft</a>/sewing projects
             </li>
             
-            <li class="currentPageIndicator">
+            <li>
               <a href="/tech/">tech</a> stuff
             </li>
             
@@ -156,57 +156,46 @@
       
 
 
-<a href="/"><i class="fas fa-arrow-circle-left"></i>&nbsp;home</a>
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
   <h1>
 
-  Techsmithing
+  Gitlab Web IDE does not work on self-hosted Gitlab with a private IP using Firefox
 
   </h1>
 
+<p class="publish-date">Published 2026-09-24</p>
+<p>If you self-hosted Gitlab using a private IP address, using Firefox 153 or newer, the web IDE fails to load:</p>
+<p><img src="image.png" alt="alt text"></p>
+<p>DevTools shows the following errors:</p>
+<blockquote>
+<p>Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at <code>https://&lt;internal Gitlab host&gt;/api/graphql</code>. (Reason: CORS request did not succeed). Status code: (null). 2</p>
+</blockquote>
+<blockquote>
+<p>[gitlab] Failed to load Web IDE<br>
+Error: The Web IDE could not load because the extension host domain is unreachable.<br>
+u get_web_ide_workbench_config.js:146<br>
+x init_gitlab_web_ide.js:44<br>
+abRe index.js:27<br>
+abRe index.js:3<br>
+Webpack 6<br>
+index.js:5:11</p>
+</blockquote>
+<p>In the network requests, you’ll see a blocked request to <code>&lt;internal Gitlab host&gt;/api/graphql</code> with an origin similar to <code>https://workbench-2432e4c3da32cb6e6c581678692f92.cdn.web-ide.gitlab-static.net</code>.</p>
+<p>This happens because beginning with version 153, Firefox blocks public websites from accessing local resources. Because the workbench script is located at <code>cdn.web-ide.gitlab-static.net</code>, and it’s telling your browser to make a request to <code>https://&lt;internal Gitlab host&gt;/api/graphql</code>, which resolves to a private IP address, that request is blocked by Firefox.</p>
+<p>Normally this would trigger Firefox to prompt you to allow or block local network access, but because the web IDE is loaded in an iframe, it does not.</p>
+<p>You can quickly confirm that this is the issue by opening the <code>about:config</code> page in Firefox and setting <code>network.lna.blocking</code> to <strong>false</strong>:<br>
+<img src="image-1.png" alt="alt text"></p>
+<h1 id="solutions">Solutions</h1>
+<p>In addition to the quick workaround above, there are a couple permanent solutions.</p>
+<h2 id="exempt-your-internal-gitlab-host-from-local-network-blocking">Exempt your internal Gitlab host from local network blocking</h2>
+<p>Open the <code>about:config</code> page in Firefox, and add the internal FQDN of your Gitlab server to the <code>network.lna.skip-domains</code> setting:<br>
+<img src="image-2.png" alt="alt text"></p>
+<p>This can also be managed via Group Policy, using the “Local Network Access” policies in the Firefox Administrative Template: <a href="https://firefox-admin-docs.mozilla.org/reference/policies/localnetworkaccess/:">https://firefox-admin-docs.mozilla.org/reference/policies/localnetworkaccess/:</a><br>
+<img src="image-3.png" alt=""></p>
+<h2 id="configure-a-custom-extension-host-domain">Configure a custom extension host domain</h2>
+<p>Rather than running the Web IDE from the default Gitlab domain (*.cdn.web-ide.gitlab-static.net), you can configure it to run from your local Gitalb server: <a href="https://docs.gitlab.com/administration/settings/web_ide/">https://docs.gitlab.com/administration/settings/web_ide/</a></p>
 
-<ul>
-
-  <li> <a href="/tech/analyizing-procmon-output-with-visidata/old/"></a> <span class="publish-date">(published 2026-09-24)</span></li>
-
-  <li> <a href="/tech/gitlab-ide/">Gitlab Web IDE does not work on self-hosted Gitlab with a private IP using Firefox</a> <span class="publish-date">(published 2026-09-24)</span></li>
-
-  <li> <a href="/tech/solarwinds-custom-snmp-poller/">How to poll custom SNMP objects in Solarwinds NPM</a> <span class="publish-date">(published 2025-05-02)</span></li>
-
-  <li> <a href="/tech/logarithmic-disk-space-monitoring/">A logarithmic formula for disk space monitoring</a> <span class="publish-date">(published 2024-08-02)</span></li>
-
-  <li> <a href="/tech/analyizing-procmon-output-with-visidata/">Analyzing ProcMon output with VisiData</a> <span class="publish-date">(published 2022-08-05)</span></li>
-
-  <li> <a href="/tech/the-unreasonable-annoyance-of-moving-emails-in-Outlook/">The unreasonable annoyance of moving emails in Outlook for Windows</a> <span class="publish-date">(published 2022-04-27, updated 2022-04-27)</span></li>
-
-  <li> <a href="/tech/visidata-line-endings/">VisiData for Windows: extra lines in CSV</a> <span class="publish-date">(published 2022-04-19, updated 2022-04-19)</span></li>
-
-  <li> <a href="/tech/multiple-search-and-replace-with-vim/">How to search and replace multiple strings with Vim</a> <span class="publish-date">(published 2021-09-21)</span></li>
-
-  <li> <a href="/tech/convert-o365-mailbox-to-shared/">How to convert an Office365 mailbox to Shared in a hybrid Exchange environment</a> <span class="publish-date">(published 2021-08-17)</span></li>
-
-  <li> <a href="/tech/powershell-module-separate-files-for-each-cmdlet/">Writing a PowerShell module with separate .ps1 files for each cmdlet</a> <span class="publish-date">(published 2021-07-24)</span></li>
-
-  <li> <a href="/tech/create-onprem-ad-user-for-o365-mailbox/">How to create a local AD user for an existing Office365 mailbox</a> <span class="publish-date">(published 2021-06-22)</span></li>
-
-  <li> <a href="/tech/migrate-o365-mailbox-to-onprem/">How to migrate an Office365 mailbox to on-premises in an Exchange hybrid environment</a> <span class="publish-date">(published 2021-06-15)</span></li>
-
-  <li> <a href="/tech/fix-outlook-view/">How to fix your broken Outlook inbox view</a> <span class="publish-date">(published 2021-06-05)</span></li>
-
-  <li> <a href="/tech/paloalto-ca-cert/">Issuing a CA cert to a PaloAlto firewall from Active Directory Certificate Services for SSL decryption</a> <span class="publish-date">(published 2021-06-05)</span></li>
-
-  <li> <a href="/tech/deploying-eleventy-to-github-pages/">How To Deploy an Eleventy Site to Github Pages with a Custom Domain</a> <span class="publish-date">(published 2020-09-05)</span></li>
-
-  <li> <a href="/tech/editing-pixel-art-in-photoshop/">Editing Pixel Art in Photoshop</a> <span class="publish-date">(published 2020-09-02)</span></li>
-
-  <li> <a href="/tech/sdr-adventures-in-shortwave/">SDR: Digital Adventures in Shortwave Radio</a> <span class="publish-date">(published 2020-08-30)</span></li>
-
-  <li> <a href="/tech/open-with-vim/">&#39;Open With&#39; Vim from MacOS Finder</a> <span class="publish-date">(published 2020-05-08)</span></li>
-
-  <li> <a href="/tech/eleventy-utc-dates/">Eleventy static-site generator: Making Liquid play nice with dates</a> <span class="publish-date">(published 2020-04-16)</span></li>
-
-  <li> <a href="/tech/how-to-ditch-gmail/">How to ditch Gmail</a> <span class="publish-date">(published 2020-04-16)</span></li>
-
-</ul>
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
 
     </main>
     
