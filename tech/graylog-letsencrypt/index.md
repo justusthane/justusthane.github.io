@@ -17,10 +17,10 @@ This guide is based on the official [Graylog documentation for configuring TLS](
   > This will make certbot certificates, and their private keys, readable to any user on the system.
   > This is a recommended configuration by certbot: https://eff-certbot.readthedocs.io/en/stable/using.html#where-are-my-certificates
 3. Generate a passphrase for the private key and save it to a file:
-  ```bash
-  echo $(tr -dc 'A-Za-km-z0-9\_\-.,+=@%' </dev/urandom | head -c 24) > /root/graylog_keypass
-  ```
-  You may choose to save this file somewhere else
+    ```bash
+    echo $(tr -dc 'A-Za-km-z0-9\_\-.,+=@%' </dev/urandom | head -c 24) > /root/graylog_keypass
+    ```
+    You may choose to save this file elsewhere/
 4.  Request a certificate from certbot:
   Replace `<GRAYLOG FQDN>` with the FQDN of your server
   ```bash
