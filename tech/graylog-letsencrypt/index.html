@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Configuring Graylog TLS with LetsEncrypt | justus.ws</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home, home on the web, where the links and the hypertexts play">
+
+    <link rel="shortcut icon" type="image/png" href="/images/daoi_round.png" />
+    <link rel="canonical" href="https://justus.ws/tech/graylog-letsencrypt/" />
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+    <link rel="stylesheet" href="/style/prism-cb.css" type="text/css">
+    <link rel="stylesheet" href="/webfonts/badscript.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="/style/fontawesome-all.min.css" type="text/css">
+    <link rel="webmention" href="https://webmention.io/justus.ws/webmention" />
+
+</head>
+<body id="top" class="color-auto ">
+  <div id="toggle-color">
+  </div>
+  <div id="wrapper">
+    <div id="titleContainer">
+      <div id="avatar">
+        <a href="/"><img alt="Avatar" src="/images/dadi-avatar.png" class="avatar"></a>
+      </div>
+      <div id="sitetitle">
+        <div class="logo"><a href="/" class="u-url u-uid p-name" rel="me">justus<br>grunow</a></div> 
+      </div>
+    </div>
+    <div id="tagline">home, home on the web<br />where the links and the hypertexts play
+        <div id="elsewhere">
+                      <a href="mailto:jg@justus.ws" rel="me" class="u-email" data-label="<strong>email</strong>&nbsp;| jg@justus.ws" aria-label="Email"><i class="far fa-envelope-open" aria-hidden="true"></i></a>
+                                <a href="https://photos.justus.ws" rel="me" data-label="<strong>photos</strong>&nbsp;| smugmug" aria-label="Photography"><i class="fas fa-camera-retro" aria-hidden="true"></i></a>
+                                          <a href="https://github.com/justusthane" rel="me" data-label="<strong>code</strong>&nbsp;| github" aria-label="Github"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                                  </div>
+    </div>
+    <div id="sidebar">
+      
+
+<details id="menuMobile">
+  <summary>Menu</summary>
+        <ul>
+          <li><a href="/">home</a></li>
+          
+          <li>
+            <a href="/craft/">craft</a>/sewing projects
+          </li>
+          
+          <li>
+            <a href="/tech/">tech</a> stuff
+          </li>
+          
+          <li>
+            <a href="/food/">food</a> &amp; kitchen
+          </li>
+          
+          <li>
+            <a href="/garden/">garden</a>ing
+          </li>
+          
+          <li>
+            <a href="/misc/">misc</a>
+          </li>
+          
+          <li>
+            <a href="/writings/">writings</a> &amp; musings
+          </li>
+          
+          <li>
+            <a href="/blog/">blog</a>
+          </li>
+          
+          <li>
+            <a href="/why/">why</a> does this site exist?
+          </li>
+          
+          <li>
+            <a href="/how/">how</a> does this site work?
+          </li>
+          
+          <li>
+            <a href="/links/">links</a> &amp; other things I like
+          </li>
+          
+          <li>
+            <a href="/now/">now</a>: what I&#39;m up to
+          </li>
+          
+          <li>
+            <a href="/todo/">todo</a> for this site
+          </li>
+          
+        </ul>
+</details>
+        <div id="menuDesktop">
+          <ul>
+          <li><a href="/">home</a></li>
+            
+            <li>
+              <a href="/craft/">craft</a>/sewing projects
+            </li>
+            
+            <li>
+              <a href="/tech/">tech</a> stuff
+            </li>
+            
+            <li>
+              <a href="/food/">food</a> &amp; kitchen
+            </li>
+            
+            <li>
+              <a href="/garden/">garden</a>ing
+            </li>
+            
+            <li>
+              <a href="/misc/">misc</a>
+            </li>
+            
+            <li>
+              <a href="/writings/">writings</a> &amp; musings
+            </li>
+            
+            <li>
+              <a href="/blog/">blog</a>
+            </li>
+            
+            <li>
+              <a href="/why/">why</a> does this site exist?
+            </li>
+            
+            <li>
+              <a href="/how/">how</a> does this site work?
+            </li>
+            
+            <li>
+              <a href="/links/">links</a> &amp; other things I like
+            </li>
+            
+            <li>
+              <a href="/now/">now</a>: what I&#39;m up to
+            </li>
+            
+            <li>
+              <a href="/todo/">todo</a> for this site
+            </li>
+            
+          </ul>
+        </div>
+
+    </div>
+    </header>
+
+    <main id="content">
+      
+
+
+<a href="/tech"><i class="fas fa-arrow-circle-left"></i>&nbsp;tech</a>
+  <h1>
+
+  Configuring Graylog TLS with LetsEncrypt
+
+  </h1>
+
+<p class="publish-date">Published 2026-11-18, updated 2026-11-18</p>
+<p>This guide is based on the official <a href="https://go2docs.graylog.org/current/setting_up_graylog/secure_graylog_interface_with_tls.htm">Graylog documentation for configuring TLS</a>, adjusted for LetsEncrypt (as well as an additional step, not mentioned in the docs, which will break your Graylog if you don’t do it). The Graylog TLS configuration is one of the most convoluted I’ve seen.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+<li>Graylog is installed and configured (tested on version 7.2.0)</li>
+<li>certbot is installed</li>
+<li>You’re familiar with the various ACME challenges (http-01, dns-01) and you know how to make one work. That is beyond the scope of this guide.</li>
+</ul>
+<ol>
+<li>Log into your server as root</li>
+<li>chmod the certbot directory where certs are kept so that the graylog user can read them:<br>
+<code>chmod 0755 /etc/letsencrypt/{live,archive}</code></li>
+</ol>
+<blockquote>
+<p>[!note]<br>
+This will make certbot certificates, and their private keys, readable to any user on the system.<br>
+This is a recommended configuration by certbot: <a href="https://eff-certbot.readthedocs.io/en/stable/using.html#where-are-my-certificates">https://eff-certbot.readthedocs.io/en/stable/using.html#where-are-my-certificates</a></p>
+</blockquote>
+<ol start="3">
+<li>Generate a passphrase for the private key and save it to a file:</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">tr</span> <span class="token parameter variable">-dc</span> <span class="token string">'A-Za-km-z0-9\_\-.,+=@%'</span> <span class="token operator">&lt;</span>/dev/urandom <span class="token operator">|</span> <span class="token function">head</span> <span class="token parameter variable">-c</span> <span class="token number">24</span><span class="token variable">)</span></span> <span class="token operator">></span> /root/graylog_keypass</code></pre>
+<p>You may choose to save this file somewhere else<br>
+4.  Request a certificate from certbot:<br>
+Replace <code>&lt;GRAYLOG FQDN&gt;</code> with the FQDN of your server</p>
+<pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">FQDN</span><span class="token operator">=</span><span class="token operator">&lt;</span>GRAYLOG FQDN<span class="token operator">></span><br>certbot certonly <span class="token parameter variable">-d</span> <span class="token operator">&lt;</span>GRAYLOG FQDN<span class="token operator">></span> --deploy-hook "openssl pkcs8 <span class="token parameter variable">-in</span> /etc/letsencrypt/live/<span class="token variable">$FQDN</span>/privkey.pem <span class="token parameter variable">-topk8</span> <span class="token parameter variable">-out</span> /etc/letsencrypt/live/<span class="token variable">$FQDN</span>/privkey.pkcs8.pem <span class="token parameter variable">-passout</span> <span class="token string">'file:/root/graylog_keypass'</span> <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> <span class="token number">755</span> /etc/letsencrypt/live/<span class="token variable">$FQDN</span>/privkey.pkcs8.pem <span class="token operator">&amp;&amp;</span> systemctl restart graylog-server<br><span class="token comment"># Make sure to update the file referenced in the `-passout` argument if you saved the passphrase elsewhere.</span></code></pre>
+<blockquote>
+<p>[!note]<br>
+Graylog requires the private key to be an encrypted PKCS#8 file, but certbot outputs an unencrypted key. This deploy hook converts the key and restarts Graylog.</p>
+</blockquote>
+
+<a href="#wrapper"><i class="fas fa-arrow-circle-up"></i>&nbsp;top</a>
+
+    </main>
+    
+    
+  </div>
+
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  <script src="/js/scripts.js"></script>
+
+</body>
+</html>
